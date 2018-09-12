@@ -1,0 +1,45 @@
+#joinBtn:hover{
+	background-image: url(../img/buttons/join_1.png);
+}
+#FAQBtn:hover{
+	background-image: url(../img/buttons/FAQ_1.png);
+}
+#conceptArtBtn:hover{
+	background-image: url(../img/buttons/concept_1.png);
+}
+#documentsBtn:hover{
+	background-image: url(../img/buttons/docfolder_1.png);
+}
+.metal{
+	background-image: url('../img/misc/metal.png');
+	border-style: ridge;
+	border-width: medium;
+	border-color: #77422c;
+}
+.black{
+	background-color: black;
+}
+.btn{
+	font-family: "Times New Roman", serif;
+	font-weight: bold;
+}
+.border{
+	border-width: medium !important;
+	border-color: black !important;
+}
+.TNR{
+	font-family: "Times New Roman", serif;
+	font-weight: bold;	
+}
+.trait-img{
+	width: 33%;
+}
+.half{
+	width: 50%;
+}
+.characterSheet{
+	background-image: url(../img/misc/photocopy.png);
+	background-position: center; 
+  	background-repeat: no-repeat; 
+  	background-size: cover;	
+}

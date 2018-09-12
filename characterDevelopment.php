@@ -1,0 +1,1079 @@
+<?php
+    include("inc/config.php");
+    session_start();
+
+    if (isset($_SESSION['ID']) == false){
+        header("Location: login.php");
+    } 
+?>
+
+<!doctype html>
+<html lang='en' dir='ltr'>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>New Character</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/characterDevelopment.js"></script>
+  </head>
+
+  <body>
+    <div class="container-fluid metal">
+      <?php include('inc/header.php'); ?>
+
+      <div class='row black'>
+        <div class='col'></div>
+        <div class='col-6'><h4 class='text-danger text-center'>RED BUTTONS COST 2 SKILL CHOICES</h4></div>
+        <div class='col'></div>
+      </div>
+
+      <!--MODALS-->
+      <div class="modal fade" id="outdoorsmanModal" tabindex="-1" role="dialog" aria-labelledby="outdoorsmanModal" data-backdrop='static' aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            
+            <div class="modal-header">
+              <h5 class="modal-title">Due to your history as an Outdoorsman <br> Please select one of the following:</h5>
+            </div>
+
+            <div class="modal-body">
+              <div class='container-fluid'>
+                <div class='row'>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='thrown' data-dismiss='modal'>
+                    THROWN</button></div>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='archery' data-dismiss='modal'>
+                    ARCHERY</button></div>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='rifles' data-dismiss='modal'>
+                    RIFLES</button></div>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='pistols' data-dismiss='modal'>
+                    PISTOLS</button></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="militiaModal" tabindex="-3" role="dialog" aria-labelledby="militiaModal" data-backdrop='static' aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            
+            <div class="modal-header">
+              <h5 class="modal-title">Due to your history as an Militia Member <br> Please select one of the following:</h5>
+            </div>
+
+            <div class="modal-body">
+              <div class='container-fluid'>
+                <div class='row'>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='shortWeapons' data-dismiss='modal'>
+                    SHORT</button></div>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='longWeapons' data-dismiss='modal'>
+                    LONG</button></div>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='twoHand' data-dismiss='modal'>
+                    TWO HAND</button></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>  
+
+      <div class="modal fade" id="gangModal" tabindex="-4" role="dialog" aria-labelledby="gangModal" data-backdrop='static' aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            
+            <div class="modal-header">
+              <h5 class="modal-title">Due to your history as a Gang Member <br> Please select one of the following:</h5>
+            </div>
+
+            <div class="modal-body">
+              <div class='container-fluid'>
+                <div class='row'>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='unarmed' data-dismiss='modal'>
+                    UNARMED</button></div>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='thrown' data-dismiss='modal'>
+                    THROWN</button></div>
+                </div>
+                <div class='row'>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='grapple' data-dismiss='modal'>
+                    GRAPPLE</button></div>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='archery' data-dismiss='modal'>
+                    ARCHERY</button></div>
+                </div>
+                <div class='row'>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='shortWeapons' data-dismiss='modal'>
+                    SHORT</button></div>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='pistols' data-dismiss='modal'>
+                    PISTOLS</button></div>
+                </div>
+                <div class='row'>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='longWeapons' data-dismiss='modal'>
+                    LONG</button></div>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='rifles' data-dismiss='modal'>
+                    RIFLES</button></div>
+                </div>
+                <div class='row'>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='twoHand' data-dismiss='modal'>
+                    TWO HAND</button></div>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='special' data-dismiss='modal'>
+                    SPECIAL</button></div>
+                </div>
+                <div class='row'>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='chain' data-dismiss='modal'>
+                    CHAIN</button></div>
+                  <div class='col'></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="securityModal" tabindex="-6" role="dialog" aria-labelledby="securityModal" data-backdrop='static' aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            
+            <div class="modal-header">
+              <h5 class="modal-title">Due to your history as a Security Guard <br> Please select one of the following:</h5>
+            </div>
+
+            <div class="modal-body">
+              <div class='container-fluid'>
+                <div class='row'>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='longWeapons' data-dismiss='modal'>
+                    LONG</button></div>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgChoice" data-target='twoHand' data-dismiss='modal'>
+                    TWO HAND</button></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="marinerModal" tabindex="-7" role="dialog" aria-labelledby="marinerModal" data-backdrop='static' aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            
+            <div class="modal-header">
+              <h5 class="modal-title">Due to your history as a Mariner <br> Please select one of the following:</h5>
+            </div>
+
+            <div class="modal-body">
+              <div class='container-fluid'>
+                <div class='row'>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgSkill" data-target='sailing' data-dismiss='modal'>
+                    SAILING</button></div>
+                  <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border bgSkill" data-target='boating' data-dismiss='modal'>
+                    BOATING</button></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="languageModal" tabindex="-9" role="dialog" aria-labelledby="languageModal" data-backdrop='static' aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+          <div class="modal-content">
+            
+            <div class="modal-header">
+              <h5 class="modal-title">Please select one of the following:</h5>
+            </div>
+
+            <div class="modal-body">
+              <div class='container-fluid'>
+                <div class='row'>
+                  <div class='col'><button type="button" id='spanishBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Spanish'>SPANISH</button></div>
+                  <div class='col'><button type="button" id='mandarinBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Mandarin'>MANDARIN</button></div>
+                  <div class='col'><button type="button" id='cantoneseBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Cantonese'>CANTONESE</button></div>
+                  <div class='col'><button type="button" id='tagalogBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Tagalog'>TAGALOG</button></div>
+                </div>
+                
+                <div class='row'>                  
+                  <div class='col'><button type="button" id='vietnameseBtn' class="btn btn-warning btn-lg btn-block border langSelect px-0" 
+                    data-language='Vietnamese*'>VIETNAMESE*</button></div>                  
+                  <div class='col'><button type="button" id='bengaliBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Bengali'>BENGALI</button></div>                  
+                  <div class='col'><button type="button" id='thaiBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Thai*'>THAI*</button></div>
+                  <div class='col'><button type="button" id='arabicBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Arabic'>ARABIC</button></div>
+                </div>
+                
+                <div class='row'>
+                  <div class='col'><button type="button" id='frenchBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='French'>FRENCH</button></div>
+                  <div class='col'><button type="button" id='koreanBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Korean'>KOREAN</button></div>
+                  <div class='col'><button type="button" id='russianBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Russian'>RUSSIAN</button></div>
+                  <div class='col'><button type="button" id='germanBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='German'>GERMAN</button></div>
+                </div>
+                
+                <div class='row'>
+                  <div class='col'><button type="button" id='haitianBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Haitian'>HAITIAN</button></div>
+                  <div class='col'><button type="button" id='portugeseBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Portugese'>PORTUGESE</button></div>
+                  <div class='col'><button type="button" id='italianBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Italian'>ITALIAN</button></div>
+                  <div class='col'><button type="button" id='polishBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Polish'>POLISH</button></div>
+                </div>
+                
+                <div class='row'>
+                  <div class='col'><button type="button" id='urduBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Urdu'>URDU</button></div>
+                  <div class='col'><button type="button" id='japaneseBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Japanese'>JAPANESE</button></div>
+                  <div class='col'><button type="button" id='hindiBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Hindi'>HINDI</button></div>
+                  <div class='col'><button type="button" id='indianBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Indian*'>INDIAN*</button></div>
+                </div>
+                
+                <div class='row'>
+                  <div class='col'><button type="button" id='greekBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Greek'>GREEK</button></div>
+                  <div class='col'><button type="button" id='armenianBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Armenian'>ARMENIAN</button></div>
+                  <div class='col'><button type="button" id='serboBtn' class="btn btn-warning btn-lg btn-block border px-1 langSelect" 
+                    data-language='Serbo-Croat'>SERBO-CROAT</button></div>
+                  <div class='col'><button type="button" id='hebrewBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Hebrew'>HEBREW</button></div>
+                </div>
+                
+                <div class='row'>
+                  <div class='col'><button type="button" id='bantuBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Bantu*'>BANTU*</button></div>
+                  <div class='col'><button type="button" id='navajoBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='Navajo'>NAVAJO</button></div>
+                  <div class='col'><button type="button" id='usSignBtn' class="btn btn-warning btn-lg btn-block border langSelect" 
+                    data-language='US Sign'>US SIGN</button></div>
+                </div>
+                
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <div class='col'></div>
+              <div class='col'>
+                <button type="button" class="btn btn-danger btn-lg btn-block border" data-dismiss="modal">CANCEL</button>
+              </div>
+              <div class='col'></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    
+    </div> <!--END HEADER-->
+
+      <!--SHEET BEGIN-->
+      <form id="characterDevelopment" class='characterSheet' method="post" action="inc/processCharacter.php">
+        <div class='sticky-top'>
+          <div class='row black'>
+            <div class='col'></div>
+            <div class='col'><h3 class='text-white TNR pt-2 text-center'>CHOICES REMAINING:</h3></div>
+            <div class='col'>
+              <div class="input-group input-group-lg">
+                <input type="text" id="choicePool" class="form-control border text-center" readonly />
+              </div>
+            </div>
+            <div class='col'></div>
+          </div>
+        </div>
+      
+        <div class='row no-gutters'>
+          <div class='col-3'></div>
+          <div class='col'><h4 class='TNR text-center'><u>DEMOGRAPHIC INFORMATION</u></h4></div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col-4'><img src='img/misc/picSlot.png' class='mx-auto d-block'></div>
+          <div class='col-8'>
+
+            <div class='row no-gutters'>
+              <div class='col-2'><h5 class='pt-2 TNR text-center'>NAME:</h5></div>
+              <div class='col-4'>
+                <div class="input-group input-group-lg">
+                  <input type="text" id="name" name="name" class="form-control border text-center" required />
+                </div>
+              </div>
+              <div class='col-2'><h5 class='pt-2 TNR text-center'>BACKGROUND:</h5></div>
+              <div class='col-4'>
+                <div class="input-group input-group-lg">
+                  <input type="text" id="background" name="background" class="form-control border text-center" value='<?php echo $_SESSION["background"]; ?>' readonly />
+                </div>
+              </div>
+            </div>
+
+            <div class='row no-gutters'>
+              <div class='col-2'><h5 class='pt-2 TNR text-center'>HABITAT:</h5></div>
+              <div class='col-4'>
+                <div class="input-group input-group-lg">
+                  <input type="text" id="habitat" name="habitat" class="form-control border text-center" required />
+                </div>
+              </div>
+              <div class='col-2'><h5 class='pt-2 TNR text-center'>ETHNICITY:</h5></div>
+              <div class='col-4'>
+                <div class="input-group input-group-lg">
+                  <input type="text" id="ethnicity" name="ethnicity" class="form-control border text-center" value='<?php echo $_SESSION["ethnicity"]; ?>' readonly />
+                </div>
+              </div>
+            </div>
+
+            <div class='row no-gutters'>
+              <div class='col-2'><h5 class='pt-2 TNR text-center'>AGE:</h5></div>
+              <div class='col-4'>
+                <div class="input-group input-group-lg">
+                  <input type="text" id="age" name="age" class="form-control border text-center" value='<?php echo $_SESSION["age"]; ?>' readonly />
+                </div>
+              </div>
+              <div class='col-2'><h5 class='pt-2 TNR text-center'>SEX:</h5></div>
+              <div class='col-4'>
+                <div class="input-group input-group-lg">
+                  <input type="text" id="sex" name="sex" class="form-control border text-center" value='<?php echo $_SESSION["sex"]; ?>' readonly />
+                </div>
+              </div>
+            </div>
+
+            <div class='row no-gutters'>
+              <div class='col-2'><h5 class='pt-2 TNR text-center'>HAIR STYLE:</h5></div>
+              <div class='col-4'>
+                <div class="input-group input-group-lg">
+                  <input type="text" id="hairStyle" name="hairStyle" class="form-control border text-center" required />
+                </div>
+              </div>
+              <div class='col-2'><h5 class='pt-2 TNR text-center'>HAIR COLOR:</h5></div>
+              <div class='col-4'>
+                <div class="input-group input-group-lg">
+                  <input type="text" id="hairColor" name="hairColor" class="form-control border text-center" readonly />
+                </div>
+              </div>
+            </div>
+
+            <div class='row no-gutters'>
+              <div class='col-2'><h5 class='pt-2 TNR text-center'>FACIAL HAIR:</h5></div>
+              <div class='col-4'>
+                <div class="input-group input-group-lg">
+                  <input type="text" id="facialHair" name="facialHair" class="form-control border text-center" />
+                </div>
+              </div>
+              <div class='col-2'><h5 class='pt-2 TNR text-center'>EYE COLOR:</h5></div>
+              <div class='col-4'>
+                <div class="input-group input-group-lg">
+                  <input type="text" id="eyeColor" name="eyeColor" class="form-control border text-center" readonly />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><h4 class='TNR text-center'><u>COMBAT SKILLS</u></h4></div>
+          <div class='col'><h4 class='TNR text-center'><u>PHYSICAL TRAITS</u></h4></div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border train" data-target='unarmed'>UNARMED</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="unarmed" name='unarmed' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border train" data-target='thrown'>THROWN</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="thrown" name='thrown' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><h5 class='pt-2 TNR text-center'>MEMORY:</h5></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" name='memory' id='memory' class="form-control border text-center" value='<?php echo $_SESSION["memory"]; ?>' readonly />
+            </div>
+          </div>
+          <div class='col'><h5 class='pt-2 TNR text-center'>STRENGTH:</h5></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" name='strength' id='strength' class="form-control border text-center" value='<?php echo $_SESSION["strength"]; ?>' readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border train" data-target='grapple'>GRAPPLE</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="grapple" name='grapple' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border train" data-target='archery'>ARCHERY</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="archery" name='archery' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><h5 class='pt-2 TNR text-center'>LOGIC:</h5></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" name='logic' id='logic' class="form-control border text-center" value='<?php echo $_SESSION["logic"]; ?>' readonly />
+            </div>
+          </div>
+          <div class='col'><h5 class='pt-2 TNR text-center'>ENDURANCE:</h5></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" name='endurance' id='endurance' class="form-control border text-center" value='<?php echo $_SESSION["endurance"]; ?>' 
+                readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border train" data-target='shortWeapons'>SHORT</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="shortWeapons" name='shortWeapons' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border train" data-target='pistols'>PISTOLS</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="pistols" name='pistols' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><h5 class='pt-2 TNR text-center'>PERCEPTION:</h5></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" name='perception' id='perception' class="form-control border text-center" value='<?php echo $_SESSION["perception"]; ?>' 
+                readonly />
+            </div>
+          </div>
+          <div class='col'><h5 class='pt-2 TNR text-center'>AGILITY:</h5></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" name='agility' id='agility' class="form-control border text-center" value='<?php echo $_SESSION["agility"]; ?>' readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border train" data-target='longWeapons'>LONG</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="longWeapons" name='longWeapons' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border train" data-target='rifles'>RIFLES</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="rifles" name='rifles' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><h5 class='pt-2 TNR text-center'>WILLPOWER:</h5></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" name='willpower' id='willpower' class="form-control border text-center" value='<?php echo $_SESSION["willpower"]; ?>' readonly />
+            </div>
+          </div>
+          <div class='col'><h5 class='pt-2 TNR text-center'>SPEED:</h5></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" name='speed' id='speed' class="form-control border text-center" value='<?php echo $_SESSION["speed"]; ?>' readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border train" data-target='twoHand'>TWO HAND</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="twoHand" name='twoHand' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" class="btn btn-danger btn-lg btn-block border advTrain" data-target='burst'>BURST</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="burst" name='burst' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><h5 class='pt-2 TNR text-center'>CHARISMA:</h5></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="charisma" name='charisma' class="form-control border text-center" value='<?php echo $_SESSION["charisma"]; ?>' readonly />
+            </div>
+          </div>
+          <div class='col'><h5 class='pt-2 TNR text-center'>BEAUTY:</h5></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="beauty" name='beauty' class="form-control border text-center" value='<?php echo $_SESSION["beauty"]; ?>' readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border train" data-target='chain'>CHAIN</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="chain" name='chain' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" class="btn btn-danger btn-lg btn-block border advTrain" data-target='special'>SPECIAL</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="special" name='special' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><h5 class='pt-2 TNR text-center'>ACTIONS:</h5></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="actions" name='actions' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><h5 class='pt-2 TNR text-center'>SEQUENCE:</h5></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="sequence" name='sequence' class="form-control border text-center" readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border train" data-target='shield'>SHIELD</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="shield" name='shield' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" class="btn btn-danger btn-lg btn-block border advTrain px-1" data-target='weaponSys'>WEAPON SYS</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="weaponSys" name='weaponSys' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'></div>
+          <div class='col'><button type="button" class="btn btn-danger btn-lg btn-block border offTrain" data-target='offHand'>OFF HAND</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="offHand" name='offHand' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'></div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border trainDefense" data-target='block'>BLOCK</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="block" name='block' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" class="btn btn-danger btn-lg btn-block border advTrainDefense" data-target='dodge'>DODGE</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="dodge" name='dodge' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'></div>
+          <div class='col'><h5 class='pt-2 TNR text-center'>GAMBLING:</h5></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="gambling" name='gambling' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'></div>        
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><h4 class='TNR text-center'><u>COVERT SKILLS</u></h4></div>
+          <div class='col'><h4 class='TNR text-center'><u>SURVIVAL SKILLS</u></h4></div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border train" data-target='stealth'>STEALTH</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="stealth" name='stealth' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border train" data-target='concealment'>CONCEAL</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="concealment" name='concealment' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border train" data-target='envAware'>ENV AWARE</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="envAware" name='envAware' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border train" data-target='surveillance'>SURVEY</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="surveillance" name='surveillance' class="form-control border text-center" readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" class="btn btn-danger btn-lg btn-block border advTrain" data-target='sleight'>SLEIGHT</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="sleight" name='sleight' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='lockpickBtn' class="btn btn-danger btn-lg btn-block border advanced" data-target='lockpick'>LOCKPICK</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="lockpick" name='lockpick' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'>
+            <button type="button" class="btn btn-warning btn-lg btn-block border train" data-target='navigation'>NAVIGATION</button>
+          </div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="navigation" name='navigation' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='preservationBtn' class="btn btn-warning btn-lg btn-block border standard" data-target='preservation'>
+            PRESERVE</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="preservation" name='preservation' class="form-control border text-center" readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" id='forgeryBtn' class="btn btn-danger btn-lg btn-block border advanced" data-target='forgery'>FORGERY</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="forgery" name='forgery' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='cryptographyBtn' class="btn btn-danger btn-lg btn-block border advanced" data-target='cryptography'>CRYPTO</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="cryptography" name='cryptography' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='trackingBtn' class="btn btn-danger btn-lg btn-block border advanced" data-target='tracking'>TRACKING</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="tracking" name='tracking' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='trappingBtn' class="btn btn-warning btn-lg btn-block border standard" data-target='trapping'>TRAPPING</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="trapping" name='trapping' class="form-control border text-center" readonly />
+            </div>
+          </div>
+        </div>
+        
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" id='disguiseBtn' class="btn btn-danger btn-lg btn-block border advanced" data-target='disguise'>DISGUISE</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="disguise" name='disguise' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='restraintsBtn' class="btn btn-warning btn-lg btn-block border standard" data-target='restraints'>
+            RESTRAINTS</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="restraints" name='restraints' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border standard" data-target='fishing'>FISHING</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="fishing" name='fishing' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" class="btn btn-danger btn-lg btn-block border advTrain" data-target='firstAid'>FIRST AID</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="firstAid" name='firstAid' class="form-control border text-center" readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class='row'>
+          <div class='col-6'><h4 class='TNR text-center'><u>TRANSPORTATION SKILLS</u></h4></div>
+          <div class='col-6'><h4 class='TNR text-center'><u>TECHNOLOGY SKILLS</u></h4></div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border standard px-1" data-target='skateboard'>
+              SKATEBOARD</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="skateboard" name='skateboard' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border standard" data-target='bicycle'>BICYCLE</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="bicycle" name='bicycle' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border train" data-target='crafting'>CRAFTING</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="crafting" name='crafting' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'></div>
+          <div class='col'></div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border standard" data-target='horsemanship'>HORSE</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="horsemanship" name='horsemanship' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='automobileBtn' class="btn btn-warning btn-lg btn-block border standard px-1" data-target='automobile'>
+            AUTOMOBILE</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="automobile" name='automobile' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='computersBtn' class="btn btn-warning btn-lg btn-block border standard" data-target='computers'>
+            COMPUTERS</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="computers" name='computers' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='programBtn' class="btn btn-danger btn-lg btn-block border advanced" data-target='programming'>
+              PROGRAM</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="programming" name='programming' class="form-control border text-center" readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" id='motorcycleBtn' class="btn btn-warning btn-lg btn-block border standard px-1" data-target='motorcycle'>
+            MOTORCYCLE</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="motorcycle" name='motorcycle' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border standard" data-target='jetSki'>JET SKI</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="jetSki" name='jetSki' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='radiosBtn' class="btn btn-warning btn-lg btn-block border standard" data-target='radios'>RADIOS</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="radios" name='radios' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='networksBtn' class="btn btn-danger btn-lg btn-block border advanced" data-target='networks'>NETWORKS</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="networks" name='networks' class="form-control border text-center" readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" id='sailingBtn' class="btn btn-warning btn-lg btn-block border standard" data-target='sailing'>SAILING</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="sailing" name='sailing' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='boatingBtn' class="btn btn-warning btn-lg btn-block border standard" data-target='boating'>BOATING</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="boating" name='boating' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='mechanicsBtn' class="btn btn-warning btn-lg btn-block border standard" data-target='mechanics'>MECHANICS</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="mechanics" name='mechanics' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='electricalBtn' class="btn btn-warning btn-lg btn-block border standard px-1" data-target='electrical'>
+            ELECTRICAL</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="electrical" name='electrical' class="form-control border text-center" readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" id='multiGearBtn' class="btn btn-danger btn-lg btn-block border advanced" data-target='multiGear'>MULTI GEAR</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="multiGear" name='multiGear' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='hvyEquipBtn' class="btn btn-danger btn-lg btn-block border advanced" data-target='hvyEquip'>HVY EQUIP</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="hvyEquip" name='hvyEquip' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='circuitryBtn' class="btn btn-warning btn-lg btn-block border standard" data-target='circuitry'>
+            CIRCUITRY</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="circuitry" name='circuitry' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='explosivesBtn' class="btn btn-danger btn-lg btn-block border advanced" data-target='explosives'>
+            EXPLOSIVES</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="explosives" name='explosives' class="form-control border text-center" readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" class="btn btn-danger btn-lg btn-block border advanced px-1" data-target='helicopters'>HELICOPTER</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="helicopters" name='helicopters' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" class="btn btn-danger btn-lg btn-block border advanced" data-target='airplanes'>AIRPLANES</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="airplanes" name='airplanes' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='constructionBtn' class="btn btn-danger btn-lg btn-block border advanced" data-target='construction'>
+            CONSTRUCT</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="construction" name='construction' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='architectureBtn' class="btn btn-danger btn-lg btn-block border advanced" data-target='architecture'>
+            ARCHITECT</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="architecture" name='architecture' class="form-control border text-center" readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><h4 class='TNR text-center'><u>SOFT SKILLS & LANGUAGES</u></h4></div>
+          <div class='col'><h4 class='TNR text-center'><u>SCIENCE SKILLS</u></h4></div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border train" data-target='negotiation'>NEGOTIATE</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="negotiation" name='negotiation' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='guileBtn' class="btn btn-warning btn-lg btn-block border train" data-target='guile'>GUILE</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="guile" name='guile' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border standard" data-target='history'>HISTORY</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="history" name='history' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='forensicsBtn' class="btn btn-danger btn-lg btn-block border advanced" data-target='forensics'>
+              FORENSICS</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="forensics" name='forensics' class="form-control border text-center" readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" id='etiquetteBtn' class="btn btn-danger btn-lg btn-block border advTrain" data-target='etiquette'>
+              ETIQUETTE</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="etiquette" name='etiquette' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='animalsBtn' class="btn btn-warning btn-lg btn-block border train" data-target='animals'>
+              ANIMALS</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="animals" name='animals' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='biologyBtn' class="btn btn-warning btn-lg btn-block border standard" data-target='biology'>
+              BIOLOGY</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="biology" name='biology' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='chemistryBtn' class="btn btn-warning btn-lg btn-block border standard" data-target='chemistry'>
+            CHEMISTRY</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="chemistry" name='chemistry' class="form-control border text-center" readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'><button type="button" id='appraisalBtn' class="btn btn-danger btn-lg btn-block border advTrain" data-target='appraisal'>
+              APPRAISAL</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="appraisal" name='appraisal' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='legalBtn' class="btn btn-danger btn-lg btn-block border advanced" data-target='legal'>LEGAL</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="legal" name='legal' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='botanyBtn' class="btn btn-warning btn-lg btn-block border standard" data-target='botany'>
+              BOTANY</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="botany" name='botany' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" class="btn btn-warning btn-lg btn-block border standard px-1" data-target='mycology'>MYCOLOGY</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="mycology" name='mycology' class="form-control border text-center" readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="lang1" name='lang1' class="form-control border text-center langSlot" data-target='lang1Value' readonly />
+            </div>
+          </div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="lang1Value" name='lang1Value' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="lang2" name='lang2' class="form-control border text-center langSlot" data-target='lang2Value' readonly />
+            </div>
+          </div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="lang2Value" name='lang2Value' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='toxicologyBtn' class="btn btn-danger btn-lg btn-block border advanced px-1" data-target='toxicology'>
+            TOXICOLOGY</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="toxicology" name='toxicology' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='pharmacologyBtn' class="btn btn-danger btn-lg btn-block border advanced" data-target='pharmacology'>
+              PHARMA</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="pharmacology" name='pharmacology' class="form-control border text-center" readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="lang3" name='lang3' class="form-control border text-center langSlot" data-target='lang3Value' readonly />
+            </div>
+          </div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="lang3Value" name='lang3Value' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="lang4" name='lang4' class="form-control border text-center langSlot" data-target='lang4Value' readonly />
+            </div>
+          </div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="lang4Value" name='lang4Value' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='surgeryBtn' class="btn btn-danger btn-lg btn-block border" data-target='surgery'>
+            SURGERY</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="surgery" name='surgery' class="form-control border text-center" readonly />
+            </div>
+          </div>
+          <div class='col'><button type="button" id='medicineBtn' class="btn btn-danger btn-lg btn-block border px-1" data-target='medicine'>
+            MEDICINE</button></div>
+          <div class='col'>
+            <div class="input-group input-group-lg">
+              <input type="text" id="medicine" name='medicine' class="form-control border text-center" readonly />
+            </div>
+          </div>
+        </div>
+
+        <div class='row no-gutters'>
+          <div class='col-1'></div>
+          <div class='col-4'><button type="button" id='learnLangBtn' class="btn btn-warning btn-lg btn-block border">LEARN NEW LANGUAGE</button></div>  
+          <div class='col-1'></div>
+          <div class='col-6'></div>
+        </div>
+
+        <br />
+        <div class='row black'>
+          <div class='col'></div>
+          <div class='col'><button type='submit' class='btn btn-success btn-lg btn-block border'>CONFIRM & SAVE</button></div>
+          <div class='col'></div>
+        </div>
+      </form>
+
+      <?php include("inc/footer.php"); ?>
+    </div>
+  </body>
+</html>
