@@ -9,16 +9,16 @@
         </div>
 
         <div class='col'>
-            <a href='signup.php' role='button'><img src='img/buttons/join_0.png' id='joinBtn' /></a>
+            <a href='signup.php' role='button'><img src='../img/buttons/join_0.png' id='joinBtn' /></a>
         </div>
 
         <div class='col'>
-            <img src='img/graffiti/usernameX.png' />
+            <img src='../img/graffiti/usernameX.png' />
         </div>
 
         <div class='col'>
             <div class="input-group input-group-lg">
-                <input type="text" class="form-control border text-center" placeholder='Login to continue' id='usernameArea' readonly />
+                <input type="text" class="form-control border text-center" placeholder='Login to continue' id='usernameArea' readonly>
             
                 <script>
                     var username = "<?php echo $username; ?>";
@@ -35,19 +35,19 @@
     <div class='row black'>
         <div class='col-3'></div>
         <div class='col-6'>
-            <a href='index.php'>
+            <a href='../index.php'>
             <div id="carousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="img/banners/Aftermath0.jpg" alt="First slide">
+                        <img class="d-block w-100" src="../img/banners/Aftermath0.jpg" alt="First slide">
                     </div>
                                         
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="img/banners/Aftermath2.jpg" alt="Second slide">
+                        <img class="d-block w-100" src="../img/banners/Aftermath2.jpg" alt="Second slide">
                     </div>
 
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="img/banners/Aftermath3.jpg" alt="Third slide">
+                        <img class="d-block w-100" src="../img/banners/Aftermath3.jpg" alt="Third slide">
                     </div>
                 </div>
             </div>

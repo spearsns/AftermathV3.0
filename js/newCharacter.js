@@ -2,7 +2,7 @@ function roll(min, max){
 	return Math.round(Math.random() * (max - min)) + min;
 }
 function percentile(){
-	return (roll(1,10) * 10) + roll(1,10);
+	return (roll(0,9) * 10) + roll(1,10);
 }
 function twoD10(){
 	return roll(1,10) + roll(1,10);

@@ -1,21 +1,21 @@
 <?php
-   include("inc/config.php");
-
+  include("inc/config.php");
   session_start();
-   if(isset($_POST['submit'])){
-      $username = $_POST['username'];
-      $password = $_POST['password'];
-      $passwordConfirm = $_POST['passwordConfirm'];
-      $email = $_POST['email'];
-   }
+
+  if(isset($_SESSION['ID']) == false){
+    header("Location: login.php");
+  } 
+
+  $userID = $_SESSION['ID'];
 ?>
+
 <!doctype html>
 <html lang='en' dir='ltr'>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Sign Up</title>
+    <title>Create New Game</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
   </head>
@@ -38,14 +38,14 @@
         </div>
       </div>
 
-      <form id="signup" method="post" action="inc/processSignUp.php">
+      <form id="newGame" method="post" action="inc/processNewGame.php">
 
       <div class='row black'>
         <div class='col'></div>
-        <div class='col'><img src="img/graffiti/username.png" /></div>
-        <div class='col'>
+        <div class='col'><img src="img/graffiti/GameName.png" /></div>
+        <div class='col-4'>
           <div class="input-group input-group-lg">
-            <input type="text" name="username" class="form-control border" placeholder="Enter Username" required />
+            <input type="text" name="name" class="form-control border" placeholder="Enter the Game's Name" required />
           </div>
         </div>
         <div class='col'></div>
@@ -53,10 +53,10 @@
 
       <div class='row black'>
         <div class='col'></div>
-        <div class='col'><img src="img/graffiti/password.png" /></div>
-        <div class='col'>
+        <div class='col'><img src="img/graffiti/description1.png" /></div>
+        <div class='col-4'>
           <div class="input-group input-group-lg">
-            <input type="password" name="password" class="form-control border" placeholder="Enter Password" required />
+            <textarea rows="4" name="description" class="form-control border" placeholder="Enter a Brief Description" required></textarea>
           </div>
         </div>
         <div class='col'></div>
@@ -64,10 +64,10 @@
 
       <div class='row black'>
         <div class='col'></div>
-        <div class='col'><img src="img/graffiti/confirmpassword.png" /></div>
-        <div class='col'>
+        <div class='col'><img src="img/graffiti/StorytellerPassword.png" /></div>
+        <div class='col-4'>
           <div class="input-group input-group-lg">
-            <input type="password" name="passwordConfirm" class="form-control border" placeholder="Confirm Password" required />
+            <input type="password" name="storytellerPassword" class="form-control border" placeholder="Enter Storyteller Password" required />
           </div>
         </div>
         <div class='col'></div>
@@ -75,10 +75,10 @@
 
       <div class='row black'>
         <div class='col'></div>
-        <div class='col'><img src="img/graffiti/email.png" /></div>
-        <div class='col'>
+        <div class='col'><img src="img/graffiti/STConfirmPassword.png" /></div>
+        <div class='col-4'>
           <div class="input-group input-group-lg">
-            <input type="text" name="email" class="form-control border" placeholder="Enter Email" required />
+            <input type="password" name="storytellerPWConfirm" class="form-control border" placeholder="Confirm Password" required />
           </div>
         </div>
         <div class='col'></div>
@@ -86,11 +86,30 @@
 
       <div class='row black'>
         <div class='col'></div>
-        <div class='col text-center'>
+        <div class='col'><img src="img/graffiti/playerPassword.png" /></div>
+        <div class='col-4'>
+          <div class="input-group input-group-lg">
+            <input type="password" name="playerPassword" class="form-control border" placeholder="Enter Player Password" />
+          </div>
+        </div>
+        <div class='col'></div>
+      </div>
+
+      <div class='row black'>
+        <div class='col'></div>
+        <div class='col'><img src="img/graffiti/PConfirmPassword.png" /></div>
+        <div class='col-4'>
+          <div class="input-group input-group-lg">
+            <input type="password" name="playerPWConfirm" class="form-control border" placeholder="Confirm Password" />
+          </div>
+        </div>
+        <div class='col'></div>
+      </div>
+
+      <div class='row black'>
+        <div class='col'>
           <br />
-          <p class='text-danger TNR'>EMAIL WILL ONLY BE USED TO RESET PASSWORD<p>
         </div>
-        <div class='col'></div>
       </div>
 
       <div class='row black'>
@@ -111,12 +130,12 @@
           <br />
           <?php
             $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-            if (strpos($url, 'error=username')) {
-              echo '<p class="text-danger">USERNAME ALREADY TAKEN</p>';
-            } elseif (strpos($url, 'error=email')){
-              echo '<p class="text-danger">PLEASE ENTER A VALID EMAIL</p>';
-            } elseif (strpos($url, 'error=password')){
-              echo '<p class="text-danger">PASSWORD VALUES DO NOT MATCH</p>';
+            if (strpos($url, 'error=name')) {
+              echo '<p class="text-danger">GAME NAME ALREADY TAKEN</p>';
+            } elseif (strpos($url, 'error=storytellerPW')){
+              echo '<p class="text-danger">STORYTELLER PASSWORDS DO NOT MATCH</p>';
+            } elseif (strpos($url, 'error=playerPW')){
+              echo '<p class="text-danger">PLAYER PASSWORDS DO NOT MATCH</p>';
             }
           ?>
         </div>

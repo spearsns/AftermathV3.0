@@ -1,6 +1,7 @@
 <?php
 	include('inc/config.php');
 	session_start();
+  unset($_SESSION['gameName']);
 ?>
 
 <!doctype html>
@@ -22,66 +23,98 @@
 		<div class="container-fluid">
   		<?php include('inc/header.php'); ?>
 
-  		<div class='row metal'>
-  			<div class='col'>
-  				<button type="button" class="btn btn-warning btn-lg btn-block border">FIRST TIME?</button>
-  			</div>
+      <div class='row metal border-bottom-0 py-1'>
 
-  			<div class='col'>
+  			<div class='col-3'>
   				<a href='newCharacter.php' role='button' class="btn btn-warning btn-lg btn-block border">NEW CHARACTER</a>
   			</div>
 
-  			<div class='col'>
+        <div class='col-6'>
+          <button type="button" class="btn btn-white btn-lg btn-block border">FIRST TIME?</button>
+        </div>
+
+  			<div class='col-3'>
   				<a href='characterSelect.php' role='button' class="btn btn-warning btn-lg btn-block border">CHARACTER MGMT</a>
   			</div>
+
   		</div>
 
-  		<div class='row metal'>
-        <div class='col-2'>
-          <button type='button' class='btn btn-danger btn-lg btn-block border'>NEW GAME</button>
-        </div>
+      <div class='row'>
+        <div class='col-10'>
+      		<div class='row metal border-top-0 py-1'>
+            <div class='col-2'>
+              <a href='newGame.php' role='button' class="btn btn-danger btn-lg btn-block border">NEW GAME</a>
+            </div>
 
-        <div class='col-2'>
-          <img src='img/graffiti/gamesX.png'>
-        </div>
+            <div class='col-3'>
+              <img src='img/graffiti/gamesX.png'>
+            </div>
 
-        <div class='col-4'>
-          <img src='img/graffiti/description.png' class='mx-auto d-block'>
-        </div>
+            <div class='col-5'>
+              <img src='img/graffiti/description.png' class='mx-auto d-block'>
+            </div>
 
-        <div class='col-2'></div>
-
-        <div class='col-2'>
-          <img src='img/graffiti/onlineX.png'>
-        </div>
-  		</div>
-
-      <div class='row black'>
-        <div class='col-2'>
-          <button type='button' class='btn btn-success btn-lg btn-block border'>PLAY</button>
-        </div>
-
-        <div class='col-2'>
-          <div class="input-group input-group-lg">
-            <input type="text" class="form-control border" placeholder='Game Name' id='gameNameArea' readonly>
+            <div class='col-2'></div>
           </div>
-        </div>
 
-        <div class='col-4'>
-          <div class="input-group input-group-lg">
-            <input type="text" class="form-control border" placeholder='Description' id='descriptionArea' readonly>
+          <!--GAME LIST-->
+          <?php
+            $sql = 
+            "SELECT GameName, Description, PlayerPassword
+            FROM games 
+            WHERE Finished = '0' AND Open = '1' ";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    while($row = $result->fetch_assoc()) {
+                      $playerTarget = 'playerLogin.php?'. $row['GameName'];
+                      if (empty($row['PlayerPassword'])){
+                        $playerTarget = 'characterSelect.php?' .$row['GameName'];
+                      }
+
+                    echo "
+                        <div class='row black py-1'>
+                          <div class='col-2'>
+                            <a href='". $playerTarget ."' role='button' class='btn btn-success btn-lg btn-block border'>PLAY</a>
+                          </div>
+
+                          <div class='col-3'>
+                            <div class='input-group input-group-lg'>
+                              <input type='text' class='form-control text-center border' value='". $row['GameName'] ."' readonly />
+                            </div>
+                          </div>
+
+                          <div class='col-5'>
+                            <div class='input-group input-group-lg'>
+                              <input type='text' class='form-control text-center border' value='". $row['Description'] ."' readonly />
+                            </div>
+                          </div>
+
+                          <div class='col-2'>
+                            <a href='storytellerLogin.php?". $row['GameName'] ."' role='button' class='btn btn-info btn-lg btn-block border'>TELL</a>
+                          </div>
+                        </div>
+                        ";
+                      }
+                } else {
+                echo "
+                    <div class='row black py-1'>
+                        <div class='col'></div>
+                        <div class='col'>
+                            <h5 class='text-white text-center TNR'>NO OPEN GAMES, BUILD ONE!</h4>
+                        </div>
+                        <div class='col'></div>
+                    </div>
+                    ";
+                }
+          ?>
           </div>
-        </div>
 
-        <div class='col-2'>
-          <button type='button' class='btn btn-info btn-lg btn-block border'>TELL</button>
-        </div>
+          <div class='col-2 brass'>
+            <img src='img/graffiti/onlineX.png'>
+          </div>
+    		</div>
 
-        <div class='col-2'>
-          <button type='button' class='btn btn-primary btn-lg btn-block border'>USERS</button>
-        </div>
-
-        <div class='col-1'></div>
       </div>
 
       <?php include('inc/footer.php'); ?>

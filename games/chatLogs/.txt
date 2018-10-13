@@ -1,0 +1,23 @@
+<span>Pretty Boy Floyd</span> : 55 
+<span>Pretty Boy Floyd</span> : 55 
+<span>Pretty Boy Floyd</span> : 55 
+<span>Pretty Boy Floyd</span> : 55 
+<span>Pretty Boy Floyd</span> : 55 
+<span>Pretty Boy Floyd</span> : 55 
+<span>Pretty Boy Floyd</span> : [RHC] R FOREARM 
+<span>Pretty Boy Floyd</span> : 55 
+Kemosabe : <span style='color: red;'>R UPPER BODY(RIBS/SHOULDER)
+Kemosabe : <span style='color: red;'>HEAD
+Storyteller : <span style='color: red;'>[RHC] L UPPER BODY(RIBS[HEART]/SHOULDER)
+Storyteller : <span style='color: red;'>[RHC] L CALF
+Kemosabe : <span style='color: red;'>MIDSECTION(STOMACH/LOWER BACK)
+Kemosabe : <span style='color: red;'>[2D10] 7
+Kemosabe : <span style='color: red;'>[%] 77
+Storyteller : <span style='color: red;'>[%] 38
+Storyteller : <span style='color: red;'>[2D10] 13
+Storyteller : <span style='color: red;'>[%] 79
+Storyteller : <span style='color: red;'>[%] 48
+Storyteller : <span style='color: red;'>[%] !!CRITICAL!! 66
+Storyteller : <span style='color: red;'>[%] 18
+Storyteller : <span style='color: red;'>[%] 74
+Storyteller : <span style='color: red;'>[%] 56

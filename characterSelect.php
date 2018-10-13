@@ -2,8 +2,16 @@
     include("inc/config.php");
     session_start();
 
+    $character = null;
+
     if (isset($_SESSION['ID']) == false){
         header("Location: login.php");
+    }
+
+    if (isset($_SESSION['gameName']) == true){
+        $target = 'games/'. $_SESSION['gameName'] .'_Play.php?';
+    } else {
+        $target = 'characterManagement.php?';
     } 
 
     $userID = $_SESSION['ID'];
@@ -27,10 +35,12 @@
         <?php include("inc/header.php"); ?>
         <div class="container-fluid">
 
-            <div class="row metal">
-                <div class='col'></div>
-                <div class="col"><h4 class='text-danger text-center pt-2 TNR'>PLEASE SELECT CHARACTER:</h4></div>
-                <div class='col'></div>
+            <div class='row metal'>
+                <div class='col'>
+                  <br />
+                  <h4 class='text-black text-center TNR'>CHOOSE YOUR CHARACTER:</h4>
+                  <br /> 
+                </div>
             </div>
 
             <?php
@@ -43,14 +53,22 @@
                         <div class='row black'>
                             <div class='col'></div>
                             <div class='col'>
-                                <a href='characterManagement.php?". $row['CharacterName'] ."' role='button' class='btn btn-warning btn-lg btn-block border'>
+                                <a href='". $target . $row['CharacterName'] ."' role='button' class='btn btn-warning btn-lg btn-block border'>
                                     ". $row['CharacterName'] ."</a>
                             </div>
                             <div class='col'></div>
                         </div>";
                     }
                 } else {
-                echo "0 results";
+                echo "
+                    <div class='row black'>
+                        <div class='col'></div>
+                        <div class='col'>
+                            <h4 class='text-white text-center TNR'>Zero Results:<br />You have to build a character first!</h4>
+                        </div>
+                        <div class='col'></div>
+                    </div>
+                    ";
                 }
             ?>
             <?php include("inc/footer.php"); ?>
