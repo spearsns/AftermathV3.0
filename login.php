@@ -83,7 +83,7 @@
           <?php
               $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
               if (strpos($url, 'error=fail')){
-              echo '<p class="txt-red">INVALID USERNAME OR PASSWORD</p>';
+              echo '<p class="text-danger TNR">INVALID USERNAME OR PASSWORD</p>';
               }
           ?>
         </div>

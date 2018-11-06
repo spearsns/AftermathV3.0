@@ -1,346 +1,338 @@
 <!--VIEW ID MARKS MODAL-->
+
 <div class="modal fade" id="idMarksModal" tabindex="-1" role="dialog" aria-labelledby="idMarksModal" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
-
-      <div class="modal-body">
-        <div class='container-fluid'>
-          <div class='row'>
-
-            <!--LEFT SIDE-->
-            <div class='col'>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>HAIR STYLE</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="hairStyle" class="form-control border text-center" 
-                      value='<?php echo $hair['HairStyle']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>HEAD</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="head" class="form-control border text-center" 
-                      value='<?php echo $idMarks['Head']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>NECK</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="neck" class="form-control border text-center" 
-                      value='<?php echo $idMarks['Neck']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>LEFT SHOULDER</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="leftShoulder" class="form-control border text-center"
-                      value='<?php echo $idMarks['LShoulder']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>LEFT RIBS</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="leftRibs" class="form-control border text-center"
-                      value='<?php echo $idMarks['LRibs']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>LEFT BICEP</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="leftBicep" class="form-control border text-center"
-                      value='<?php echo $idMarks['LBicep']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col px-0'><p class='mb-0 TNR text-center'>LOWER BACK</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="lowerBack" class="form-control border text-center" 
-                      value='<?php echo $idMarks['LowerBack']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>LEFT FOREARM</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="leftForearm" class="form-control border text-center"
-                      value='<?php echo $idMarks['LForearm']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>REAR</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="rear" class="form-control border text-center" 
-                      value='<?php echo $idMarks['Rear']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>LEFT HAND</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="leftHand" class="form-control border text-center"
-                      value='<?php echo $idMarks['LHand']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>LEFT THIGH</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="leftThigh" class="form-control border text-center"
-                      value='<?php echo $idMarks['LThigh']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>LEFT CALF</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="leftCalf" class="form-control border text-center" 
-                      value='<?php echo $idMarks['LCalf']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>LEFT FOOT</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="leftFoot" class="form-control border text-center" 
-                      value='<?php echo $idMarks['LFoot']; ?>' readonly />
-                  </div>
+      
+      <form id="IDMarksForm" method="post" action="../inc/updateIDMarks.php">
+      
+        <div class="modal-body">
+          <div class='container-fluid'>
+            <div class='row'>
+              <div class='col'>
+                <div class="input-group input-group-lg">
+                  <input type="hidden" name="CharacterID" id='CharacterID' value="" />
                 </div>
               </div>
             </div>
 
-            <!--CENTER-->
-            <div class='col px-0'>
-              <img src='../img/virtruvian/sketchyvirtruvian.jpg' class='img-fluid h-100' />
-            </div>
-            
-            <!--RIGHT SIDE-->
-            <div class='col'>
+            <div class='row'>
 
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>FACIAL HAIR</p></div>
-              </div>
-              <div class='row'>
+              <!--LEFT SIDE-->
                 <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="facialHair" class="form-control border text-center" 
-                      value='<?php echo $charInfo['FacialHair']; ?>' readonly />
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>HAIR STYLE</p></div>
                   </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="HairStyle" id="HairStyle" class="form-control border text-center idMarks" value="" readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>HEAD</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="Head" id="Head" class="form-control border text-center idMarks" value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>NECK</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="Neck" id="Neck" class="form-control border text-center idMarks" value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>LEFT SHOULDER</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="LShoulder" id="LShoulder" class="form-control border text-center idMarks" value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>LEFT RIBS</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="LRibs" id="LRibs" class="form-control border text-center idMarks"value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>LEFT BICEP</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="LBicep" id="LBicep" class="form-control border text-center idMarks"value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col px-0'><p class='mb-0 TNR text-center idMarks'>LOWER BACK</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="LowerBack" id="LowerBack" class="form-control border text-center idMarks" value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>LEFT FOREARM</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="LForearm" id="LForearm" class="form-control border text-center idMarks"value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>REAR</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="Rear" id="Rear" class="form-control border text-center idMarks" value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>LEFT HAND</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="LHand" id="LHand" class="form-control border text-center idMarks"value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>LEFT THIGH</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="LThigh" id="LThigh" class="form-control border text-center idMarks"value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>LEFT CALF</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="LCalf" id="LCalf" class="form-control border text-center idMarks" value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>LEFT FOOT</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="LFoot" id="LFoot" class="form-control border text-center idMarks" value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--CENTER-->
+                <div class='col px-0'>
+                  <img src='../img/virtruvian/sketchyvirtruvian.jpg' class='img-fluid h-100' />
+                </div>
+                
+                <!--R SIDE-->
+                <div class='col'>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>FACIAL HAIR</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="FacialHair" id="FacialHair" class="form-control border text-center idMarks" value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>FACE</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="Face" id="Face" class="form-control border text-center idMarks" value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>&nbsp;</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" class="form-control border text-center idMarks invisible" readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>RIGHT SHOULDER</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="RShoulder" id="RShoulder" class="form-control border text-center idMarks" value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>RIGHT RIBS</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="RRibs" id="RRibs" class="form-control border text-center idMarks" value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>RIGHT BICEP</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="RBicep" id="RBicep" class="form-control border text-center idMarks" value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>STOMACH</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="Stomach" id="Stomach" class="form-control border text-center idMarks" value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>RIGHT FOREARM</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="RForearm" id="RForearm" class="form-control border text-center idMarks" value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>GROIN</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="Groin" id="Groin" class="form-control border text-center idMarks" value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>RIGHT HAND</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="RHand" id="RHand" class="form-control border text-center idMarks" value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col px-0'><p class='mb-0 TNR text-center idMarks'>RIGHT THIGH</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="RThigh" id="RThigh" class="form-control border text-center idMarks" value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>RIGHT CALF</p></div>
+                  </div>
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="RCalf" id="RCalf" class="form-control border text-center idMarks" value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'><p class='mb-0 TNR text-center idMarks'>RIGHT FOOT</p></div>
+                  </div>
+
+                  <div class='row'>
+                    <div class='col'>
+                      <div class="input-group input-group-lg">
+                        <input type="text" name="RFoot" id="RFoot" class="form-control border text-center idMarks" value='' readonly />
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
 
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>FACE</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="face" class="form-control border text-center"
-                      value='<?php echo $idMarks['Face']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>&nbsp;</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" class="form-control border text-center invisible" readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>RIGHT SHOULDER</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="rightShoulder" class="form-control border text-center" 
-                      value='<?php echo $idMarks['RShoulder']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>RIGHT RIBS</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="rightRibs" class="form-control border text-center" 
-                      value='<?php echo $idMarks['RRibs']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>RIGHT BICEP</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="rightBicep" class="form-control border text-center" 
-                      value='<?php echo $idMarks['RBicep']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>STOMACH</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="stomach" class="form-control border text-center" 
-                      value='<?php echo $idMarks['Stomach']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>RIGHT FOREARM</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="rightForearm" class="form-control border text-center" 
-                      value='<?php echo $idMarks['RForearm']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>GROIN</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="groin" class="form-control border text-center" 
-                      value='<?php echo $idMarks['Groin']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>RIGHT HAND</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="rightHand" class="form-control border text-center" 
-                      value='<?php echo $idMarks['RHand']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col px-0'><p class='mb-0 TNR text-center'>RIGHT THIGH</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="rightThigh" class="form-control border text-center" 
-                      value='<?php echo $idMarks['RThigh']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>RIGHT CALF</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="rightCalf" class="form-control border text-center" 
-                      value='<?php echo $idMarks['RCalf']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
-
-              <div class='row'>
-                <div class='col'><p class='mb-0 TNR text-center'>RIGHT FOOT</p></div>
-              </div>
-              <div class='row'>
-                <div class='col'>
-                  <div class="input-group input-group-lg">
-                    <input type="text" id="rightFoot" class="form-control border text-center" 
-                      value='<?php echo $idMarks['RFoot']; ?>' readonly />
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="modal-footer">
-        <div class='col'></div>
-        <div class='col'>
-          <button type="button" class="btn btn-danger btn-lg btn-block border" data-dismiss="modal">CLOSE</button>
+        <div class="modal-footer">
+
+          <div class='col'></div>
+          <div class='col' id='closeBtn'>
+            <button type="button" class="btn btn-danger btn-lg btn-block border" data-dismiss="modal">CLOSE</button>
+          </div>
+          <div class='col'></div>
+
         </div>
-        <div class='col'></div>
-      </div>
+
+      </form>
     </div>
   </div>
 </div>

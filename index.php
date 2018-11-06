@@ -1,7 +1,23 @@
 <?php
 	include('inc/config.php');
 	session_start();
-  unset($_SESSION['gameName']);
+
+  if(isset($_SESSION['gameID'])){
+
+    $ID = $_SESSION['ID'];
+    $gameID = $_SESSION['gameID'];
+     
+    $GPUpdateSQL =
+      "UPDATE game_participants
+      SET StorytellerActive = 0, PlayerActive = 0
+      WHERE GameID = '$gameID' AND UserID = '$ID'
+      ";
+
+    $result2 = mysqli_query($conn, $GPUpdateSQL) or die(mysqli_error($conn));
+  }
+  
+    unset($_SESSION['gameID']);
+    unset($_SESSION['gameName']);
 ?>
 
 <!doctype html>

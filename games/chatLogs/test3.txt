@@ -840,3 +840,27 @@ Storyteller : <span style='color: red;'>[2D10] 9
 Storyteller : <span style='color: red;'>[2D10] 19
 Storyteller : <span style='color: red;'>[2D10] 13
 Storyteller : <span style='color: red;'>RIGHT BICEP
+Kemosabe : <span style='color: red;'>[%] 25
+Kemosabe : <span style='color: red;'>[2D10] 5
+Kemosabe : <span style='color: red;'>[%] 25
+Kemosabe : <span style='color: red;'>[2D10] 10
+Kemosabe : <span style='color: red;'>LEFT UPPER BODY (RIBS[HEART]/SHOULDER)
+Kemosabe : <span style='color: red;'>[%] 13
+Kemosabe : <span style='color: red;'>[2D10] 12
+Kemosabe : <span style='color: red;'>MIDSECTION (STOMACH/LOWER BACK)
+<span>Storyteller</span> : hi kemosabe 
+<span>Kemosabe</span> : whattup storyteller?!?! 
+<span>Storyteller</span> : joao must die~!!!! 
+<span>Kemosabe</span> : que? 
+<span>Storyteller</span> : roll percentile to hit 
+Kemosabe : <span style='color: red;'>[%] 64
+<span>Storyteller</span> : glancing blow 
+<span>Storyteller</span> : roll random hit 
+Kemosabe : <span style='color: red;'>LEFT UPPER BODY (RIBS[HEART]/SHOULDER)
+<span>Kemosabe</span> : just a flesh wound! 
+<span>Storyteller</span> : tis 
+Storyteller : <span style='color: red;'>[2D10] 17
+Kemosabe : <span style='color: red;'>[%] 19
+Kemosabe : <span style='color: red;'>[2D10] 13
+Kemosabe : <span style='color: red;'>RIGHT FOREARM
+<span>Storyteller</span> : just confirming 

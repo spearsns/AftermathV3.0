@@ -18,15 +18,13 @@
                         <div class='col-2'><p class='pt-2 TNR text-center'>NAME:</p></div>
                         <div class='col-4'>
                           <div class="input-group input-group-lg">
-                            <input type="text" id="name" name="name" class="form-control border text-center"
-                              value='<?php echo $characterName; ?>' readonly />
+                            <input type="text" id="CharacterName" class="form-control border text-center demographic" value="" readonly />
                           </div>
                         </div>
                         <div class='col-2'><p class='pt-2 TNR text-center'>BACKGROUND:</p></div>
                         <div class='col-4'>
                           <div class="input-group input-group-lg">
-                            <input type="text" id="background" name="background" class="form-control border text-center"
-                              value="<?php echo $charInfo['Background']; ?>" readonly />
+                            <input type="text" id="Background" class="form-control border text-center demographic" value="" readonly />
                           </div>
                         </div>
                       </div>
@@ -35,15 +33,13 @@
                         <div class='col-2'><p class='pt-2 TNR text-center'>HABITAT:</p></div>
                         <div class='col-4'>
                           <div class="input-group input-group-lg">
-                            <input type="text" id="habitat" name="habitat" class="form-control border text-center"
-                              value="<?php echo $charInfo['Habitat']; ?>" readonly />
+                            <input type="text" id="Habitat" class="form-control border text-center demographic" value="" readonly />
                           </div>
                         </div>
                         <div class='col-2'><p class='pt-2 TNR text-center'>ETHNICITY:</p></div>
                         <div class='col-4'>
                           <div class="input-group input-group-lg">
-                            <input type="text" id="ethnicity" name="ethnicity" class="form-control border text-center"
-                              value="<?php echo $charInfo['Ethnicity']; ?>" readonly />
+                            <input type="text" id="Ethnicity" class="form-control border text-center demographic" value="" readonly />
                           </div>
                         </div>
                       </div>
@@ -52,15 +48,13 @@
                         <div class='col-2'><p class='pt-2 TNR text-center'>AGE:</p></div>
                         <div class='col-4'>
                           <div class="input-group input-group-lg">
-                            <input type="text" id="age" name="age" class="form-control border text-center"
-                              value="<?php echo $charInfo['Age']; ?>" readonly />
+                            <input type="text" id="Age" class="form-control border text-center demographic" value="" readonly />
                           </div>
                         </div>
                         <div class='col-2'><p class='pt-2 TNR text-center'>SEX:</p></div>
                         <div class='col-4'>
                           <div class="input-group input-group-lg">
-                            <input type="text" id="sex" name="sex" class="form-control border text-center"
-                              value="<?php echo $sex; ?>" readonly />
+                            <input type="text" id="Sex" class="form-control border text-center demographic" value="" readonly />
                           </div>
                         </div>
                       </div>
@@ -69,15 +63,13 @@
                         <div class='col-2'><p class='pt-2 TNR text-center'>HAIR STYLE:</p></div>
                         <div class='col-4'>
                           <div class="input-group input-group-lg">
-                            <input type="text" id="hairStyle" name="hairStyle" class="form-control border text-center"
-                              value="<?php echo $charInfo['HairStyle']; ?>" readonly />
+                            <input type="text" id="HairStyle" class="form-control border text-center demographic" value="" readonly />
                           </div>
                         </div>
                         <div class='col-2'><p class='pt-2 TNR text-center'>HAIR COLOR:</p></div>
                         <div class='col-4'>
                           <div class="input-group input-group-lg">
-                            <input type="text" id="hairColor" name="hairColor" class="form-control border text-center"
-                              value="<?php echo $charInfo['HairColor']; ?>" readonly />
+                            <input type="text" id="HairColor" class="form-control border text-center demographic" value="" readonly />
                           </div>
                         </div>
                       </div>
@@ -86,15 +78,13 @@
                         <div class='col-2'><p class='pt-2 TNR text-center'>FACIAL HAIR:</p></div>
                         <div class='col-4'>
                           <div class="input-group input-group-lg">
-                            <input type="text" id="facialHair" name="facialHair" class="form-control border text-center"
-                              value="<?php echo $charInfo['FacialHair']; ?>" readonly/>
+                            <input type="text" id="FacialHair" class="form-control border text-center demographic" value="" readonly />
                           </div>
                         </div>
                         <div class='col-2'><p class='pt-2 TNR text-center'>EYE COLOR:</p></div>
                         <div class='col-4'>
                           <div class="input-group input-group-lg">
-                            <input type="text" id="eyeColor" name="eyeColor" class="form-control border text-center"
-                              value="<?php echo $charInfo['EyeColor']; ?>" readonly />
+                            <input type="text" id="EyeColor" class="form-control border text-center demographic" value="" readonly />
                           </div>
                         </div>
                       </div>
@@ -103,51 +93,45 @@
                         <div class='col-2'><p class='pt-2 TNR text-center'>EXP POOL:</p></div>
                         <div class='col-4'>
                           <div class="input-group input-group-lg">
-                            <input type="text" id="expPool" name="expPool" class="form-control border text-center experience"
-                              value="<?php echo $charInfo['RemainingExp']; ?>" readonly />
+                            <input type="text" id="RemainingExp" class="form-control border text-center experience demographic" value="" readonly />
                           </div>
                         </div>
                         <div class='col-2'><p class='pt-2 TNR text-center'>TOTAL EXP:</p></div>
                         <div class='col-4'>
                           <div class="input-group input-group-lg">
-                            <input type="text" id="totalExp" name="totalExp" class="form-control border text-center"
-                              value="<?php echo $charInfo['TotalExp']; ?>" readonly />
+                            <input type="text" id="TotalExp" class="form-control border text-center demographic" value="" readonly />
                           </div>
                         </div>
                       </div>
 
                   <div class='row no-gutters'>
                     <div class='col'><h4 class='TNR text-center'><u>COMBAT SKILLS</u></h4></div>
-                    <div class='col'><h4 class='TNR text-center'><u>PHYSICAL TRAITS</u></h4></div>
+                    <div class='col'><h4 class='TNR text-center'><u>PHYSICAL TRAIT</u></h4></div>
                   </div>
 
                   <div class='row no-gutters'>
                     <div class='col'><p class='pt-2 TNR text-center'>UNARMED:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="unarmed" name='unarmed' class="form-control border text-center"
-                          value="<?php echo $charSkills['Unarmed']; ?>" readonly />
+                        <input type="text" id="Unarmed" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>THROWN:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="thrown" name='thrown' class="form-control border text-center"
-                          value="<?php echo $charSkills['Thrown']; ?>" readonly />
+                        <input type="text" id="Thrown" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>MEM:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="memory" name='memory' class="form-control border text-center"
-                          value="<?php echo $charTraits['Memory']; ?>" readonly />
+                        <input type="text" id="Memory" class="form-control border text-center trait" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>STR:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="strength" name='strength' class="form-control border text-center"
-                          value="<?php echo $charTraits['Strength']; ?>" readonly />
+                        <input type="text" id="Strength" class="form-control border text-center trait" value="" readonly />
                       </div>    
                     </div>
                   </div>
@@ -156,29 +140,25 @@
                     <div class='col'><p class='pt-2 TNR text-center'>GRAPPLE:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="grapple" name='grapple' class="form-control border text-center"
-                          value="<?php echo $charSkills['Grapple']; ?>" readonly />
+                        <input type="text" id="Grapple" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>ARCHERY:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="archery" name='archery' class="form-control border text-center"
-                          value="<?php echo $charSkills['Archery']; ?>" readonly />
+                        <input type="text" id="Archery" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>LOG:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="logic" name='logic' class="form-control border text-center"
-                          value="<?php echo $charTraits['Logic']; ?>" readonly />
+                        <input type="text" id="Logic" class="form-control border text-center trait" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>END:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="endurance" name='endurance' class="form-control border text-center"
-                          value="<?php echo $charTraits['Endurance']; ?>" readonly />
+                        <input type="text" id="Endurance" class="form-control border text-center trait" value="" readonly />
                       </div>    
                     </div>
                   </div>
@@ -187,29 +167,25 @@
                     <div class='col'><p class='pt-2 TNR text-center'>SHORT:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="shortWeapons" name='shortWeapons' class="form-control border text-center"
-                          value="<?php echo $charSkills['ShortWeapons']; ?>" readonly />
+                        <input type="text" id="ShortWeapons" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>PISTOLS:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="pistols" name='pistols' class="form-control border text-center"
-                          value="<?php echo $charSkills['Pistols']; ?>" readonly />
+                        <input type="text" id="Pistols" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>PER:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="perception" name='perception' class="form-control border text-center"
-                          value="<?php echo $charTraits['Perception']; ?>" readonly />
+                        <input type="text" id="Perception" class="form-control border text-center trait" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>AGL:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="agility" name='agility' class="form-control border text-center"
-                          value="<?php echo $charTraits['Agility']; ?>" readonly />
+                        <input type="text" id="Agility" class="form-control border text-center trait" value="" readonly />
                       </div>    
                     </div>
                   </div>
@@ -218,29 +194,25 @@
                     <div class='col'><p class='pt-2 TNR text-center'>LONG:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="longWeapons" name='longWeapons' class="form-control border text-center"
-                          value="<?php echo $charSkills['LongWeapons']; ?>" readonly />
+                        <input type="text" id="LongWeapons" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>RIFLES:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="rifles" name='rifles' class="form-control border text-center"
-                          value="<?php echo $charSkills['Rifles']; ?>" readonly />
+                        <input type="text" id="Rifles" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>WILL:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="willpower" name='willpower' class="form-control border text-center"
-                          value="<?php echo $charTraits['Willpower']; ?>" readonly />
+                        <input type="text" id="Willpower" class="form-control border text-center trait" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>SPD:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="speed" name='speed' class="form-control border text-center"
-                          value="<?php echo $charTraits['Speed']; ?>" readonly />
+                        <input type="text" id="Speed" class="form-control border text-center trait" value="" readonly />
                       </div>    
                     </div>
                   </div>
@@ -249,29 +221,25 @@
                     <div class='col'><p class='pt-2 TNR text-center'>2 HAND:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="twoHand" name='twoHand' class="form-control border text-center"
-                          value="<?php echo $charSkills['TwoHandWeapons']; ?>" readonly />
+                        <input type="text" id="TwoHandWeapons" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>BURST:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="burst" name='burst' class="form-control border text-center"
-                          value="<?php echo $charSkills['Burst']; ?>" readonly />
+                        <input type="text" id="Burst" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>CHA:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="charisma" name='charisma' class="form-control border text-center"
-                          value="<?php echo $charTraits['Charisma']; ?>" readonly />
+                        <input type="text" id="Charisma" class="form-control border text-center trait" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>BTY:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="beauty" name='beauty' class="form-control border text-center"
-                          value="<?php echo $charTraits['Beauty']; ?>" readonly />
+                        <input type="text" id="Beauty" class="form-control border text-center trait" value="" readonly />
                       </div>
                     </div>
                   </div>
@@ -280,29 +248,25 @@
                     <div class='col'><p class='pt-2 TNR text-center'>CHAIN:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="chain" name='chain' class="form-control border text-center"
-                          value="<?php echo $charSkills['ChainWeapons']; ?>" readonly />
+                        <input type="text" id="ChainWeapons" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>SPECIAL:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="special" name='special' class="form-control border text-center"
-                          value="<?php echo $charSkills['SpecialWeapons']; ?>" readonly />
+                        <input type="text" id="SpecialWeapons" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>ACTIONS:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="actions" name='actions' class="form-control border text-center"
-                          value="<?php echo $charTraits['Actions']; ?>" readonly />
+                        <input type="text" id="Actions" class="form-control border text-center" value="" readonly />
                       </div>
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>SEQ:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="sequence" name='sequence' class="form-control border text-center"
-                          value="<?php echo $charTraits['Sequence']; ?>" readonly />
+                        <input type="text" id="Sequence" class="form-control border text-center" value="" readonly />
                       </div>
                     </div>
                   </div>
@@ -311,23 +275,20 @@
                     <div class='col'><p class='pt-2 TNR text-center'>SHIELD:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="shield" name='shield' class="form-control border text-center"
-                          value="<?php echo $charSkills['Shield']; ?>" readonly />
+                        <input type="text" id="Shield" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>WPN SYS:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="weaponSys" name='weaponSys' class="form-control border text-center"
-                          value="<?php echo $charSkills['WeaponSystems']; ?>" readonly />
+                        <input type="text" id="WeaponSystems" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'></div>
                     <div class='col'><p class='pt-2 TNR text-center'>OFF HAND:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="offHand" name='offHand' class="form-control border text-center"
-                          value="<?php echo $charSkills['OffHand']; ?>" readonly />
+                        <input type="text" id="OffHand" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'></div>
@@ -337,23 +298,20 @@
                     <div class='col'><p class='pt-2 TNR text-center'>BLOCK:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="block" name='block' class="form-control border text-center"
-                          value="<?php echo $charSkills['Block']; ?>" readonly />
+                        <input type="text" id="Block" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>DODGE:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="dodge" name='dodge' class="form-control border text-center"
-                          value="<?php echo $charSkills['Dodge']; ?>" readonly />
+                        <input type="text" id="Dodge" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'></div>
                     <div class='col'><p class='pt-2 TNR text-center'>GAMBLE:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="gambling" name='gambling' class="form-control border text-center"
-                          value="<?php echo $charSkills['Gambling']; ?>" readonly />
+                        <input type="text" id="Gambling" class="form-control border text-center" value="" readonly />
                       </div>
                     </div>
                     <div class='col'></div>                
@@ -368,29 +326,25 @@
                     <div class='col'><p class='pt-2 TNR text-center'>STEALTH:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="stealth" name='stealth' class="form-control border text-center"
-                          value="<?php echo $charSkills['Stealth']; ?>" readonly />
+                        <input type="text" id="Stealth" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>CONCEAL:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="concealment" name='concealment' class="form-control border text-center"
-                          value="<?php echo $charSkills['Concealment']; ?>" readonly />
+                        <input type="text" id="Concealment" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>ENV AWR:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="envAware" name='envAware' class="form-control border text-center"
-                          value="<?php echo $charSkills['EnvAware']; ?>" readonly />
+                        <input type="text" id="EnvAware" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>SURVEY:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="surveillance" name='surveillance' class="form-control border text-center"
-                          value="<?php echo $charSkills['Surveillance']; ?>" readonly />
+                        <input type="text" id="Surveillance" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                   </div>
@@ -399,29 +353,25 @@
                     <div class='col'><p class='pt-2 TNR text-center'>SLEIGHT:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="sleight" name='sleight' class="form-control border text-center"
-                          value="<?php echo $charSkills['Sleight']; ?>" readonly />
+                        <input type="text" id="Sleight" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>LOCKPICK:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="lockpick" name='lockpick' class="form-control border text-center"
-                          value="<?php echo $charSkills['Lockpick']; ?>" readonly />
+                        <input type="text" id="Lockpick" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>NAVIG:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="navigation" name='navigation' class="form-control border text-center"
-                          value="<?php echo $charSkills['Navigation']; ?>" readonly />
+                        <input type="text" id="Navigation" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>PRESERVE:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="preservation" name='preservation' class="form-control border text-center"
-                          value="<?php echo $charSkills['Preservation']; ?>" readonly />
+                        <input type="text" id="Preservation" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                   </div>
@@ -430,29 +380,25 @@
                     <div class='col'><p class='pt-2 TNR text-center'>FORGERY:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="forgery" name='forgery' class="form-control border text-center"
-                          value="<?php echo $charSkills['Forgery']; ?>" readonly />
+                        <input type="text" id="Forgery" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>CRYPTO:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="cryptography" name='cryptography' class="form-control border text-center"
-                          value="<?php echo $charSkills['Cryptography']; ?>" readonly />
+                        <input type="text" id="Cryptography" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>TRACK:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="tracking" name='tracking' class="form-control border text-center"
-                          value="<?php echo $charSkills['Tracking']; ?>" readonly />
+                        <input type="text" id="Tracking" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>TRAPS:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="trapping" name='trapping' class="form-control border text-center"
-                          value="<?php echo $charSkills['Trapping']; ?>" readonly />
+                        <input type="text" id="Trapping" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                   </div>
@@ -461,29 +407,25 @@
                     <div class='col'><p class='pt-2 TNR text-center'>DISGUISE:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="disguise" name='disguise' class="form-control border text-center"
-                          value="<?php echo $charSkills['Disguise']; ?>" readonly />
+                        <input type="text" id="Disguise" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>RESTRAIN:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="restraints" name='restraints' class="form-control border text-center"
-                          value="<?php echo $charSkills['Restraints']; ?>" readonly />
+                        <input type="text" id="Restraints" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>FISH:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="fishing" name='fishing' class="form-control border text-center"
-                          value="<?php echo $charSkills['Fishing']; ?>" readonly />
+                        <input type="text" id="Fishing" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>FIRST AID:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="firstAid" name='firstAid' class="form-control border text-center"
-                          value="<?php echo $charSkills['FirstAid']; ?>" readonly />
+                        <input type="text" id="FirstAid" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                   </div>
@@ -497,22 +439,19 @@
                     <div class='col'><p class='pt-2 TNR text-center'>SKATE:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="skateboard" name='skateboard' class="form-control border text-center"
-                          value="<?php echo $charSkills['Skateboard']; ?>" readonly />
+                        <input type="text" id="Skateboard" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>BICYCLE:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="bicycle" name='bicycle' class="form-control border text-center"
-                          value="<?php echo $charSkills['Bicycle']; ?>" readonly />
+                        <input type="text" id="Bicycle" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>CRAFT:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="crafting" name='crafting' class="form-control border text-center"
-                          value="<?php echo $charSkills['Crafting']; ?>" readonly />
+                        <input type="text" id="Crafting" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'></div>
@@ -523,29 +462,25 @@
                     <div class='col'><p class='pt-2 TNR text-center'>HORSE:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="horsemanship" name='horsemanship' class="form-control border text-center"
-                          value="<?php echo $charSkills['Horsemanship']; ?>" readonly />
+                        <input type="text" id="Horsemanship" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>AUTOS:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="automobile" name='automobile' class="form-control border text-center"
-                          value="<?php echo $charSkills['Automobile']; ?>" readonly />
+                        <input type="text" id="Automobile" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>COMPS:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="computers" name='computers' class="form-control border text-center"
-                          value="<?php echo $charSkills['Computers']; ?>" readonly />
+                        <input type="text" id="Computers" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>PROGRAM:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="programming" name='programming' class="form-control border text-center"
-                          value="<?php echo $charSkills['Programming']; ?>" readonly />
+                        <input type="text" id="Programming" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                   </div>
@@ -554,29 +489,25 @@
                     <div class='col'><p class='pt-2 TNR text-center'>MOTOR X:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="motorcycle" name='motorcycle' class="form-control border text-center"
-                          value="<?php echo $charSkills['Motorcycle']; ?>" readonly />
+                        <input type="text" id="Motorcycle" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>JET SKI:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="jetSki" name='jetSki' class="form-control border text-center"
-                          value="<?php echo $charSkills['Jet Ski']; ?>" readonly />
+                        <input type="text" id="JetSki" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>RADIOS:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="radios" name='radios' class="form-control border text-center"
-                          value="<?php echo $charSkills['Radios']; ?>" readonly />
+                        <input type="text" id="Radios" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>NETWORK:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="networks" name='networks' class="form-control border text-center"
-                          value="<?php echo $charSkills['Networks']; ?>" readonly />
+                        <input type="text" id="Networks" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                   </div>
@@ -585,29 +516,25 @@
                     <div class='col'><p class='pt-2 TNR text-center'>SAIL:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="sailing" name='sailing' class="form-control border text-center"
-                          value="<?php echo $charSkills['Sailing']; ?>" readonly />
+                        <input type="text" id="Sailing" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>BOAT:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="boating" name='boating' class="form-control border text-center"
-                          value="<?php echo $charSkills['Boating']; ?>" readonly />
+                        <input type="text" id="Boating" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>MECHS:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="mechanics" name='mechanics' class="form-control border text-center"
-                          value="<?php echo $charSkills['Mechanics']; ?>" readonly />
+                        <input type="text" id="Mechanics" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>ELECTRIC:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="electrical" name='electrical' class="form-control border text-center"
-                          value="<?php echo $charSkills['Electrical']; ?>" readonly />
+                        <input type="text" id="Electrical" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                   </div>
@@ -616,29 +543,25 @@
                     <div class='col'><p class='pt-2 TNR text-center'>MX GEAR:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="multiGear" name='multiGear' class="form-control border text-center"
-                          value="<?php echo $charSkills['Multi Gear']; ?>" readonly />
+                        <input type="text" id="MultiGear" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>HV EQUIP:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="hvyEquip" name='hvyEquip' class="form-control border text-center"
-                          value="<?php echo $charSkills['Heavy Equip']; ?>" readonly />
+                        <input type="text" id="HeavyEquip" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>CIRCUIT:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="circuitry" name='circuitry' class="form-control border text-center"
-                          value="<?php echo $charSkills['Circuitry']; ?>" readonly />
+                        <input type="text" id="Circuitry" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>EXPLODE:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="explosives" name='explosives' class="form-control border text-center"
-                          value="<?php echo $charSkills['Explosives']; ?>" readonly />
+                        <input type="text" id="Explosives" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                   </div>
@@ -647,29 +570,25 @@
                     <div class='col'><p class='pt-2 TNR text-center'>HELIS:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="helicopters" name='helicopters' class="form-control border text-center"
-                          value="<?php echo $charSkills['Helicopters']; ?>" readonly />
+                        <input type="text" id="Helicopters" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>PLANES:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="airplanes" name='airplanes' class="form-control border text-center"
-                          value="<?php echo $charSkills['Airplanes']; ?>" readonly />
+                        <input type="text" id="Airplanes" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>CONSTR:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="construction" name='construction' class="form-control border text-center"
-                          value="<?php echo $charSkills['Construction']; ?>" readonly />
+                        <input type="text" id="Construction" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>ARCHIT:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="architecture" name='architecture' class="form-control border text-center"
-                          value="<?php echo $charSkills['Architecture']; ?>" readonly />
+                        <input type="text" id="Architecture" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                   </div>
@@ -683,29 +602,25 @@
                     <div class='col'><p class='pt-2 TNR text-center'>NEGOT:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="negotiation" name='negotiation' class="form-control border text-center"
-                          value="<?php echo $charSkills['Negotiation']; ?>" readonly />
+                        <input type="text" id="Negotiation" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>GUILE:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="guile" name='guile' class="form-control border text-center"
-                          value="<?php echo $charSkills['Guile']; ?>" readonly />
+                        <input type="text" id="Guile" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>HISTORY:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="history" name='history' class="form-control border text-center"
-                          value="<?php echo $charSkills['History']; ?>" readonly />
+                        <input type="text" id="History" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>FORENS:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="forensics" name='forensics' class="form-control border text-center"
-                          value="<?php echo $charSkills['Forensics']; ?>" readonly />
+                        <input type="text" id="Forensics" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                   </div>
@@ -714,29 +629,25 @@
                     <div class='col'><p class='pt-2 TNR text-center'>ETIQ:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="etiquette" name='etiquette' class="form-control border text-center"
-                          value="<?php echo $charSkills['Etiquette']; ?>" readonly />
+                        <input type="text" id="Etiquette" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>ANIMALS:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="animals" name='animals' class="form-control border text-center"
-                          value="<?php echo $charSkills['Animal Handling']; ?>" readonly />
+                        <input type="text" id="Animals" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>BIO:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="biology" name='biology' class="form-control border text-center"
-                          value="<?php echo $charSkills['Biology']; ?>" readonly />
+                        <input type="text" id="Biology" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>CHEM:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="chemistry" name='chemistry' class="form-control border text-center"
-                          value="<?php echo $charSkills['Chemistry']; ?>" readonly />
+                        <input type="text" id="Chemistry" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                   </div>
@@ -745,29 +656,25 @@
                     <div class='col'><p class='pt-2 TNR text-center'>APPRAISE:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="appraisal" name='appraisal' class="form-control border text-center"
-                          value="<?php echo $charSkills['Appraisal']; ?>" readonly />
+                        <input type="text" id="Appraisal" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>LEGAL:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="legal" name='legal' class="form-control border text-center"
-                          value="<?php echo $charSkills['Legal']; ?>" readonly />
+                        <input type="text" id="Legal" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>BOTANY:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="botany" name='botany' class="form-control border text-center"
-                          value="<?php echo $charSkills['Botany']; ?>" readonly />
+                        <input type="text" id="Botany" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>MYCO:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="mycology" name='mycology' class="form-control border text-center"
-                          value="<?php echo $charSkills['Mycology']; ?>" readonly />
+                        <input type="text" id="Mycology" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                   </div>
@@ -775,40 +682,36 @@
                   <div class='row no-gutters'>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="lang1" name='lang1' class="form-control border text-center TNR langSlot" data-target='lang1Value'
-                          value="<?php echo $charInfo['SecondLanguage']; ?>" readonly /> 
+                        <input type="text" id="SecondLanguage" class="form-control border text-center TNR langSlot" data-target='lang1Value'
+                          value="" readonly /> 
                       </div>
                     </div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="lang1Value" name='lang1Value' class="form-control border text-center"
-                          value="<?php echo $charSkills['SecondLang']; ?>" readonly />
+                        <input type="text" id="SecondLang" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="lang2" name='lang2' class="form-control border text-center TNR langSlot" data-target='lang2Value'
-                           value="<?php echo $charInfo['ThirdLanguage']; ?>" readonly />
+                        <input type="text" id="ThirdLanguage" class="form-control border text-center TNR langSlot" data-target='lang2Value'
+                          value="" readonly />
                       </div>
                     </div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="lang2Value" name='lang2Value' class="form-control border text-center"
-                          value="<?php echo $charSkills['ThirdLang']; ?>" readonly />
+                        <input type="text" id="ThirdLang" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>TOXIC:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="toxicology" name='toxicology' class="form-control border text-center"
-                          value="<?php echo $charSkills['Toxicology']; ?>" readonly />
+                        <input type="text" id="Toxicology" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>PHARMA:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="pharmacology" name='pharmacology' class="form-control border text-center"
-                          value="<?php echo $charSkills['Pharmacology']; ?>" readonly />
+                        <input type="text" id="Pharmacology" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                   </div>
@@ -816,40 +719,36 @@
                   <div class='row no-gutters'>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="lang3" name='lang3' class="form-control border text-center TNR langSlot" data-target='lang3Value'
-                            value="<?php echo $charInfo['FourthLanguage']; ?>" readonly />
+                        <input type="text" id="FourthLanguage" class="form-control border text-center TNR langSlot" data-target='lang3Value'
+                          value="" readonly />
                       </div>
                     </div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="lang3Value" name='lang3Value' class="form-control border text-center"
-                          value="<?php echo $charSkills['FourthLang']; ?>" readonly />
+                        <input type="text" id="FourthLang" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="lang4" name='lang4' class="form-control border text-center TNR langSlot" data-target='lang4Value'
-                            value="<?php echo $charInfo['FifthLanguage']; ?>" readonly />
+                        <input type="text" id="FifthLanguage" class="form-control border text-center TNR langSlot" data-target='lang4Value'
+                          value="" readonly />
                       </div>
                     </div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="lang4Value" name='lang4Value' class="form-control border text-center"
-                          value="<?php echo $charSkills['FifthLang']; ?>" readonly />
+                        <input type="text" id="FifthLang" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>SURGERY:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="surgery" name='surgery' class="form-control border text-center"
-                          value="<?php echo $charSkills['Surgery']; ?>" readonly />
+                        <input type="text" id="Surgery" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                     <div class='col'><p class='pt-2 TNR text-center'>MEDICINE:</p></div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="medicine" name='medicine' class="form-control border text-center"
-                          value="<?php echo $charSkills['Medicine']; ?>" readonly />
+                        <input type="text" id="Medicine" class="form-control border text-center" value="" readonly />
                       </div>    
                     </div>
                   </div>
@@ -863,26 +762,22 @@
                   <div class='row no-gutters'>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="ability1" name='ability1' class="form-control border text-center TNR abilitySlot" 
-                          value='<?php echo $charAbilities["1"] ?>' readonly />
+                        <input type="text" id="Ability1" class="form-control border text-center TNR abilitySlot" value="" readonly />
                       </div>
                     </div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="ability2" name='ability2' class="form-control border text-center TNR abilitySlot" 
-                          value='<?php echo $charAbilities["2"] ?>' readonly />
+                        <input type="text" id="Ability2" class="form-control border text-center TNR abilitySlot" value="" readonly />
                       </div>
                     </div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="ability3" name='ability3' class="form-control border text-center TNR abilitySlot" 
-                          value='<?php echo $charAbilities["3"] ?>' readonly />
+                        <input type="text" id="Ability3" class="form-control border text-center TNR abilitySlot" value="" readonly />
                       </div>
                     </div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="ability4" name='ability4' class="form-control border text-center TNR abilitySlot" 
-                          value='<?php echo $charAbilities["4"] ?>' readonly />
+                        <input type="text" id="Ability4" class="form-control border text-center TNR abilitySlot" value="" readonly /> 
                       </div>
                     </div>
                   </div>
@@ -890,26 +785,22 @@
                   <div class='row no-gutters'>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="ability5" name='ability5' class="form-control border text-center TNR abilitySlot" 
-                          value='<?php echo $charAbilities["5"] ?>' readonly />
+                        <input type="text" id="Ability5" class="form-control border text-center TNR abilitySlot" value="" readonly />
                       </div>
                     </div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="ability6" name='ability6' class="form-control border text-center TNR abilitySlot" 
-                          value='<?php echo $charAbilities["6"] ?>' readonly />
+                        <input type="text" id="Ability6" class="form-control border text-center TNR abilitySlot" value="" readonly />
                       </div>
                     </div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="ability7" name='ability7' class="form-control border text-center TNR abilitySlot" 
-                          value='<?php echo $charAbilities["7"] ?>' readonly />
+                        <input type="text" id="Ability7" class="form-control border text-center TNR abilitySlot" value="" readonly />
                       </div>
                     </div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="ability8" name='ability8' class="form-control border text-center TNR abilitySlot" 
-                          value='<?php echo $charAbilities["8"] ?>' readonly />
+                        <input type="text" id="Ability8" class="form-control border text-center TNR abilitySlot" value="" readonly />
                       </div>
                     </div>
                   </div>
@@ -917,26 +808,22 @@
                   <div class='row no-gutters'>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="ability9" name='ability9' class="form-control border text-center TNR abilitySlot" 
-                          value='<?php echo $charAbilities["9"] ?>' readonly />
+                        <input type="text" id="Ability9" class="form-control border text-center TNR abilitySlot" value="" readonly />
                       </div>
                     </div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="ability10" name='ability10' class="form-control border text-center TNR abilitySlot" 
-                          value='<?php echo $charAbilities["10"] ?>' readonly />
+                        <input type="text" id="Ability10" class="form-control border text-center TNR abilitySlot" value="" readonly />
                       </div>
                     </div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="ability11" name='ability11' class="form-control border text-center TNR abilitySlot" 
-                          value='<?php echo $charAbilities["11"] ?>' readonly />
+                        <input type="text" id="Ability11" class="form-control border text-center TNR abilitySlot" value="" readonly />
                       </div>
                     </div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="ability12" name='ability12' class="form-control border text-center TNR abilitySlot" 
-                          value='<?php echo $charAbilities["12"] ?>' readonly />
+                        <input type="text" id="Ability12" class="form-control border text-center TNR abilitySlot" value="" readonly />
                       </div>
                     </div>
                   </div>
@@ -944,26 +831,22 @@
                   <div class='row no-gutters'>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="ability13" name='ability13' class="form-control border text-center TNR abilitySlot" 
-                          value='<?php echo $charAbilities["13"] ?>' readonly />
+                        <input type="text" id="Ability13" class="form-control border text-center TNR abilitySlot" value="" readonly />
                       </div>
                     </div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="ability14" name='ability14' class="form-control border text-center TNR abilitySlot" 
-                          value='<?php echo $charAbilities["14"] ?>' readonly />
+                        <input type="text" id="Ability14" class="form-control border text-center TNR abilitySlot" value="" readonly />
                       </div>
                     </div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="ability15" name='ability15' class="form-control border text-center TNR abilitySlot" 
-                          value='<?php echo $charAbilities["15"] ?>' readonly />
+                        <input type="text" id="Ability15" class="form-control border text-center TNR abilitySlot" value="" readonly />
                       </div>
                     </div>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" id="ability16" name='ability16' class="form-control border text-center TNR abilitySlot" 
-                          value='<?php echo $charAbilities["16"] ?>' readonly />
+                        <input type="text" id="Ability16" class="form-control border text-center TNR abilitySlot" value="" readonly />
                       </div>
                     </div>
                   </div>

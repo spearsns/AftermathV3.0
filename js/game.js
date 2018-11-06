@@ -104,8 +104,7 @@
 		});
 	}
 
-	function sendDice(message, nickname)
-	{       
+	function sendDice(message, nickname){       
 	    updateChat();
 	     $.ajax({
 			   type: "POST",
@@ -128,11 +127,45 @@ $(document).ready(function(){
 	function roll(min, max){
 		return Math.round(Math.random() * (max - min)) + min;
 	}
+
 	function percentile(){
 		return (roll(0,9) * 10) + roll(1,10);
 	}
+
 	function twoD10(){
 		return roll(1,10) + roll(1,10);
+	}
+
+	function playerInterface(){
+		$.ajax({
+			type: "GET",
+			url: "../inc/playerInterface.php",
+			dataType: "html",
+			success: function(response){                    
+	           $("#interface").html(response);
+	       	}
+		});
+	}
+
+	function getStoryteller(){
+		$.ajax({
+			type: "GET",
+			url: "../inc/getStoryteller.php",
+			dataType: "html",
+			success: function(response){                    
+	           $("#storytellerName").val(response);
+	       	}
+		});
+	}
+
+	function getExp(){
+		$.ajax({
+			type: "GET",
+			url: "../inc/getExp.php",
+			success: function(response){
+				$('#expPool').val(String(response));
+			}
+		})
 	}
 
 	$('#percentileBtn').click(function(){
@@ -149,13 +182,12 @@ $(document).ready(function(){
 			roll == 99 ||
 			roll == 100){
 				var percentileResult = "[%] !!CRITICAL!! " + roll;
-		} else if (roll >= 01 && roll <= 09){
+		} else if (roll >= 1 && roll <= 9){
 			var percentileResult = "[%] 0" + roll;
 		} else {
 			var percentileResult = "[%] " + roll;
 		}
-			console.log(roll);
-			sendDice(percentileResult, name);
+		sendDice(percentileResult, name);
 	});
 
 	$('#twoD10Btn').click(function(){
@@ -206,15 +238,109 @@ $(document).ready(function(){
 		} else {
 			RHCResult = "RIGHT FOOT";
 		}
-		console.log(RHC);
 		sendDice(RHCResult, name);
 	});
 
-	$('.idMarksBtn').click(function(){
-		$('#idMarksModal').modal('toggle');
+	setInterval(getExp, 1000);
+	var listing = setInterval(playerInterface, 1000);
+	setInterval(getStoryteller, 1000);
+
+	$('.interface').on('click', '.idMarksBtn', function(e){ 
+		e.preventDefault(); 
+		var characterID = $(this).data('reference');
+		$.ajax({
+			type: 		"POST",
+			url: 		"../inc/getIDMarks.php",
+			data: 		{
+						'characterID' : characterID
+						},
+			dataType: 	"json",
+			success: 	function(idmarks){
+							$('#CharacterID').val(characterID);
+
+							if (window.location.href.indexOf("_Tell") > -1) {
+							    $('.idMarks').removeAttr('readonly');
+							    $('#closeBtn').html("<button type='submit' class='btn btn-success btn-lg btn-block border'>CONFIRM & SAVE</button>");
+							}
+							Object.keys(idmarks).forEach(function(key){
+								$('.idMarks').each(function(){
+									if( $(this).attr('id') == key){
+										$(this).val(idmarks[key]);
+									}
+								})
+							}); 
+						$('#idMarksModal').modal('toggle');
+						}
+		});
 	});
 
-	$('.charSheetBtn').click(function(){
-		$('#characterSheetModal').modal('toggle');
+	$("#IDMarksForm").submit(function(e) {
+	  	e.preventDefault();
+	  	var dataString = $("#IDMarksForm").serialize();
+	  	$.ajax({
+			type: 		"POST",
+			url: 		"../inc/updateIDMarks.php",
+			data: 		dataString,
+			dataType: 	"json"
+		});
+		$('#idMarksModal').modal('toggle');
+    });
+
+    $('.interface').on('click', '.charSheetBtn', function(e){ 
+		e.preventDefault(); 
+		var characterID = $(this).data('reference');
+		console.log('clicked');
+
+		$.ajax({
+			type: 		"POST",
+			url: 		"../inc/getCharacterSheet.php",
+			data: 		{
+						'characterID' : characterID
+						},
+			dataType: 	"json",
+			success: 	function(response){
+							console.log(response);
+							Object.keys(response).forEach(function(key){
+								if(key == 'Sex'){
+									if(response[key] == 1){
+										response[key] = 'Male';
+									} else {
+										response[key] = 'Female';
+									}
+								}
+								$('#characterSheetModal input[type="text"]').each(function(){
+									if( $(this).attr('id') == key){
+										$(this).val(response[key]);
+									}
+								})
+							}); 
+
+						$('#characterSheetModal').modal('toggle');
+						}
+		});
+	});
+
+    $('.interface').on('focus', '.earnedExp', function(e){ 
+		e.preventDefault(); 
+		clearInterval(listing);
+	});
+
+	$('.interface').on('click', '.awardExpBtn', function(e){ 
+		e.preventDefault(); 
+		var characterID = $(this).data('reference');
+		var experience = $('.earnedExp[data-reference="' + characterID + '"]').val();
+		$.ajax({
+			type: 		"POST",
+			url: 		"../inc/updateExperience.php",
+			data: 		{
+						'characterID' : characterID,
+						'experience' : experience
+						},
+			dataType: 	"html",
+			success: 	function(response){
+							$('.earnedExp[data-reference="' + characterID + '"]').val('');
+							listing = setInterval(playerInterface, 1000);
+						}
+		});
 	});
 });

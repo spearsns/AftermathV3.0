@@ -9,7 +9,7 @@ $userID = $_SESSION['ID'];
 
 $sql = "SELECT ID FROM games WHERE StorytellerPassword = '$password' AND GameName = '$gameName'";
 $result = $conn->query($sql);
-while($row = $result->fetch_assoc()) {
+if($row = $result->fetch_assoc()) {
 		$gameID = $row["ID"];
 		$_SESSION['gameID'] = $gameID;
 	}

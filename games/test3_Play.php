@@ -12,6 +12,7 @@
   $characterName = rawurldecode($character);
   $gameName = $_SESSION['gameName']; 
   $gameID = $_SESSION['gameID'];
+
   //STAT PREP
   $characterSQL =  
     "SELECT ID, Background, Habitat, Age, Sex, Ethnicity, HairColor, HairStyle, FacialHair, EyeColor, SecondLanguage, ThirdLanguage,
@@ -23,6 +24,7 @@
   $charInfo = mysqli_fetch_assoc($result1);
 
   $characterID = $charInfo['ID'];
+  $_SESSION['characterID'] = $characterID;
 
   if($charInfo['Sex'] == 0){
     $sex = 'Female';
@@ -38,11 +40,6 @@
   $result2 = mysqli_query($conn, $traitSQL);
   $charTraits = mysqli_fetch_assoc($result2);
 
-  $idMarksSQL = "SELECT * FROM char_id_marks WHERE CharacterID = '$characterID' ";
-
-  $result3 = mysqli_query($conn, $idMarksSQL);
-  $idMarks = mysqli_fetch_assoc($result3);
-  
   $skillSQL =
     "SELECT Name, Value
     FROM char_skills AS S
@@ -50,9 +47,9 @@
     WHERE CharacterID = '$characterID' ";
   
   $charSkills = array();
-  $result4 = mysqli_query($conn, $skillSQL);
+  $result3 = mysqli_query($conn, $skillSQL);
 
-  while ($output = mysqli_fetch_array($result4)){
+  while ($output = mysqli_fetch_array($result3)){
     $charSkills[$output['Name']] = $output['Value'];
   }
 
@@ -61,9 +58,9 @@
     FROM char_abilities 
     WHERE CharacterID = '$characterID' ";
   $charAbilities = array();
-  $result5 = mysqli_query($conn, $abilitySQL);
+  $result4 = mysqli_query($conn, $abilitySQL);
 
-  while ($output = mysqli_fetch_array($result5)){
+  while ($output = mysqli_fetch_array($result4)){
     $charAbilities[$output['AbilityNumber']] = $output['Name'];
   }
 
@@ -71,20 +68,22 @@
     "SELECT GameID, UserID, CharacterID, PlayerActive 
     FROM game_participants AS GP
     INNER JOIN games AS G ON G.ID = GP.GameID 
-    WHERE GameName = '$gameName' AND UserID = '$userID' ";
+    WHERE GameName = '$gameName' AND UserID = '$userID' AND CharacterID = '$characterID' AND PlayerActive = 0 ";
 
-    $result6 = mysqli_query($conn, $participantsSQL) or die(mysqli_error($conn));
-    if($result6->num_rows > 0) {
+    $result5 = mysqli_query($conn, $participantsSQL) or die(mysqli_error($conn));
+
+    if($result5->num_rows > 0) {
       $GPUpdateSQL =
         "UPDATE game_participants
-        SET PlayerActive = '1'
-        WHERE GameID = '$gameID' AND CharacterID = '$characterID' AND UserID = '$userID'
-        ";
+        SET PlayerActive = 1
+        WHERE GameID = '$gameID' AND CharacterID = '$characterID' AND UserID = '$userID' ";
+
+      $result6 = $conn->query($GPUpdateSQL) or die(mysqli_error($conn));
+
     } else {
       $GPInsertSQL = 
         "INSERT INTO game_participants (GameID, UserID, PlayerActive, CharacterID)
-        VALUES ('$gameID', '$userID', 1, '$characterID')
-        ";
+        VALUES ('$gameID', '$userID', 1, '$characterID') ";
 
       $result7 = $conn->query($GPInsertSQL) or die(mysqli_error($conn));
     }
@@ -106,6 +105,7 @@
     <script type="text/javascript">
 
       var name = "<?php echo $characterName; ?>";
+      var characterID = "<?php echo $characterID ?>";
   
       // kick off chat
       var chat =  new Chat();
@@ -159,10 +159,9 @@
   <body onload="setInterval('chat.update()', 1000)">
     <div class="container-fluid black">
       <?php 
-      include('header.php'); 
-      include('../modals/idMarksModal.php'); 
-      ?>
-      
+        include('header.php');
+        include('../modals/idMarksModal.php'); 
+      ?>      
 
       <!--PLAY INTERFACE-->
       <div class='row metal py-2'>
@@ -175,8 +174,7 @@
         <div class='col'><img src='../img/graffiti/storyteller.png' class='mx-auto d-block' /></div>
         <div class='col'>
           <div class="input-group input-group-lg">
-            <input type="text" id="storytellerName" class="form-control border text-center" value='' 
-              readonly />
+            <input type="text" id="storytellerName" class="form-control border text-center" value='' readonly />
           </div>
         </div>
       </div>
@@ -199,7 +197,7 @@
             </div>
           </div>
 
-          <div class='col-3 brass'>
+          <div class='col-3 brass interface'>
             <div class='row'>
               <div class='col'>
                 <br />
@@ -221,7 +219,8 @@
             <div class='row'>
               <div class='col'>
                 <br />
-                <button class="btn btn-info btn-lg btn-block border idMarksBtn" type="button">VIEW ID MARKS</button>
+                <button class="btn btn-info btn-lg btn-block border idMarksBtn" data-reference='<?php echo $characterID ?>' 
+                  type="button">VIEW ID MARKS</button>
               </div>
             </div>
             <div class='row'>
@@ -230,8 +229,7 @@
             <div class='row'>
               <div class='col'>
                 <div class="input-group input-group-lg">
-                  <input type="text" id="expPool" class="form-control border text-center" value="<?php echo $charInfo['RemainingExp']; ?>" 
-                    readonly />
+                  <input type="text" id="expPool" class="form-control border text-center" value="" readonly />
                 </div>
               </div>
             </div>
@@ -256,6 +254,11 @@
             <textarea class='w-100'></textarea>
           </div>
         </div>
+
+        <div class='row'>
+          <div class='col' id='test'></div>
+        </div>
+
 
       <!--SHEET BEGIN-->
       <div class='characterSheet my-4'>

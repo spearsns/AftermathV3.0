@@ -143,7 +143,7 @@ $characterIDSQL =
 "SELECT ID FROM characters WHERE UserID = '$userID' AND CharacterName = '$name' ";
 $result2 = $conn->query($characterIDSQL) or die(mysqli_error($conn));
 if ($result2->num_rows > 0) {
-    while($row = $result2->fetch_assoc()) {
+    if($row = $result2->fetch_assoc()) {
 		$characterID = $row["ID"];
 	}
 }

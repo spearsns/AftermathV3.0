@@ -24,37 +24,45 @@ if ($row = $result->fetch_assoc()) {
 	header("Location: ../login.php?error=fail");
 }
 
-
-/* TIMEOUT CODE */
+/* 
+//TIMEOUT CODE
 $ID = $_SESSION['ID'];
 $time = $_SERVER['REQUEST_TIME'];
 
-/**
-* for a 20 minute timeout, specified in seconds
-*/
-$timeout_duration = 1200;
+// for a 60 minute timeout, specified in seconds
 
-/**
-* Here we look for the user's LAST_ACTIVITY timestamp. If
-* it's set and indicates our $timeout_duration has passed,
-* blow away any previous $_SESSION data and start a new one.
-*/
+$timeout_duration = 6000;
+
+//Here we look for the user's LAST_ACTIVITY timestamp. If
+//it's set and indicates our $timeout_duration has passed,
+//blow away any previous $_SESSION data and start a new one.
+
+$_SESSION['LAST_ACTIVITY'] = $time;
+
 if (isset($_SESSION['LAST_ACTIVITY']) && 
    ($time - $_SESSION['LAST_ACTIVITY']) > $timeout_duration) {
     
-    $query = mysqli_query($conn, "UPDATE users
-          SET Active = '0'
-          WHERE ID = '$ID';"
-          );
+    $userActive = 
+      mysqli_query($conn, 
+      "UPDATE users
+      SET Active = 0
+      WHERE ID = '$ID';"
+      );
+
+    $gameActive =
+      mysqli_query($conn,
+      "UPDATE game_participants
+      SET PlayerActive = 0, StorytellerActive = 0
+      WHERE UserID = '$ID'; "
+      );
 
     session_unset();
     session_destroy();
     session_start();
+    header('../login.php');
 }
 
-/**
-* Finally, update LAST_ACTIVITY so that our timeout
-* is based on it and not the user's login time.
+// Finally, update LAST_ACTIVITY so that our timeout
+// is based on it and not the user's login time.
 */
-$_SESSION['LAST_ACTIVITY'] = $time;
 ?>

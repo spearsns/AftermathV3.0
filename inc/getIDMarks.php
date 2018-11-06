@@ -1,16 +1,21 @@
 <?php
-  $hairSQL =  
-    "SELECT HairStyle, FacialHair
-    FROM characters 
-    WHERE UserID = '$userID' AND CharacterName = '$characterName' ";
+  include("../inc/config.php");
+  session_start();
 
-  $result1 = mysqli_query($conn, $hairSQL);
-  $hair = mysqli_fetch_assoc($result1);
-  json_encode($hair);
+  $characterID = $_POST['characterID'];
+  
+  $sql =  " SELECT DISTINCT cid.*, c.FacialHair, c.HairStyle 
+            FROM char_id_marks AS cid
+            LEFT JOIN characters AS c ON c.ID = cid.CharacterID
+            WHERE CharacterID = $characterID;
+          ";
 
-  $idMarksSQL = "SELECT * FROM char_id_marks WHERE CharacterID = '$characterID' ";
+  $result = mysqli_query($conn, $sql);
 
-  $result2 = mysqli_query($conn, $idMarksSQL);
-  $idMarks = mysqli_fetch_assoc($result2);
-  json_encode($idMarks);
+  if ($result->num_rows > 0) {
+    $row = mysqli_fetch_assoc($result);
+
+    echo json_encode($row);
+
+  }
 ?>
