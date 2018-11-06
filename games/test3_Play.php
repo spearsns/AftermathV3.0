@@ -7,6 +7,7 @@
   }
 
   $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+  $username = $_SESSION['username'];
   $userID = $_SESSION['ID'];
   $character = parse_url($url, PHP_URL_QUERY);
   $characterName = rawurldecode($character);
@@ -104,7 +105,7 @@
     <script type="text/javascript" src="../js/game.js"></script>
     <script type="text/javascript">
 
-      var name = "<?php echo $characterName; ?>";
+      var name = "<?php echo $username; ?> [ <?php echo $characterName ?> ]";
       var characterID = "<?php echo $characterID ?>";
   
       // kick off chat

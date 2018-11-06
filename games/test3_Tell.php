@@ -7,6 +7,7 @@
   }
 
   $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+  $username = $_SESSION['username'];
   $userID = $_SESSION['ID'];
   $gameName = $_SESSION['gameName'];
   $gameID = $_SESSION['gameID'];
@@ -54,7 +55,7 @@
     <script type="text/javascript" src="../js/game.js"></script>
     <script type="text/javascript">
 
-      var name = "Storyteller";
+      var name = "<?php echo $username; ?> [ Storyteller ]";
   
       // kick off chat
       var chat =  new Chat();

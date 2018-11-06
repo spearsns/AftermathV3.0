@@ -864,3 +864,33 @@ Kemosabe : <span style='color: red;'>[%] 19
 Kemosabe : <span style='color: red;'>[2D10] 13
 Kemosabe : <span style='color: red;'>RIGHT FOREARM
 <span>Storyteller</span> : just confirming 
+Kemosabe : <span style='color: red;'>[%] 47
+Kemosabe : <span style='color: red;'>[2D10] 9
+Storyteller : <span style='color: red;'>[%] 46
+Kemosabe : <span style='color: red;'>[%] 68
+Kemosabe : <span style='color: red;'>[%] 63
+Creator : <span style='color: red;'>[%] 09
+Creator : <span style='color: red;'>[%] 65
+Creator : <span style='color: red;'>[%] 43
+Storyteller : <span style='color: red;'>[%] 83
+Creator [Kemosabe] : <span style='color: red;'>[%] 49
+Storyteller : <span style='color: red;'>[%] 94
+Storyteller : <span style='color: red;'>[%] 81
+Storyteller : <span style='color: red;'>[%] 43
+Storyteller : <span style='color: red;'>[%] 75
+Storyteller : <span style='color: red;'>[%] 14
+STORYTELLER [ Guest ] : <span style='color: red;'>[%] !!CRITICAL!! 22
+Storyteller [ Guest ] : <span style='color: red;'>[%] 87
+Creator [Kemosabe] : <span style='color: red;'>[%] !!CRITICAL!! 100
+Storyteller [ Guest ] : <span style='color: red;'>[2D10] 2
+Storyteller [Guest] : <span style='color: red;'>[2D10] 14
+Creator [Kemosabe] : <span style='color: red;'>[%] 31
+<span>Creator [ Kemosabe ]</span> : victory 
+<span>Storyteller [Guest]</span> : Indeed!!! 
+Storyteller [Guest] : <span style='color: red;'>[%] 38
+Creator [ Kemosabe ] : <span style='color: red;'>[%] !!CRITICAL!! 55
+Creator [Kemosabe] : <span style='color: red;'>[%] 60
+Guest [STORYTELLER] : <span style='color: red;'>[%] 84
+Guest [ Storyteller ] : <span style='color: red;'>[%] 42
+Creator [ Kemosabe ] : <span style='color: red;'>[%] 27
+Guest [ Storyteller ] : <span style='color: red;'>[%] !!CRITICAL!! 11
