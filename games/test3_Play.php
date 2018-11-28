@@ -27,12 +27,6 @@
   $characterID = $charInfo['ID'];
   $_SESSION['characterID'] = $characterID;
 
-  if($charInfo['Sex'] == 0){
-    $sex = 'Female';
-  } else {
-    $sex = 'Male';
-  }
-
   $traitSQL =  
     "SELECT Memory, Logic, Perception, Willpower, Charisma, Strength, Endurance, Agility, Speed, Beauty, Sequence, Actions 
     FROM char_traits 
@@ -69,7 +63,7 @@
     "SELECT GameID, UserID, CharacterID, PlayerActive 
     FROM game_participants AS GP
     INNER JOIN games AS G ON G.ID = GP.GameID 
-    WHERE GameName = '$gameName' AND UserID = '$userID' AND CharacterID = '$characterID' AND PlayerActive = 0 ";
+    WHERE GameID = '$gameID' AND UserID = '$userID' AND CharacterID = '$characterID' AND PlayerActive = 0 ";
 
     $result5 = mysqli_query($conn, $participantsSQL) or die(mysqli_error($conn));
 
@@ -77,7 +71,7 @@
       $GPUpdateSQL =
         "UPDATE game_participants
         SET PlayerActive = 1
-        WHERE GameID = '$gameID' AND CharacterID = '$characterID' AND UserID = '$userID' ";
+        WHERE GameID = '$gameID' AND CharacterID = '$characterID' AND UserID = '$userID' AND PlayerActive = 0 ";
 
       $result6 = $conn->query($GPUpdateSQL) or die(mysqli_error($conn));
 
@@ -321,7 +315,7 @@
               <div class='col-4'>
                 <div class="input-group input-group-lg">
                   <input type="text" id="sex" name="sex" class="form-control border text-center"
-                    value="<?php echo $sex; ?>" readonly />
+                    value="<?php echo $charInfo['Sex']; ?>" readonly />
                 </div>
               </div>
             </div>

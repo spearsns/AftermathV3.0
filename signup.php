@@ -22,7 +22,7 @@
 
   <body>
     <div class="container-fluid">
-      <?php include('inc/header.php'); ?>
+      <?php include('header.php'); ?>
 
       <div class='row metal'>
         <div class='col'>
@@ -123,11 +123,10 @@
         <div class='col'></div>  
       </div>
 
-      <?php include('inc/footer.php'); ?>
+      <?php include('footer.php'); ?>
     </div>   
   </body>
 
   <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
 </html>

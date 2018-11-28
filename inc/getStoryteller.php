@@ -6,9 +6,9 @@
   $gameID = $_SESSION['gameID'];
 
   $sql =    "SELECT Username
-            FROM users AS U 
-            INNER JOIN game_participants AS GP ON U.ID = GP.UserID
-            WHERE GameID = '$gameID' AND StorytellerActive = '1' ";
+            FROM users AS u 
+            INNER JOIN games AS g ON u.ID = g.StorytellerID
+            WHERE g.ID = '$gameID' AND StorytellerActive = '1' ";
 
   $result = $conn->query($sql);
 

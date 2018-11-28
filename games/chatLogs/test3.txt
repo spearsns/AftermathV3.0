@@ -894,3 +894,22 @@ Guest [STORYTELLER] : <span style='color: red;'>[%] 84
 Guest [ Storyteller ] : <span style='color: red;'>[%] 42
 Creator [ Kemosabe ] : <span style='color: red;'>[%] 27
 Guest [ Storyteller ] : <span style='color: red;'>[%] !!CRITICAL!! 11
+Guest [ Storyteller ] : <span style='color: red;'>RIGHT UPPER BODY (RIBS/SHOULDER)
+<span>Creator [ Spinks ]</span> : still works? 
+<span>Guest [ Storyteller ]</span> : Yessir! 
+Guest [ Storyteller ] : <span style='color: red;'>LEFT UPPER BODY (RIBS[HEART]/SHOULDER)
+Guest [ Storyteller ] : <span style='color: red;'>[2D10] 8
+Guest [ Storyteller ] : <span style='color: red;'>[%] 25
+Creator [ Spinks ] : <span style='color: red;'>MIDSECTION (STOMACH/LOWER BACK)
+Creator [ Spinks ] : <span style='color: red;'>[2D10] 13
+Creator [ Spinks ] : <span style='color: red;'>[%] 26
+Guest [ Storyteller ] : <span style='color: red;'>RIGHT CALF
+Guest [ Storyteller ] : <span style='color: red;'>LEFT CALF
+Guest [ Storyteller ] : <span style='color: red;'>RIGHT UPPER BODY (RIBS/SHOULDER)
+Guest [ Storyteller ] : <span style='color: red;'>RIGHT FOREARM
+Guest [ Storyteller ] : <span style='color: red;'>[HIT] RIGHT UPPER BODY (RIBS/SHOULDER)
+Creator [ Spinks ] : <span style='color: red;'>MIDSECTION (STOMACH/LOWER BACK)
+Creator [ Spinks ] : <span style='color: red;'>HEAD
+Creator [ Spinks ] : <span style='color: red;'>[HIT] LEFT BICEP
+Guest [ Storyteller ] : <span style='color: red;'>[2D10] 7
+Guest [ Storyteller ] : <span style='color: red;'>[%] 15

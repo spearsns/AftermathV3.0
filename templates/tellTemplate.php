@@ -7,36 +7,19 @@
   }
 
   $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+  $username = $_SESSION['username'];
   $userID = $_SESSION['ID'];
   $gameName = $_SESSION['gameName'];
   $gameID = $_SESSION['gameID'];
 
-  $participantsSQL = 
-    "SELECT GameID, UserID, StorytellerActive 
-    FROM game_participants AS GP
-    INNER JOIN games AS G ON G.ID = GP.GameID 
-    WHERE GameName = '$gameName' AND UserID = '$userID' AND StorytellerActive = '0'
+  $gameUpdateSQL =
+    "UPDATE games
+    SET StorytellerActive = 1,
+        StorytellerID = '$userID'
+    WHERE ID = '$gameID'
     ";
 
-    $result1 = mysqli_query($conn, $participantsSQL) or die(mysqli_error($conn));
-
-    if($result1->num_rows > 0) {
-      $GPUpdateSQL =
-        "UPDATE game_participants
-        SET StorytellerActive = 1
-        WHERE GameID = '$gameID' AND UserID = '$userID'
-        ";
-
-      $result2 = $conn->query($GPUpdateSQL) or die(mysqli_error($conn));
-
-    } else {
-      $GPInsertSQL = 
-        "INSERT INTO game_participants (GameID, UserID, StorytellerActive)
-        VALUES ('$gameID', '$userID', 1)
-        ";
-
-      $result2 = $conn->query($GPInsertSQL) or die(mysqli_error($conn));
-    }
+  $result2 = $conn->query($gameUpdateSQL) or die(mysqli_error($conn));
 ?>
 
 <!doctype html>
@@ -54,7 +37,7 @@
     <script type="text/javascript" src="../js/game.js"></script>
     <script type="text/javascript">
 
-      var name = "STORYTELLER [<?php echo $username; ?>]";
+      var name = "<?php echo $username; ?> [ Storyteller ]";
   
       // kick off chat
       var chat =  new Chat();
@@ -108,10 +91,12 @@
   <body onload="setInterval('chat.update()', 1000)">
   	<div class="container-fluid black">
     	<?php 
-        include('header.php');
-        include('../modals/idMarksModal.php');
-        include('../modals/characterSheetModal.php'); 
-      ?>
+	        include('header.php');
+	        include('../modals/idMarksModal.php');
+	        include('../modals/characterSheetModal.php');
+	        include('../modals/adminModal.php'); 
+	        include('../modals/confirmCloseModal.php'); 
+      	?>
 
 	    <div class='row metal py-2'>
 	      <div class='col'><img src='../img/graffiti/GameName.png' class='mx-auto d-block' /></div>
@@ -123,8 +108,7 @@
 	      <div class='col'><img src='../img/graffiti/storyteller.png' class='mx-auto d-block' /></div>
 	      <div class='col'>
 	        <div class="input-group input-group-lg">
-	          <input type="text" id="storytellerName" class="form-control border text-center" value='<?php echo $username; ?>' 
-	            readonly />
+	          <input type="text" id="storytellerName" class="form-control border text-center" value='' readonly />
 	        </div>
 	      </div>
 	    </div>
@@ -172,7 +156,7 @@
 		      <div class='row'>
 		        <div class='col'>
 		          <br />
-		          <button class="btn btn-secondary btn-lg btn-block border" id='adminOptionsBtn' type="button">ADMIN OPTIONS</button>
+		          <button class="btn btn-secondary btn-lg btn-block border" id='adminBtn' data-reference='<?php echo $gameID ?>' type="button">ADMIN OPTIONS</button>
 		          <br />
 		        </div>
 		      </div>

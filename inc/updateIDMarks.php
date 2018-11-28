@@ -8,6 +8,8 @@ $characterID = $_POST['CharacterID'];
 $HairStyle = ($_POST['HairStyle']);
 $FacialHair = ($_POST['FacialHair']);
 
+$Deceased = ($_POST['Deceased']);
+
 $Head = ($_POST['Head']);
 $Face = ($_POST['Face']);
 $Neck = ($_POST['Neck']);
@@ -59,20 +61,24 @@ $idMarksArray = array(
 	'RFoot' => $RFoot
 	);
 
-	// HAIR
-	$hairSQL = 
-		"UPDATE characters 
-			SET HairStyle = '$HairStyle',
-				FacialHair = '$FacialHair'
-			WHERE ID = '$characterID' ";
-	$result1 = $conn->query($hairSQL) or die(mysqli_error($conn));
-
+	$stmt1 = $conn->prepare("UPDATE characters 
+							SET HairStyle = ?,
+								FacialHair = ?,
+								Deceased = ?
+							WHERE ID = ? ");
+	$stmt1->bind_param("ssii", $HairStyle, $FacialHair, $Deceased, $characterID);
+	$stmt1->execute();
+	
 	// IDMARKS 
 	$it = new ArrayIterator ($idMarksArray);
 	$cit = new CachingIterator ($it);
 	foreach ($cit as $value){
-		$idMarksSQL = "UPDATE char_id_marks SET " .$cit->key(). " = '" .$cit->current(). "' ";
-		$idMarksSQL .= "WHERE CharacterID = '$characterID'";
-		$result2 = $conn->query($idMarksSQL) or die(mysqli_error($conn));	
+		$stmt = $conn->prepare("UPDATE char_id_marks SET " .$cit->key(). " = ? WHERE CharacterID = ? ");
+		$stmt->bind_param("si", $cit->current(), $characterID);
+		$stmt->execute();
+
+	//		$idMarksSQL = "UPDATE char_id_marks SET " .$cit->key(). " = '" .$cit->current(). "' ";
+	//		$idMarksSQL .= "WHERE CharacterID = '$characterID'";
+	//		$result2 = $conn->query($idMarksSQL) or die(mysqli_error($conn));	
 	}	
 ?>

@@ -22,8 +22,9 @@
       exit();
 
     } else {
-      $sql = "INSERT INTO users (username, password, email) VALUES ('$username', '$password', '$email')";
-      $result = $conn->query($sql);
+      $stmt = $conn->prepare("INSERT INTO users (username, password, email) VALUES (?, ?, ?)");
+      $stmt->bind_param("sss", $username, $password, $email);
+      $stmt->execute();
 
       header("Location: ../success.php");
       exit(); 

@@ -2,6 +2,7 @@
 include('config.php');
 session_start();
 
+$zero = 0;
 $userID = $_SESSION['ID'];
 /* DEMOGRAPHICS */
 $name = ($_POST['name']);
@@ -9,7 +10,9 @@ $background = ($_POST['background']);
 $habitat = ($_POST['habitat']);
 $ethnicity = ($_POST['ethnicity']);
 $age = ($_POST['age']);
+
 $sex = ($_POST['sex']);
+
 $hairStyle = ($_POST['hairStyle']);
 $hairColor = ($_POST['hairColor']);
 $facialHair = ($_POST['facialHair']);
@@ -132,12 +135,11 @@ $lang4Value = ($_POST['lang4Value']);
 /* SQL */
 /* CHARACTERS */
 $characterID = null;
-$charactersSQL = 
-"INSERT INTO characters (UserID, CharacterName, Background, Habitat, Age, Sex, Ethnicity, HairColor, HairStyle, FacialHair, EyeColor,
-	SecondLanguage, ThirdLanguage, FourthLanguage, FifthLanguage)
-VALUES ('$userID', '$name', '$background', '$habitat', '$age', '$sex', '$ethnicity', '$hairColor', '$hairStyle', '$facialHair', '$eyeColor',
-		'$lang1', '$lang2', '$lang3', '$lang4' )";
-	$result1 = $conn->query($charactersSQL)	or die(mysqli_error($conn));
+$stmt = $conn->prepare("INSERT INTO characters (UserID, CharacterName, Background, Habitat, Age, Sex, Ethnicity, HairColor, HairStyle, FacialHair, EyeColor,
+	SecondLanguage, ThirdLanguage, FourthLanguage, FifthLanguage, TotalExp, RemainingExp) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+$stmt->bind_param("isssissssssssssii", $userID, $name, $background, $habitat, $age, $sex, $ethnicity, $hairColor, $hairStyle, $facialHair, $eyeColor,
+	$lang1, $lang2, $lang3, $lang4, $zero, $zero);
+$stmt->execute();
 
 $characterIDSQL = 
 "SELECT ID FROM characters WHERE UserID = '$userID' AND CharacterName = '$name' ";

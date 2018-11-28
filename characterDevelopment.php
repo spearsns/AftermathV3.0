@@ -24,7 +24,7 @@
 
   <body>
     <div class="container-fluid metal">
-      <?php include('inc/header.php'); ?>
+      <?php include('header.php'); ?>
 
       <div class='row black'>
         <div class='col'></div>
@@ -38,9 +38,9 @@
       <!--SHEET BEGIN-->
       <form id="characterDevelopment" class='characterSheet' method="post" action="inc/processCharacter.php">
         <div class='sticky-top'>
-          <div class='row black'>
+          <div class='row black py-2'>
             <div class='col'></div>
-            <div class='col'><h3 class='text-white TNR pt-2 text-center'>CHOICES REMAINING:</h3></div>
+            <div class='col'><h4 class='text-white TNR pt-2 text-center'>CHOICES REMAINING:</h4></div>
             <div class='col'>
               <div class="input-group input-group-lg">
                 <input type="text" id="choicePool" class="form-control border text-center" readonly />
@@ -823,7 +823,7 @@
         </div>
       </form>
 
-      <?php include("inc/footer.php"); ?>
+      <?php include("footer.php"); ?>
     </div>
   </body>
 </html>

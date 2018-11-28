@@ -1,17 +1,15 @@
 <?php
-include('config.php');
-session_start();
+	include('config.php');
+	session_start();
 
-/* POST */
-$characterID = $_POST['characterID'];
-$experience = $_POST['experience'];
+	/* POST */
+	$characterID = $_POST['characterID'];
+	$experience = $_POST['experience'];
 
-$sql = 
-	"UPDATE characters 
-		SET TotalExp = TotalExp + $experience,
-			RemainingExp = RemainingExp + $experience
-		WHERE ID = '$characterID' ";
-$result = $conn->query($sql) or die(mysqli_error($conn));
-
-echo 'success';
+	$stmt = $conn->prepare("UPDATE characters 
+							SET TotalExp = TotalExp + ?,
+								RemainingExp = RemainingExp + ?
+							WHERE ID = ? ");
+	$stmt->bind_param("iii", $experience, $experience, $characterID);
+	$stmt->execute();
 ?>

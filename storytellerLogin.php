@@ -33,7 +33,7 @@
   <body>
 
     <div class="container-fluid">
-      <?php include("inc/header.php"); ?>
+      <?php include("header.php"); ?>
 
       <form id="storytellerLogin" method="post" action="inc/processStoryteller.php">
         
@@ -91,6 +91,6 @@
 
       </form>
     </div>
-    <?php include("inc/footer.php"); ?>
+    <?php include("footer.php"); ?>
   </body>
 </html>

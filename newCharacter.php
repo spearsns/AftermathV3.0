@@ -24,7 +24,7 @@
 
   <body>
     <div class="container-fluid">
-      <?php include('inc/header.php'); ?>
+      <?php include('header.php'); ?>
       
       <div class='row metal'>
         <div class='col'></div>
@@ -73,10 +73,10 @@
           <div class='col'>
             <div class="btn-group btn-group-toggle d-flex" role="group" data-toggle="buttons">
               <label class="btn btn-lg btn-warning border w-100">
-                <input type="radio" name="sex" value="Male">MALE
+                <input type="radio" name="sex" value="Male">MALE</input>
               </label>
               <label class="btn btn-lg btn-warning border w-100">
-                <input type="radio" name="sex" value="Female">FEMALE
+                <input type="radio" name="sex" value="Female">FEMALE</input>
               </label>
             </div>
           </div>
@@ -241,7 +241,7 @@
           <div class='col'></div>
         </div>
       </form>
-      <?php include("inc/footer.php"); ?>
+      <?php include("footer.php"); ?>
     </div>
   </body>
 </html>

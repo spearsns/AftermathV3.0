@@ -57,8 +57,8 @@ $_SESSION["textFile"] = $txt_path . $camp_txt_file;
 		header("Location: ../newGame.php?error=playerPW");
 		exit();
 	} else {
-		$sql = "INSERT INTO games (GameName, Description, TxtFile, StorytellerPassword, PlayerPassword, Open, Finished) 
-		VALUES ('$gameName', '$description', '$game_txt_file', '$storytellerPW', '$playerPW', 1, 0)";
+		$sql = "INSERT INTO games (GameName, Description, TxtFile, StorytellerPassword, PlayerPassword, Locked, Finished) 
+		VALUES ('$gameName', '$description', '$game_txt_file', '$storytellerPW', '$playerPW', 0, 0)";
 		$result = $conn->query($sql);
 
 		$play = fopen($game_path.$game_play_file, "w");

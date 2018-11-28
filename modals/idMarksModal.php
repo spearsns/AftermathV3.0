@@ -70,7 +70,7 @@
                   <div class='row'>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" name="LRibs" id="LRibs" class="form-control border text-center idMarks"value='' readonly />
+                        <input type="text" name="LRibs" id="LRibs" class="form-control border text-center idMarks" value='' readonly />
                       </div>
                     </div>
                   </div>
@@ -81,7 +81,7 @@
                   <div class='row'>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" name="LBicep" id="LBicep" class="form-control border text-center idMarks"value='' readonly />
+                        <input type="text" name="LBicep" id="LBicep" class="form-control border text-center idMarks" value='' readonly />
                       </div>
                     </div>
                   </div>
@@ -103,7 +103,7 @@
                   <div class='row'>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" name="LForearm" id="LForearm" class="form-control border text-center idMarks"value='' readonly />
+                        <input type="text" name="LForearm" id="LForearm" class="form-control border text-center idMarks" value='' readonly />
                       </div>
                     </div>
                   </div>
@@ -125,7 +125,7 @@
                   <div class='row'>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" name="LHand" id="LHand" class="form-control border text-center idMarks"value='' readonly />
+                        <input type="text" name="LHand" id="LHand" class="form-control border text-center idMarks" value='' readonly />
                       </div>
                     </div>
                   </div>
@@ -136,7 +136,7 @@
                   <div class='row'>
                     <div class='col'>
                       <div class="input-group input-group-lg">
-                        <input type="text" name="LThigh" id="LThigh" class="form-control border text-center idMarks"value='' readonly />
+                        <input type="text" name="LThigh" id="LThigh" class="form-control border text-center idMarks" value='' readonly />
                       </div>
                     </div>
                   </div>
@@ -325,10 +325,12 @@
         <div class="modal-footer">
 
           <div class='col'></div>
+          
           <div class='col' id='closeBtn'>
             <button type="button" class="btn btn-danger btn-lg btn-block border" data-dismiss="modal">CLOSE</button>
           </div>
-          <div class='col'></div>
+          
+          <div class='col' id='deathToggle'></div>
 
         </div>
 

@@ -28,7 +28,9 @@
         </div>
         
         <div class='col'>
-            <button type="button" class="btn btn-warning btn-lg btn-block border" id='logoutBtn'>LOG OUT</button>
+            <form id="logout" action="inc/processLogout.php" method="post">
+            <button type="submit" class="btn btn-warning btn-lg btn-block border" id='logoutBtn'>LOG OUT</button>
+            </form>
         </div>
     </div>
 

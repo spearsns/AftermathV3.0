@@ -5,11 +5,11 @@
 ?>
     <div class='row metal py-2'>
         <div class='col'>
-            <a href='login.php' role='button' class="btn btn-warning btn-lg btn-block border">LOG IN</a>
+            <a href='../login.php' role='button' class="btn btn-warning btn-lg btn-block border">LOG IN</a>
         </div>
 
         <div class='col'>
-            <a href='signup.php' role='button'><img src='../img/buttons/join_0.png' id='joinBtn' /></a>
+            <a href='../signup.php' role='button'><img src='../img/buttons/join_0.png' id='joinBtn' /></a>
         </div>
 
         <div class='col'>
@@ -18,7 +18,7 @@
 
         <div class='col'>
             <div class="input-group input-group-lg">
-                <input type="text" class="form-control border text-center" placeholder='Login to continue' id='usernameArea' readonly>
+                <input type="text" class="form-control border text-center" placeholder='Login to continue' id='usernameArea' readonly />
             
                 <script>
                     var username = "<?php echo $username; ?>";
@@ -28,7 +28,9 @@
         </div>
         
         <div class='col'>
-            <button type="button" class="btn btn-warning btn-lg btn-block border" id='logoutBtn'>LOG OUT</button>
+            <form id="logout" action="../inc/processLogout.php" method="post">
+            <button type="submit" class="btn btn-warning btn-lg btn-block border" id='logoutBtn'>LOG OUT</button>
+            </form>
         </div>
     </div>
 

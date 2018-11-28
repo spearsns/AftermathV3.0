@@ -5,64 +5,25 @@ session_start();
 $username = htmlentities(stripslashes($_POST['username']));
 $password = htmlentities(stripslashes($_POST['password']));
 
-$sql = "SELECT Username, ID FROM users WHERE Username = '$username' AND Password = '$password' ";
-$result = $conn->query($sql);
+$stmt = $conn->prepare("SELECT Username, ID FROM users WHERE Username = ? AND Password = ? ");
+$stmt->bind_param("ss", $username, $password);
+$stmt->execute();
+$stmt->store_result();
 
-if ($row = $result->fetch_assoc()) {
-		$username = $row['Username'];
-		$ID = $row['ID'];
+if($stmt->num_rows === 0) header("Location: ../login.php?error=fail");
+$stmt->bind_result($user, $ID);
+$stmt->fetch();
 
-		$_SESSION['username'] = $username;
-		$_SESSION['ID'] = $ID;
-		
-		$query = mysqli_query($conn, "UPDATE users
-          SET Active = '1'
-          WHERE ID = '$ID';");
-		
-		header("Location: ../index.php?".$username);
-} else {
-	header("Location: ../login.php?error=fail");
-}
+	$_SESSION['username'] = $user;
+	$_SESSION['ID'] = $ID;
+	
+	$query = mysqli_query($conn, 
+	"UPDATE users
+      SET Active = '1'
+      WHERE ID = '$ID';");
+	
+	header("Location: ../index.php?".$username);
 
-/* 
-//TIMEOUT CODE
-$ID = $_SESSION['ID'];
-$time = $_SERVER['REQUEST_TIME'];
+$stmt->close();
 
-// for a 60 minute timeout, specified in seconds
-
-$timeout_duration = 6000;
-
-//Here we look for the user's LAST_ACTIVITY timestamp. If
-//it's set and indicates our $timeout_duration has passed,
-//blow away any previous $_SESSION data and start a new one.
-
-$_SESSION['LAST_ACTIVITY'] = $time;
-
-if (isset($_SESSION['LAST_ACTIVITY']) && 
-   ($time - $_SESSION['LAST_ACTIVITY']) > $timeout_duration) {
-    
-    $userActive = 
-      mysqli_query($conn, 
-      "UPDATE users
-      SET Active = 0
-      WHERE ID = '$ID';"
-      );
-
-    $gameActive =
-      mysqli_query($conn,
-      "UPDATE game_participants
-      SET PlayerActive = 0, StorytellerActive = 0
-      WHERE UserID = '$ID'; "
-      );
-
-    session_unset();
-    session_destroy();
-    session_start();
-    header('../login.php');
-}
-
-// Finally, update LAST_ACTIVITY so that our timeout
-// is based on it and not the user's login time.
-*/
 ?>

@@ -136,16 +136,17 @@ $(document).ready(function(){
 		return roll(1,10) + roll(1,10);
 	}
 
-	function playerInterface(){
+	function getPlayers(){
 		$.ajax({
 			type: "GET",
-			url: "../inc/playerInterface.php",
+			url: "../inc/getPlayers.php",
 			dataType: "html",
 			success: function(response){                    
 	           $("#interface").html(response);
 	       	}
 		});
 	}
+	getPlayers();
 
 	function getStoryteller(){
 		$.ajax({
@@ -157,6 +158,7 @@ $(document).ready(function(){
 	       	}
 		});
 	}
+	getStoryteller();
 
 	function getExp(){
 		$.ajax({
@@ -167,6 +169,7 @@ $(document).ready(function(){
 			}
 		})
 	}
+	getExp();
 
 	$('#percentileBtn').click(function(){
 		var roll = percentile();
@@ -238,11 +241,55 @@ $(document).ready(function(){
 		} else {
 			RHCResult = "RIGHT FOOT";
 		}
-		sendDice(RHCResult, name);
+		sendDice("[HIT] " + RHCResult, name);
+	});
+
+	$('#adminBtn').click(function(){
+		var gameID = $(this).data('reference');
+		$.ajax({
+			type: 		"POST",
+			url: 		"../inc/checkLocks.php",
+			data: 		{
+						'gameID' : gameID
+						},
+			dataType: 	"html",
+			success: 	function(result){
+							$('#gameLock').html(result);
+							$('#adminModal').modal('toggle');
+						}
+		});
+	});
+
+	$('#gameLock').on('click', '#lockBtn', function(e){ 
+		var gameID = $(this).data('reference');
+		$.ajax({
+			type: 		'POST',
+			url: 		'../inc/lockGame.php',
+			data: 		{
+						'gameID' : gameID
+						},
+			success: 	function(result){
+							$('#adminModal').modal('toggle');
+						}  			
+		});
+	});
+
+	$('#gameLock').on('click', '#unlockBtn', function(e){ 
+		var gameID = $(this).data('reference');
+		$.ajax({
+			type: 		'POST',
+			url: 		'../inc/unlockGame.php',
+			data: 		{
+						'gameID' : gameID
+						},
+			success: 	function(result){
+							$('#adminModal').modal('toggle');
+						}  			
+		});
 	});
 
 	setInterval(getExp, 1000);
-	var listing = setInterval(playerInterface, 1000);
+	var listing = setInterval(getPlayers, 1000);
 	setInterval(getStoryteller, 1000);
 
 	$('.interface').on('click', '.idMarksBtn', function(e){ 
@@ -261,7 +308,16 @@ $(document).ready(function(){
 							if (window.location.href.indexOf("_Tell") > -1) {
 							    $('.idMarks').removeAttr('readonly');
 							    $('#closeBtn').html("<button type='submit' class='btn btn-success btn-lg btn-block border'>CONFIRM & SAVE</button>");
+
+							    if (idmarks['Deceased'] == 0){
+									$('#deathToggle').html("<input type='button' class='btn btn-light btn-lg btn-block border' data-toggle='button' aria-pressed='false' "
+									+ "name='Deceased' id='deathBtn' autocomplete='off' value='ALIVE' >");
+								} else if (idmarks['Deceased'] == 1){
+									$('#deathToggle').html("<input type='button' class='btn btn-dark btn-lg btn-block border active' data-toggle='button' aria-pressed='true' "
+									+ "name='Deceased' id='deathBtn' autocomplete='off' value='DEAD' >");
+								}
 							}
+
 							Object.keys(idmarks).forEach(function(key){
 								$('.idMarks').each(function(){
 									if( $(this).attr('id') == key){
@@ -274,9 +330,26 @@ $(document).ready(function(){
 		});
 	});
 
+
+	$('#deathToggle').on('click', '#deathBtn', function(e){
+		if ( $(this).attr('aria-pressed') == 'false' ) {
+			$(this).val('DEAD');
+		} 
+		if ( $(this).attr('aria-pressed') == 'true' ) {
+			$(this).val('ALIVE');
+		}
+		$(this).toggleClass('btn-light');
+		$(this).toggleClass('btn-dark');
+	});
+
 	$("#IDMarksForm").submit(function(e) {
 	  	e.preventDefault();
-	  	var dataString = $("#IDMarksForm").serialize();
+	  	if ( $('input[name="Deceased"]').hasClass('active') ){
+	  		deceased = '1';
+	  	} else {
+	  		deceased = '0';
+	  	}
+	  	var dataString = $("#IDMarksForm").serialize() + '&Deceased=' + deceased;
 	  	$.ajax({
 			type: 		"POST",
 			url: 		"../inc/updateIDMarks.php",
@@ -289,7 +362,6 @@ $(document).ready(function(){
     $('.interface').on('click', '.charSheetBtn', function(e){ 
 		e.preventDefault(); 
 		var characterID = $(this).data('reference');
-		console.log('clicked');
 
 		$.ajax({
 			type: 		"POST",
@@ -299,15 +371,8 @@ $(document).ready(function(){
 						},
 			dataType: 	"json",
 			success: 	function(response){
-							console.log(response);
 							Object.keys(response).forEach(function(key){
-								if(key == 'Sex'){
-									if(response[key] == 1){
-										response[key] = 'Male';
-									} else {
-										response[key] = 'Female';
-									}
-								}
+								
 								$('#characterSheetModal input[type="text"]').each(function(){
 									if( $(this).attr('id') == key){
 										$(this).val(response[key]);
@@ -339,8 +404,32 @@ $(document).ready(function(){
 			dataType: 	"html",
 			success: 	function(response){
 							$('.earnedExp[data-reference="' + characterID + '"]').val('');
-							listing = setInterval(playerInterface, 1000);
+							listing = setInterval(getPlayers, 1000);
 						}
 		});
 	});
+
+	$('#endGameBtn').click(function(){
+		$('#adminModal').modal('toggle');
+		$('#confirmCloseModal').modal('toggle');
+	});
+
+	$('#noCloseBtn').click(function(){
+		$('#confirmCloseModal').modal('toggle');
+	});
+
+	$('#yesCloseBtn').click(function(){
+		var gameID = $(this).data('reference');
+		$.ajax({
+			type: 		'POST',
+			url: 		'../inc/processCloseGame.php',
+			data: 		{
+						'gameID' : gameID
+						},
+			success: 	function(result){
+							window.location.replace('../index.php');
+						}  			
+		});  			
+	});
+
 });

@@ -69,7 +69,7 @@
     "SELECT GameID, UserID, CharacterID, PlayerActive 
     FROM game_participants AS GP
     INNER JOIN games AS G ON G.ID = GP.GameID 
-    WHERE GameName = '$gameName' AND UserID = '$userID' AND CharacterID = '$characterID' AND PlayerActive = 0 ";
+    WHERE GameID = '$gameID' AND UserID = '$userID' AND CharacterID = '$characterID' AND PlayerActive = 0 ";
 
     $result5 = mysqli_query($conn, $participantsSQL) or die(mysqli_error($conn));
 
@@ -105,7 +105,7 @@
     <script type="text/javascript" src="../js/game.js"></script>
     <script type="text/javascript">
 
-      var name = "<?php echo $username; ?>";
+      var name = "<?php echo $username; ?> [ <?php echo $characterName ?> ]";
       var characterID = "<?php echo $characterID ?>";
   
       // kick off chat

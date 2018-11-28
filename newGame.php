@@ -22,7 +22,7 @@
 
   <body>
     <div class="container-fluid">
-      <?php include('inc/header.php'); ?>
+      <?php include('header.php'); ?>
 
       <div class='row metal'>
         <div class='col'>
@@ -142,7 +142,7 @@
         <div class='col'></div>  
       </div>
 
-      <?php include('inc/footer.php'); ?>
+      <?php include('footer.php'); ?>
     </div>   
   </body>
 

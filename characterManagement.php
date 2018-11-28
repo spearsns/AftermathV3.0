@@ -23,12 +23,6 @@
 
   $characterID = $charInfo['ID'];
 
-  if($charInfo['Sex'] == 0){
-    $sex = 'Female';
-  } else {
-    $sex = 'Male';
-  }
-
   $traitSQL =  
     "SELECT Memory, Logic, Perception, Willpower, Charisma, Strength, Endurance, Agility, Speed, Beauty, Sequence, Actions 
     FROM char_traits 
@@ -79,7 +73,7 @@
 
   <body>
     <div class="container-fluid metal">
-      <?php include('inc/header.php'); ?>
+      <?php include('header.php'); ?>
 
       <div class='row black'>
         <div class='col'><h5 class='pt-2 text-warning TNR text-center'>YELLOW BUTTONS = STANDARD SKILLS : STANDARD EXPERIENCE COST</h5></div>
@@ -172,7 +166,7 @@
               <div class='col-4'>
                 <div class="input-group input-group-lg">
                   <input type="text" id="sex" name="sex" class="form-control border text-center"
-                    value="<?php echo $sex; ?>" readonly />
+                    value="<?php echo $charInfo['Sex']; ?>" readonly />
                 </div>
               </div>
             </div>
@@ -1614,7 +1608,7 @@
         </div>
       </form>
 
-      <?php include("inc/footer.php"); ?>
+      <?php include("footer.php"); ?>
     </div>
   </body>
 </html>

@@ -1,10 +1,10 @@
 <?php
-   include("inc/config.php");
-   if(isset($_POST['submit'])){
-      $username = htmlentities(stripslashes($_POST['username']));
-      $password = htmlentities(stripslashes($_POST['password']));
-  }
+  include("inc/config.php");
   session_start();
+  if(isset($_POST['submit'])){
+    $username = htmlentities(stripslashes($_POST['username']));
+    $password = htmlentities(stripslashes($_POST['password']));
+  }
 ?>
 <!doctype html>
 <html lang='en' dir='ltr'>
@@ -19,7 +19,7 @@
 
   <body>
     <div class="container-fluid">
-      <?php include('inc/header.php'); ?>
+      <?php include('header.php'); ?>
 
       <div class="row metal">
         <div class="col">
@@ -90,7 +90,7 @@
         <div class='col'></div>  
       </div>
       
-      <?php include("inc/footer.php"); ?>
+      <?php include("footer.php"); ?>
     
     </div>
   </body>

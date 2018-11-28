@@ -32,7 +32,7 @@
     </head>
     <body>
 
-        <?php include("inc/header.php"); ?>
+        <?php include("header.php"); ?>
         <div class="container-fluid">
 
             <div class='row metal'>
@@ -71,7 +71,7 @@
                     ";
                 }
             ?>
-            <?php include("inc/footer.php"); ?>
+            <?php include("footer.php"); ?>
         </div>
     </body>
 </html>

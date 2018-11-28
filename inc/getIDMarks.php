@@ -4,7 +4,7 @@
 
   $characterID = $_POST['characterID'];
   
-  $sql =  " SELECT DISTINCT cid.*, c.FacialHair, c.HairStyle 
+  $sql =  " SELECT DISTINCT cid.*, c.FacialHair, c.HairStyle, c.Deceased 
             FROM char_id_marks AS cid
             LEFT JOIN characters AS c ON c.ID = cid.CharacterID
             WHERE CharacterID = $characterID;
