@@ -14,7 +14,7 @@
             echo "
                 <div class='row py-1'>
                   <div class='col'>
-                    <button type='button' class='btn btn-light btn-lg btn-block border' data-reference='". $row['ID'] ."'>
+                    <button type='button' class='btn btn-light btn-block border' data-reference='". $row['ID'] ."'>
                       ". $row['Username'] ."</button>
                   </div>
                 </div>

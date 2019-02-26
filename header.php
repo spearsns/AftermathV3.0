@@ -2,10 +2,15 @@
     if (isset($_SESSION['ID']) == true){
         $username = $_SESSION['username'];
     }
+    include('modals/messageListModal.php');
 ?>
     <div class='row metal py-2'>
         <div class='col'>
             <a href='login.php' role='button' class="btn btn-warning btn-lg btn-block border">LOG IN</a>
+        </div>
+
+        <div class='col'>
+            <button id='messageListBtn' class='btn btn-light btn-lg btn-block border px-0'>MESSAGES</button>
         </div>
 
         <div class='col'>
@@ -18,10 +23,11 @@
 
         <div class='col'>
             <div class="input-group input-group-lg">
-                <input type="text" class="form-control border text-center" placeholder='Login to continue' id='usernameArea' readonly />
+                <input type="text" class="form-control border text-center" placeholder='<-- Login 1st' id='usernameArea' readonly />
             
                 <script>
-                    var username = "<?php echo $username; ?>";
+                    var username = "";
+                    username = "<?php echo $username; ?>";
                     $('#usernameArea').val(username);
                 </script>
             </div>
@@ -57,3 +63,5 @@
         </div>
         <div class='col-3'></div>
     </div>
+
+    <div id='messageModalArea'></div>
