@@ -6,10 +6,6 @@ var express =  require('express'),
 	
 server.listen(3000);
 
-app.get('/', function(req, res){
-	res.sendFile(__dirname + '/index.php');
-});
-
 io.sockets.on('connection', function(socket){
 	
 	socket.on('new user', function(data, callback){

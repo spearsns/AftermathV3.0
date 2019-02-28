@@ -27,12 +27,6 @@
   $characterID = $charInfo['ID'];
   $_SESSION['characterID'] = $characterID;
 
-  if($charInfo['Sex'] == 0){
-    $sex = 'Female';
-  } else {
-    $sex = 'Male';
-  }
-
   $traitSQL =  
     "SELECT Memory, Logic, Perception, Willpower, Charisma, Strength, Endurance, Agility, Speed, Beauty, Sequence, Actions 
     FROM char_traits 
@@ -77,7 +71,7 @@
       $GPUpdateSQL =
         "UPDATE game_participants
         SET PlayerActive = 1
-        WHERE GameID = '$gameID' AND CharacterID = '$characterID' AND UserID = '$userID' ";
+        WHERE GameID = '$gameID' AND CharacterID = '$characterID' AND UserID = '$userID' AND PlayerActive = 0 ";
 
       $result6 = $conn->query($GPUpdateSQL) or die(mysqli_error($conn));
 
@@ -160,7 +154,7 @@
   <body onload="setInterval('chat.update()', 1000)">
     <div class="container-fluid black">
       <?php 
-        include('header.php');
+        include( $_SERVER['DOCUMENT_ROOT'] . '/aftermath/header.php' );
         include('../modals/idMarksModal.php'); 
       ?>      
 
@@ -321,7 +315,7 @@
               <div class='col-4'>
                 <div class="input-group input-group-lg">
                   <input type="text" id="sex" name="sex" class="form-control border text-center"
-                    value="<?php echo $sex; ?>" readonly />
+                    value="<?php echo $charInfo['Sex']; ?>" readonly />
                 </div>
               </div>
             </div>
@@ -1232,7 +1226,11 @@
         </div>
       </div>
 
-      <?php include("footer.php"); ?>
+        <script src='../js/instantMessage.js'></script>
+
+        <script src='../node_modules/socket.io-client/dist/socket.io.js'></script>
+        
+      <?php include( $_SERVER['DOCUMENT_ROOT'] . '/aftermath/footer.php' ); ?>
     </div>
   </body>
 </html>

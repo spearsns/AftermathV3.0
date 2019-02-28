@@ -96,7 +96,7 @@
           <div id='userList'></div>
         </div>
 
-        <script src='js/homeIM.js'></script>
+        <script src='js/instantMessage.js'></script>
 
         <script src='node_modules/socket.io-client/dist/socket.io.js'></script>
 

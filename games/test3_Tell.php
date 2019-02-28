@@ -91,7 +91,7 @@
   <body onload="setInterval('chat.update()', 1000)">
   	<div class="container-fluid black">
     	<?php 
-	        include('header.php');
+	        include($_SERVER['DOCUMENT_ROOT'] . '/aftermath/header.php');
 	        include('../modals/idMarksModal.php');
 	        include('../modals/characterSheetModal.php');
 	        include('../modals/adminModal.php'); 
@@ -184,7 +184,11 @@
 
       <div id='interface' class='interface'></div>
 
-      <?php include('footer.php'); ?>
+	    <script src='../js/instantMessage.js'></script>
+
+	    <script src='../node_modules/socket.io-client/dist/socket.io.js'></script>
+
+      <?php include($_SERVER['DOCUMENT_ROOT'] . '/aftermath/footer.php'); ?>
 
     </div> <!--END CONTAINER-->
 	</body>

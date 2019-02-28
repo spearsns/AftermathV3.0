@@ -59,8 +59,4 @@ $(document).ready(function(){
 		listing = setInterval(getGames, 1000);
 	});
 
-	$('#messageListBtn').click(function(){
-		$('#messageListModal').modal('toggle');
-	});
-
 });

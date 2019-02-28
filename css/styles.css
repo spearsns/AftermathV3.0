@@ -15,6 +15,10 @@ html {
 #documentsBtn:hover{
 	background-image: url(../img/buttons/docfolder_1.png);
 }
+#shortsBtn:hover{
+	background-image: url(../img/buttons/shorts_1.png);
+}
+
 .metal{
 	background-image: url('../img/misc/metal.png');
 	border-style: ridge;

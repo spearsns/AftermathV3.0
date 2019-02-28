@@ -6,7 +6,7 @@
 ?>
     <div class='row metal py-2'>
         <div class='col'>
-            <a href='login.php' role='button' class="btn btn-warning btn-lg btn-block border">LOG IN</a>
+            <a href='/aftermath/login.php' role='button' class="btn btn-warning btn-lg btn-block border">LOG IN</a>
         </div>
 
         <div class='col'>
@@ -14,11 +14,11 @@
         </div>
 
         <div class='col'>
-            <a href='signup.php' role='button'><img src='img/buttons/join_0.png' id='joinBtn' /></a>
+            <a href='/aftermath/signup.php' role='button'><img src='/aftermath/img/buttons/join_0.png' id='joinBtn' /></a>
         </div>
 
         <div class='col'>
-            <img src='img/graffiti/usernameX.png' />
+            <img src='/aftermath/img/graffiti/usernameX.png' />
         </div>
 
         <div class='col'>
@@ -34,7 +34,7 @@
         </div>
         
         <div class='col'>
-            <form id="logout" action="inc/processLogout.php" method="post">
+            <form id="logout" action="/aftermath/inc/processLogout.php" method="post">
             <button type="submit" class="btn btn-warning btn-lg btn-block border" id='logoutBtn'>LOG OUT</button>
             </form>
         </div>
@@ -43,19 +43,19 @@
     <div class='row black'>
         <div class='col-3'></div>
         <div class='col-6'>
-            <a href='index.php'>
+            <a href='/aftermath/index.php'>
             <div id="carousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="d-block w-100" src="img/banners/Aftermath0.jpg" alt="First slide">
+                        <img class="d-block w-100" src="/aftermath/img/banners/Aftermath0.jpg" alt="First slide">
                     </div>
                                         
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="img/banners/Aftermath2.jpg" alt="Second slide">
+                        <img class="d-block w-100" src="/aftermath/img/banners/Aftermath2.jpg" alt="Second slide">
                     </div>
 
                     <div class="carousel-item">
-                        <img class="d-block w-100" src="img/banners/Aftermath3.jpg" alt="Third slide">
+                        <img class="d-block w-100" src="/aftermath/img/banners/Aftermath3.jpg" alt="Third slide">
                     </div>
                 </div>
             </div>

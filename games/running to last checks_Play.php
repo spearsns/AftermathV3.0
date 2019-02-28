@@ -1226,10 +1226,6 @@
         </div>
       </div>
 
-        <script src='../js/instantMessage.js'></script>
-
-        <script src='../node_modules/socket.io-client/dist/socket.io.js'></script>
-
       <?php include( $_SERVER['DOCUMENT_ROOT'] . '/aftermath/footer.php' ); ?>
     </div>
   </body>

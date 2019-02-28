@@ -1,6 +1,10 @@
 jQuery(function($){
   var socket = io.connect('http://localhost:3000');
+  var sender = username;
+  var reciever = '';
+  var messageCount = 0;
 
+//USERNAMES
   if(username != null){
     socket.emit('new user', username);
   }
@@ -8,17 +12,17 @@ jQuery(function($){
   socket.on('usernames', function(data){
     var html = '';
     for(i=0; i < data.length; i++){
-      html += "<div class='row py-1'><div class='col'><button type='button' class='btn btn-light btn-block border user' data-reciever='"+ data[i] +"'>"+ data[i] +"</button></div></div>"
+      if (data[i] !== username){
+        html += "<div class='row py-1'><div class='col'><button type='button' class='btn btn-light btn-block border user' data-reciever='"+ data[i] +"'>"+ data[i] +"</button></div></div>";
+      } else {
+        continue;
+      }
   }
 
   $('#userList').html(html);
   });
 
-  var sender = username;
-  var reciever = '';
-  var messageCount = 0;
-
-  //SENDING MESSAGE
+//SENDING MESSAGE
   $('#messageModalArea').on('click', '#sendMessageBtn', function(e){
     e.preventDefault();
     if(username !== undefined){
@@ -88,7 +92,7 @@ jQuery(function($){
     $('#sendTo-'+ reciever).focus();
   });
 
-  //RECIEVING MESSAGE
+//RECIEVING MESSAGE
   socket.on('new message', function(data){
 
     if (username == data.reciever){
@@ -101,7 +105,7 @@ jQuery(function($){
           messageCount += 1;  
         }
     
-  //MESSAGE LIST
+//MESSAGE LIST
         var messageListHtml = '';
         messageListHtml +=    '<div class="row messageReply my-1 py-1 bg-secondary border" data-target="'+ reciever +'">';
         messageListHtml +=    ' <div class="col-4 px-1">';
@@ -120,7 +124,7 @@ jQuery(function($){
         $('#messageList').append(messageListHtml);  
       }
 
-  //INSTANT MESSAGING MODAL
+//INSTANT MESSAGING MODAL
       if( $('#message-' + reciever).length > 0 ){
         
         $('#messageBox-'+ reciever).append('<b>' + data.sender + ': </b>' + data.msg + '<br/>');
@@ -178,6 +182,7 @@ jQuery(function($){
         $('#messageBox-'+ reciever).append('<b>' + data.sender + ': </b>' + data.msg + '<br/>');
       }
 
+//MORE MESSAGE LIST
       if (messageCount == 1){
         $('#messageListBtn').html('(1) MESSAGE').addClass('btn-primary').removeClass('btn-light');
       } else if (messageCount > 1) {
@@ -190,6 +195,7 @@ jQuery(function($){
         e.preventDefault();
         messageCount -= 1;
         reciever = $(this).data('target');
+        $('#messageListModal').modal('toggle');
         $('#message-' + reciever).modal({"backdrop": "static"});
         $('#sendTo-'+ reciever).focus();
         
@@ -203,5 +209,10 @@ jQuery(function($){
       });
 
     }    
+    
   });         //new message
+
+  $('#messageListBtn').click(function(){
+    $('#messageListModal').modal('toggle');
+  });
 });           //JQuery

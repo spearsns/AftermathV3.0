@@ -16,8 +16,11 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Create New Game</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+      <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap.min.js"></script>
   </head>
 
   <body>
@@ -141,6 +144,10 @@
         </div>
         <div class='col'></div>  
       </div>
+
+      <script src='js/instantMessage.js'></script>
+
+      <script src='node_modules/socket.io-client/dist/socket.io.js'></script>
 
       <?php include('footer.php'); ?>
     </div>   

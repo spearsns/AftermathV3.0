@@ -823,6 +823,10 @@
         </div>
       </form>
 
+      <script src='js/instantMessage.js'></script>
+
+      <script src='node_modules/socket.io-client/dist/socket.io.js'></script>
+
       <?php include("footer.php"); ?>
     </div>
   </body>
