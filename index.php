@@ -59,7 +59,7 @@
         <div class='col-1'></div>
 
         <div class='col-4'>
-          <button type="button" class="btn btn-light btn-lg btn-block border">FIRST TIME? BE PREPARED...</button>
+          <button type="button" class="btn btn-dark btn-lg btn-block border font-weight-bold">FIRST TIME? BE PREPARED...</button>
         </div>
 
         <div class='col-1'></div>

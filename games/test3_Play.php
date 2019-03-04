@@ -60,10 +60,9 @@
   }
 
   $participantsSQL = 
-    "SELECT GameID, UserID, CharacterID, PlayerActive 
-    FROM game_participants AS GP
-    INNER JOIN games AS G ON G.ID = GP.GameID 
-    WHERE GameID = '$gameID' AND UserID = '$userID' AND CharacterID = '$characterID' AND PlayerActive = 0 ";
+    " SELECT DISTINCT GameID, UserID, CharacterID, PlayerActive 
+      FROM game_participants AS GP 
+      WHERE GameID = '$gameID' AND UserID = '$userID' AND CharacterID = '$characterID'";
 
     $result5 = mysqli_query($conn, $participantsSQL) or die(mysqli_error($conn));
 
@@ -71,14 +70,14 @@
       $GPUpdateSQL =
         "UPDATE game_participants
         SET PlayerActive = 1
-        WHERE GameID = '$gameID' AND CharacterID = '$characterID' AND UserID = '$userID' AND PlayerActive = 0 ";
+        WHERE GameID = '$gameID' AND UserID = '$userID' AND CharacterID = '$characterID'";
 
       $result6 = $conn->query($GPUpdateSQL) or die(mysqli_error($conn));
 
     } else {
       $GPInsertSQL = 
-        "INSERT INTO game_participants (GameID, UserID, PlayerActive, CharacterID)
-        VALUES ('$gameID', '$userID', 1, '$characterID') ";
+        "INSERT INTO game_participants (GameID, UserID, CharacterID, PlayerActive)
+        VALUES ('$gameID', '$userID', '$characterID', 1) ";
 
       $result7 = $conn->query($GPInsertSQL) or die(mysqli_error($conn));
     }

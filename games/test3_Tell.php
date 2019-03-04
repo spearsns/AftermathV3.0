@@ -96,6 +96,7 @@
 	        include('../modals/characterSheetModal.php');
 	        include('../modals/adminModal.php'); 
 	        include('../modals/confirmCloseModal.php'); 
+        	include('../modals/whisperModal.php'); 
       	?>
 
 	    <div class='row metal py-2'>
@@ -151,12 +152,16 @@
 		          <button class="btn btn-danger btn-lg btn-block border" id='randomHitBtn' type="button">RANDOM HIT</button>
 		        </div>
 		      </div>
-		      <br>
-		      <br>
+              <div class='row'>
+                <div class='col'>
+                <br />
+                <button role='button' class="btn btn-secondary btn-lg btn-block border" id='whisperBtn' type='button'>WHISPER</button>
+              	</div>
+              </div>
 		      <div class='row'>
 		        <div class='col'>
 		          <br />
-		          <button class="btn btn-secondary btn-lg btn-block border" id='adminBtn' data-reference='<?php echo $gameID ?>' type="button">ADMIN OPTIONS</button>
+		          <button class="btn btn-dark btn-lg btn-block border" id='adminBtn' data-reference='<?php echo $gameID ?>' type="button">ADMIN OPTIONS</button>
 		          <br />
 		        </div>
 		      </div>
