@@ -14,22 +14,6 @@ $(document).ready(function(){
 	getGames();
 	listing = setInterval(getGames, 1000);
 
-	/*
-	function getUsers(){
-		$.ajax({
-			type: "GET",
-			url: "inc/getUsers.php",
-			dataType: "html",
-			success: function(response){                    
-	           $("#userList").html(response);
-	       	}
-		});
-	}
-
-	getUsers();
-	setInterval(getUsers, 1000);
-	*/
-
 	$('#gameList').on('click', '.playBtn', function(e){ 
 		e.preventDefault(); 
 		var target = $(this).data('target');

@@ -136,6 +136,17 @@ $(document).ready(function(){
 		return roll(1,10) + roll(1,10);
 	}
 
+	function getParticipants(){
+		$.ajax({
+			type: "GET",
+			url: "../inc/getParticipants.php",
+			dataType: "html",
+			success: function(response){
+				$('#userList').html(response);
+			}
+		})
+	}
+
 	function getPlayers(){
 		$.ajax({
 			type: "GET",
@@ -244,6 +255,11 @@ $(document).ready(function(){
 		sendDice("[HIT] " + RHCResult, name);
 	});
 
+	$('#whisperBtn').click(function(){
+		getParticipants();
+		$('#whisperModal').modal('toggle');
+	});
+
 	$('#adminBtn').click(function(){
 		var gameID = $(this).data('reference');
 		$.ajax({
@@ -329,7 +345,6 @@ $(document).ready(function(){
 						}
 		});
 	});
-
 
 	$('#deathToggle').on('click', '#deathBtn', function(e){
 		if ( $(this).attr('aria-pressed') == 'false' ) {

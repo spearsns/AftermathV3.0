@@ -4,22 +4,28 @@ jQuery(function($){
   var reciever = '';
   var messageCount = 0;
 
+  var url = window.location.href;
+  var pageIndex = url.indexOf('?');
+  var page = url.substring(0, pageIndex);
+
 //USERNAMES
   if(username != null){
-    socket.emit('new user', username);
+    var data =  username;
+    socket.emit('new user', data);
   }
 
   socket.on('usernames', function(data){
     var html = '';
     for(i=0; i < data.length; i++){
       if (data[i] !== username){
-        html += "<div class='row py-1'><div class='col'><button type='button' class='btn btn-light btn-block border user' data-reciever='"+ data[i] +"'>"+ data[i] +"</button></div></div>";
+        html += "<div class='row py-1'><div class='col'><button type='button' class='btn btn-light btn-block border user' data-reciever='"+ data[i] +"'>";
+        html += data[i] +"</button></div></div>";
       } else {
         continue;
       }
-  }
-
-  $('#userList').html(html);
+    } 
+    
+    $('#userList').html(html);
   });
 
 //SENDING MESSAGE
@@ -86,7 +92,9 @@ jQuery(function($){
 
         messageHtml += '    </div>';
         messageHtml += '  </div>';
-        messageHtml += '</div>'
+        messageHtml += '</div>';
+
+    $('#whisperModal').modal('toggle');
     $('#messageModalArea').append(messageHtml);
     $('#message-' + reciever).modal({"backdrop": "static"});
     $('#sendTo-'+ reciever).focus();

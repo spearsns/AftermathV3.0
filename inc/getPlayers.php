@@ -5,7 +5,7 @@
   	$gameName = $_SESSION['gameName'];
   	$gameID = $_SESSION['gameID'];
 
-  	$sql =  "SELECT Username, CharacterName, CharacterID
+  	$sql =  "SELECT DISTINCT Username, CharacterName, CharacterID
             FROM characters AS C 
             INNER JOIN game_participants AS GP ON C.UserID = GP.UserID AND C.ID = GP.CharacterID
             INNER JOIN users AS U ON GP.UserID = U.ID
@@ -14,12 +14,10 @@
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
-	  	$i = 0;
-	    if($row = $result->fetch_assoc()) {
+	    while($row = $result->fetch_assoc()) {
 	        $player = $row['Username'];
 	        $character = $row['CharacterName'];
 	        $characterID = $row['CharacterID'];
-	        $i++;
 
 	        $target = '$(this).data("reference")';
 	        

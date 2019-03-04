@@ -1012,3 +1012,7 @@ Guest [ Martinez ] : <span style='color: red;'>[%] 45
 Guest [ Martinez ] : <span style='color: red;'>[HIT] LEFT THIGH
 Guest [ Martinez ] : <span style='color: red;'>[%] !!CRITICAL!! 33
 Guest [ Martinez ] : <span style='color: red;'>[HIT] RIGHT BICEP
+<span>Nick [ bind ]</span> : 55 
+<span>Nick [ bind ]</span> : 55 
+<span>Creator [ Spinks ]</span> : check  
+<span>Nick [ bind ]</span> : check 

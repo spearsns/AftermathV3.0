@@ -156,6 +156,7 @@
       <?php 
         include( $_SERVER['DOCUMENT_ROOT'] . '/aftermath/header.php' );
         include('../modals/idMarksModal.php'); 
+        include('../modals/whisperModal.php'); 
       ?>      
 
       <!--PLAY INTERFACE-->
@@ -233,6 +234,12 @@
                 <br />
                 <a href='../characterManagement.php?<?php echo $characterName ?>' role='button' 
                   class="btn btn-success btn-lg btn-block border">CHARACTER MGMT</a>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col'>
+                <br />
+                <button role='button' class="btn btn-secondary btn-lg btn-block border" id='whisperBtn' type='button'>WHISPER</button>
                 <br />
               </div>
             </div>
@@ -1226,11 +1233,11 @@
         </div>
       </div>
 
-        <script src='../js/instantMessage.js'></script>
-
-        <script src='../node_modules/socket.io-client/dist/socket.io.js'></script>
 
       <?php include( $_SERVER['DOCUMENT_ROOT'] . '/aftermath/footer.php' ); ?>
     </div>
+    <script src='../js/instantMessage.js'></script>
+
+    <script src='../node_modules/socket.io-client/dist/socket.io.js'></script>
   </body>
 </html>
