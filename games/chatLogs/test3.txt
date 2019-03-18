@@ -1016,3 +1016,27 @@ Guest [ Martinez ] : <span style='color: red;'>[HIT] RIGHT BICEP
 <span>Nick [ bind ]</span> : 55 
 <span>Creator [ Spinks ]</span> : check  
 <span>Nick [ bind ]</span> : check 
+Guest [ Storyteller ] : <span style='color: red;'>[HIT] RIGHT UPPER BODY (RIBS/SHOULDER)
+ : <span style='color: red;'>ROUND: 1
+Guest [ Storyteller ] : <span style='color: red;'>ROUND: 1
+Guest [ Storyteller ] : <span style='color: red;'>Round - 1
+Guest [ Storyteller ] : <span style='color: red;'>Round - 1
+Guest [ Storyteller ] : <span style='color: red;'>Round - 2
+Guest [ Storyteller ] : <span style='color: red;'>Round - 1
+Guest [ Storyteller ] : <span style='color: red;'>ROUND - 1
+Guest [ Storyteller ] : <span style='color: red;'>[ROUND - 1]
+Guest [ Storyteller ] : <span style='color: red;'>[ROUND - 2]
+Guest [ Storyteller ] : <span style='color: red;'>[ROUND - 3]
+Guest [ Storyteller ] : <span style='color: red;'>[ROUND - 4]
+Guest [ Storyteller ] : <span style='color: red;'>[ROUND - 1]
+Guest [ Storyteller ] : <span style='color: red;'>[ROUND - 1]
+Guest [ Storyteller ] : <span style='color: red;'>[ROUND - 1]
+Guest [ Storyteller ] : <span style='color: red;'>[ROUND - 2]
+Guest [ Storyteller ] : <span style='color: red;'>[ROUND - 3]
+Guest [ Storyteller ] : <span style='color: red;'>[ROUND - 4]
+Guest [ Storyteller ] : <span style='color: red;'>[ROUND - 5]
+Guest [ Storyteller ] : <span style='color: red;'>[ROUND - 6]
+Guest [ Storyteller ] : <span style='color: red;'>[ROUND - 7]
+Guest [ Storyteller ] : <span style='color: red;'>[ROUND - 8]
+Guest [ Storyteller ] : <span style='color: red;'>[ROUND - 9]
+Guest [ Storyteller ] : <span style='color: red;'>[ROUND - 1]

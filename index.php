@@ -44,10 +44,14 @@
       <script type="text/javascript" src="js/home.js"></script>
   	</head>
 
-	<body>
+	<body class='px-0'>
 		<div class="container-fluid" id='contentWrap'>
   		<?php 
         include('header.php');
+        include('modals/adminModal.php');
+        include('modals/adminLoginModal.php');
+        include('modals/confirmationModal.php');
+        include('modals/onlineModal.php');
       ?>
 
       <div class='row metal border-bottom-0 py-2'>
@@ -59,7 +63,7 @@
         <div class='col-1'></div>
 
         <div class='col-4'>
-          <button type="button" class="btn btn-dark btn-lg btn-block border font-weight-bold">FIRST TIME? BE PREPARED...</button>
+          <button type="button" class="btn btn-dark btn-lg btn-block border">FIRST TIME? BE PREPARED...</button>
         </div>
 
         <div class='col-1'></div>
@@ -70,37 +74,30 @@
 
   		</div>
 
-      <div class='row'>
-        <div class='col-10 black'>
-      		<div class='row metal border-top-0 py-2'>
-            <div class='col-2'>
-              <a href='newGame.php' role='button' class="btn btn-danger btn-lg btn-block border">NEW GAME</a>
-            </div>
-
-            <div class='col-3'>
-              <img src='img/graffiti/gamesX.png'>
-            </div>
-
-            <div class='col-5'>
-              <img src='img/graffiti/description.png' class='mx-auto d-block'>
-            </div>
-
-            <div class='col-2'></div>
-          </div>
-
-          <div id='gameList'></div>
+      <div class='row metal border-top-0 py-2'>
+        <div class='col-2'>
+          <a href='newGame.php' role='button' class="btn btn-danger btn-lg btn-block border">NEW GAME</a>
         </div>
 
-        <div class='col-2 brass'>
-          <img src='img/graffiti/onlineX.png' class='my-2'>
-          <div id='userList'></div>
+        <div class='col-2'>
+          <img src='img/graffiti/gamesX.png'>
         </div>
 
-        <script src='js/instantMessage.js'></script>
+        <div class='col-4'>
+          <img src='img/graffiti/description.png' class='mx-auto d-block'>
+        </div>
 
-        <script src='node_modules/socket.io-client/dist/socket.io.js'></script>
+        <div class='col-2'></div>
 
+        <div class='col-2'>
+          <button type="button" class="btn btn-light btn-lg btn-block border" id='onlineBtn'>ONLINE</button>
+        </div>
       </div>
+
+      <div id='gameList'></div>
+      
+      <script src='js/instantMessage.js'></script>
+      <script src='node_modules/socket.io-client/dist/socket.io.js'></script>
       <?php include('footer.php'); ?>
     </div> 
   </body>

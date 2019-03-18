@@ -143,6 +143,7 @@ $(document).ready(function(){
 			dataType: "html",
 			success: function(response){
 				$('#userList').html(response);
+				$('#bootList').html(response);
 			}
 		})
 	}
@@ -260,23 +261,23 @@ $(document).ready(function(){
 		$('#whisperModal').modal('toggle');
 	});
 
-	$('#adminBtn').click(function(){
-		var gameID = $(this).data('reference');
-		$.ajax({
-			type: 		"POST",
-			url: 		"../inc/checkLocks.php",
-			data: 		{
-						'gameID' : gameID
-						},
-			dataType: 	"html",
-			success: 	function(result){
-							$('#gameLock').html(result);
-							$('#adminModal').modal('toggle');
-						}
-		});
+	$('#bootBtn').click(function(){
+		getParticipants();
+		$('#bootModal').modal('toggle');
 	});
 
-	$('#gameLock').on('click', '#lockBtn', function(e){ 
+	var round = 0;
+
+	$('#roundBtn').click(function(){
+		round += 1;
+		sendDice("[ROUND - " + round + "]", name );
+	});
+
+	$('#resetBtn').click(function(){
+		round = 0;
+	});
+
+	$('#lockInterface').on('click', '.lockBtn', function(e){ 
 		var gameID = $(this).data('reference');
 		$.ajax({
 			type: 		'POST',
@@ -285,12 +286,14 @@ $(document).ready(function(){
 						'gameID' : gameID
 						},
 			success: 	function(result){
-							$('#adminModal').modal('toggle');
+							$('.lockBtn').html('UNLOCK GAME');
+							$('.lockBtn').removeClass('btn-dark').addClass('btn-success');
+							$('.lockBtn').removeClass('lockBtn').addClass('unlockBtn');
 						}  			
 		});
 	});
 
-	$('#gameLock').on('click', '#unlockBtn', function(e){ 
+	$('#lockInterface').on('click', '.unlockBtn', function(e){ 
 		var gameID = $(this).data('reference');
 		$.ajax({
 			type: 		'POST',
@@ -299,7 +302,9 @@ $(document).ready(function(){
 						'gameID' : gameID
 						},
 			success: 	function(result){
-							$('#adminModal').modal('toggle');
+							$('.unlockBtn').html('LOCK GAME');
+							$('.unlockBtn').removeClass('btn-success').addClass('btn-dark');
+							$('.unlockBtn').removeClass('id').addClass('lockBtn');
 						}  			
 		});
 	});
@@ -307,6 +312,11 @@ $(document).ready(function(){
 	setInterval(getExp, 1000);
 	var listing = setInterval(getPlayers, 1000);
 	setInterval(getStoryteller, 1000);
+
+	$('#charMgmtBtn').click(function(){
+		var url = $(this).data('target');
+		window.open(url,'_blank');
+	});
 
 	$('.interface').on('click', '.idMarksBtn', function(e){ 
 		e.preventDefault(); 
@@ -423,28 +433,4 @@ $(document).ready(function(){
 						}
 		});
 	});
-
-	$('#endGameBtn').click(function(){
-		$('#adminModal').modal('toggle');
-		$('#confirmCloseModal').modal('toggle');
-	});
-
-	$('#noCloseBtn').click(function(){
-		$('#confirmCloseModal').modal('toggle');
-	});
-
-	$('#yesCloseBtn').click(function(){
-		var gameID = $(this).data('reference');
-		$.ajax({
-			type: 		'POST',
-			url: 		'../inc/processCloseGame.php',
-			data: 		{
-						'gameID' : gameID
-						},
-			success: 	function(result){
-							window.location.replace('../index.php');
-						}  			
-		});  			
-	});
-
 });

@@ -18,6 +18,6 @@
 
 	$_SESSION['gameID'] = $gameID;
 
-	header("Location: ../characterSelect.php");
+	header("Location: ../characterSelect.php?". $gameName);
 
 ?>

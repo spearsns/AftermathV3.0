@@ -40,9 +40,6 @@ $_SESSION["textFile"] = $txt_path . $camp_txt_file;
 } if (empty($storytellerPW)){
 	header("Location: ../newGame.php?error=empty");
 	exit();
-} if (empty($playerPW)){
-	header("Location: ../newGame.php?error=empty");
-	exit();
 } else {
 	$sql = "SELECT GameName FROM games WHERE GameName ='$gameName'";
 	$result = $conn->query($sql);
@@ -57,8 +54,8 @@ $_SESSION["textFile"] = $txt_path . $camp_txt_file;
 		header("Location: ../newGame.php?error=playerPW");
 		exit();
 	} else {
-		$sql = "INSERT INTO games (GameName, Description, TxtFile, StorytellerPassword, PlayerPassword, Locked, Finished) 
-		VALUES ('$gameName', '$description', '$game_txt_file', '$storytellerPW', '$playerPW', 0, 0)";
+		$sql = "INSERT INTO games (GameName, Description, TxtFile, StorytellerPassword, PlayerPassword, Locked) 
+		VALUES ('$gameName', '$description', '$game_txt_file', '$storytellerPW', '$playerPW', 0)";
 		$result = $conn->query($sql);
 
 		$play = fopen($game_path.$game_play_file, "w");

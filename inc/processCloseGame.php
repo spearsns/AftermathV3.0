@@ -16,10 +16,14 @@
           WHERE ID = '$gameID' ";
 
   $gameName = $conn->query($sql2) or die(mysqli_error($conn));
-
-  $playFile = $_SERVER['HTTP_HOST'] . "/games/" . $gameName . "_Play";
-  $tellFile = $_SERVER['HTTP_HOST'] . "/games/" . $gameName . "_Tell";
+  
+  $playFile = $_SERVER['DOCUMENT_ROOT'] . '/aftermath/games/' . $gameName . "_Play.php";
+  $tellFile = $_SERVER['DOCUMENT_ROOT'] . "/aftermath/games/" . $gameName . "_Tell.php";
 
   unlink($playFile);
   unlink($tellFile);
+
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
 ?>

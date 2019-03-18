@@ -2,8 +2,13 @@
   include("../inc/config.php");
   session_start();
 
-  $gameName = $_SESSION['gameName'];
-  $gameID = $_SESSION['gameID'];
+  $gameName = $_SESSION['gameName']; 
+  $gameSQL =
+  "SELECT ID FROM games WHERE GameName = '$gameName'";
+  $result = mysqli_query($conn, $gameSQL);
+  $gameInfo = mysqli_fetch_array($result);
+
+  $gameID = $gameInfo[0];
   $characterID = $_SESSION['characterID'];
 
   $sql =  "SELECT RemainingExp

@@ -3,9 +3,7 @@
   	session_start();
 
 	$sql = 
-	"SELECT DISTINCT ID, GameName, Description, PlayerPassword, Locked, StorytellerActive
-	FROM games 
-	WHERE Finished = '0' ";
+	"SELECT DISTINCT ID, GameName, Description, PlayerPassword, Locked, StorytellerActive	FROM games ";
 	    
   $result = $conn->query($sql);
 
@@ -26,13 +24,13 @@
             data-reference'". $reference ."'>PLAY</a>
           </div>
 
-          <div class='col-3'>
+          <div class='col-2'>
             <div class='input-group input-group-lg'>
               <input type='text' class='form-control text-center border' value='". $row['GameName'] ."' readonly />
             </div>
           </div>
 
-          <div class='col-5'>
+          <div class='col-4'>
             <div class='input-group input-group-lg'>
               <input type='text' class='form-control text-center border' value='". $row['Description'] ."' readonly />
             </div>
@@ -41,6 +39,10 @@
           <div class='col-2'>
             <button class='btn btn-info btn-lg btn-block border tellBtn' data-target='storytellerLogin.php?". $row['GameName'] ."' 
             data-reference'". $reference ."'>TELL</a>
+          </div>
+
+          <div class='col-2'>
+            <button class='btn btn-secondary btn-lg btn-block border adminBtn' data-target='". $row['GameName'] ."' data-reference='". $reference ."'>ADMIN</a>
           </div>
         </div>
         ";
@@ -54,13 +56,13 @@
             data-reference'". $reference ."'>PLAY</a>
           </div>
 
-          <div class='col-3'>
+          <div class='col-2'>
             <div class='input-group input-group-lg'>
               <input type='text' class='form-control text-center border' value='". $row['GameName'] ."' readonly />
             </div>
           </div>
 
-          <div class='col-5'>
+          <div class='col-4'>
             <div class='input-group input-group-lg'>
               <input type='text' class='form-control text-center border' value='". $row['Description'] ."' readonly />
             </div>
@@ -69,6 +71,10 @@
           <div class='col-2'>
             <button class='btn btn-dark btn-lg btn-block border tellBtn' data-target='storytellerLogin.php?". $row['GameName'] ."' 
             data-reference'". $reference ."' disabled>TELL</a>
+          </div>
+
+          <div class='col-2'>
+            <button class='btn btn-secondary btn-lg btn-block border adminBtn' data-target='". $row['GameName'] ."' data-reference='". $reference ."'>ADMIN</a>
           </div>
         </div>
         ";
@@ -82,13 +88,13 @@
             data-reference'". $reference ."' disabled>PLAY</a>
           </div>
 
-          <div class='col-3'>
+          <div class='col-2'>
             <div class='input-group input-group-lg'>
               <input type='text' class='form-control text-center border' value='". $row['GameName'] ."' readonly />
             </div>
           </div>
 
-          <div class='col-5'>
+          <div class='col-4'>
             <div class='input-group input-group-lg'>
               <input type='text' class='form-control text-center border' value='". $row['Description'] ."' readonly />
             </div>
@@ -97,6 +103,10 @@
           <div class='col-2'>
             <button  class='btn btn-dark btn-lg btn-block border tellBtn' data-target='storytellerLogin.php?". $row['GameName'] ."'
             data-reference'". $reference ."' disabled>TELL</a>
+          </div>
+
+          <div class='col-2'>
+            <button class='btn btn-secondary btn-lg btn-block border adminBtn' data-target='". $row['GameName'] ."' data-reference='". $reference ."'>ADMIN</a>
           </div>
         </div>
         ";

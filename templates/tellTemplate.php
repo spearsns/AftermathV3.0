@@ -96,6 +96,8 @@
 	        include('../modals/characterSheetModal.php');
 	        include('../modals/adminModal.php'); 
 	        include('../modals/confirmCloseModal.php'); 
+        	include('../modals/whisperModal.php'); 
+          include('../modals/bootModal.php');  
       	?>
 
 	    <div class='row metal py-2'>
@@ -151,18 +153,39 @@
 		          <button class="btn btn-danger btn-lg btn-block border" id='randomHitBtn' type="button">RANDOM HIT</button>
 		        </div>
 		      </div>
-		      <br>
-		      <br>
 		      <div class='row'>
-		        <div class='col'>
+            <div class='col'>
+            <br />
+            <button role='button' class="btn btn-light btn-lg btn-block border" id='roundBtn' type='button'>ROUND</button>
+          	</div>
+          </div>
+          <div class='row'>
+            <div class='col'>
+            <br />
+            <button role='button' class="btn btn-info btn-lg btn-block border" id='resetBtn' type='button'>RESET</button>
+          	</div>
+          </div>
+          <div class='row'>
+            <div class='col'>
+            <br />
+            <button role='button' class="btn btn-secondary btn-lg btn-block border" id='whisperBtn' type='button'>WHISPER</button>
+          	</div>
+          </div>
+		      <div class='row'>
+		        <div class='col' id='lockInterface'>
 		          <br />
-		          <button class="btn btn-secondary btn-lg btn-block border" id='adminBtn' data-reference='<?php echo $gameID ?>' type="button">ADMIN OPTIONS</button>
-		          <br />
+		          <button class="btn btn-dark btn-lg btn-block border lockBtn" data-reference='<?php echo $gameID; ?>' type="button">LOCK GAME</button>
 		        </div>
 		      </div>
+          <div class='row'>
+            <div class='col'>
+              <br />
+              <button role='button' class="btn btn-danger btn-lg btn-block border mx-auto" id='bootBtn' type='button'>BOOT USER</button>
+              <br />
+            </div>
+          </div>
 	     	</div>
 	 	  </div>
-
 	    <div class='row metal py-2'>
 	      <div class='col'><img src='../img/graffiti/notesX.png' class='mx-auto d-block' /></div>
 	    </div>
@@ -173,21 +196,21 @@
 	      </div>
 	    </div>
 
-      <div class='row metal pt-0'>
+      <div class='row metal py-2'>
       	<div class='col px-0'><img src='../img/graffiti/playerX.png' class='mx-auto d-block' /></div>
       	<div class='col px-0'><img src='../img/graffiti/characterX.png' class='mx-auto d-block' /></div>
       	<div class='col px-0'><img src='../img/graffiti/charSheet.png' class='mx-auto d-block' /></div>
       	<div class='col px-0'><img src='../img/graffiti/idMarks.png' class='mx-auto d-block' /></div>
       	<div class='col px-0'><img src='../img/graffiti/experienceX.png' class='mx-auto d-block' /></div>
-      	<div class='col px-0'></div>
+        <div class='col px-0'></div>
       </div>
 
       <div id='interface' class='interface'></div>
 
-        <script src='../js/instantMessage.js'></script>
+	    <script src='../js/instantMessage.js'></script>
 
-        <script src='../node_modules/socket.io-client/dist/socket.io.js'></script>
-        
+	    <script src='../node_modules/socket.io-client/dist/socket.io.js'></script>
+
       <?php include($_SERVER['DOCUMENT_ROOT'] . '/aftermath/footer.php'); ?>
 
     </div> <!--END CONTAINER-->

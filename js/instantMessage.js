@@ -3,6 +3,7 @@ jQuery(function($){
   var sender = username;
   var reciever = '';
   var messageCount = 0;
+  var userCount = 0;
 
   var url = window.location.href;
   var pageIndex = url.indexOf('?');
@@ -16,9 +17,10 @@ jQuery(function($){
 
   socket.on('usernames', function(data){
     var html = '';
+    userCount = data.length;
     for(i=0; i < data.length; i++){
       if (data[i] !== username){
-        html += "<div class='row py-1'><div class='col'><button type='button' class='btn btn-light btn-block border user' data-reciever='"+ data[i] +"'>";
+        html += "<div class='row py-1'><div class='col'><button type='button' class='btn btn-lg btn-warning btn-block border user' data-reciever='"+ data[i] +"'>";
         html += data[i] +"</button></div></div>";
       } else {
         continue;
@@ -26,6 +28,24 @@ jQuery(function($){
     } 
     
     $('#userList').html(html);
+
+    if(userCount > 1){
+        $('#onlineBtn').html('ONLINE (' + (userCount - 1) + ')').addClass('btn-primary').removeClass('btn-light');
+      } else {
+        $('#onlineBtn').html('ONLINE').addClass('btn-light').removeClass('btn-primary');
+      }
+  });
+
+// BOOT USER
+  $('#bootList').on('click', '.user', function(e){ 
+    e.preventDefault();
+    data = $(this).data('reciever');
+    $('#bootModal').modal('toggle');
+    socket.emit('boot user', data);
+  });
+
+  socket.on('eject', function(){
+    window.location.href = '../index.php';
   });
 
 //SENDING MESSAGE
@@ -93,7 +113,7 @@ jQuery(function($){
         messageHtml += '    </div>';
         messageHtml += '  </div>';
         messageHtml += '</div>';
-
+    $('#onlineModal').modal('toggle');
     $('#whisperModal').modal('toggle');
     $('#messageModalArea').append(messageHtml);
     $('#message-' + reciever).modal({"backdrop": "static"});
@@ -190,11 +210,21 @@ jQuery(function($){
         $('#messageBox-'+ reciever).append('<b>' + data.sender + ': </b>' + data.msg + '<br/>');
       }
 
-//MORE MESSAGE LIST
+//ONLINE LIST UPDATE
+      $('#onlineBtn').click(function(){
+        $('#onlineModal').modal('toggle');
+      });
+      
+      socket.on('logout', function(){
+        ('logout');
+        userCount -= 1;
+      });
+
+//MESSAGE LIST UPDATE
       if (messageCount == 1){
-        $('#messageListBtn').html('(1) MESSAGE').addClass('btn-primary').removeClass('btn-light');
+        $('#messageListBtn').html('MESSAGE (1)').addClass('btn-primary').removeClass('btn-light');
       } else if (messageCount > 1) {
-        $('#messageListBtn').html('(' + messageCount + ') MESSAGES').addClass('btn-primary').removeClass('btn-light');  
+        $('#messageListBtn').html('MESSAGES ' + '(' + messageCount + ')' ).addClass('btn-primary').removeClass('btn-light');  
       } else {
         $('#messageListBtn').html('MESSAGES').addClass('btn-light').removeClass('btn-primary'); 
       }
@@ -223,4 +253,5 @@ jQuery(function($){
   $('#messageListBtn').click(function(){
     $('#messageListModal').modal('toggle');
   });
+
 });           //JQuery

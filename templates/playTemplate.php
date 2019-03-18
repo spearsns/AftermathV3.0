@@ -60,10 +60,9 @@
   }
 
   $participantsSQL = 
-    "SELECT GameID, UserID, CharacterID, PlayerActive 
-    FROM game_participants AS GP
-    INNER JOIN games AS G ON G.ID = GP.GameID 
-    WHERE GameID = '$gameID' AND UserID = '$userID' AND CharacterID = '$characterID' AND PlayerActive = 0 ";
+    " SELECT DISTINCT GameID, UserID, CharacterID, PlayerActive 
+      FROM game_participants AS GP 
+      WHERE GameID = '$gameID' AND UserID = '$userID' AND CharacterID = '$characterID'";
 
     $result5 = mysqli_query($conn, $participantsSQL) or die(mysqli_error($conn));
 
@@ -71,14 +70,14 @@
       $GPUpdateSQL =
         "UPDATE game_participants
         SET PlayerActive = 1
-        WHERE GameID = '$gameID' AND CharacterID = '$characterID' AND UserID = '$userID' AND PlayerActive = 0 ";
+        WHERE GameID = '$gameID' AND UserID = '$userID' AND CharacterID = '$characterID'";
 
       $result6 = $conn->query($GPUpdateSQL) or die(mysqli_error($conn));
 
     } else {
       $GPInsertSQL = 
-        "INSERT INTO game_participants (GameID, UserID, PlayerActive, CharacterID)
-        VALUES ('$gameID', '$userID', 1, '$characterID') ";
+        "INSERT INTO game_participants (GameID, UserID, CharacterID, PlayerActive)
+        VALUES ('$gameID', '$userID', '$characterID', 1) ";
 
       $result7 = $conn->query($GPInsertSQL) or die(mysqli_error($conn));
     }
@@ -156,6 +155,7 @@
       <?php 
         include( $_SERVER['DOCUMENT_ROOT'] . '/aftermath/header.php' );
         include('../modals/idMarksModal.php'); 
+        include('../modals/whisperModal.php'); 
       ?>      
 
       <!--PLAY INTERFACE-->
@@ -231,8 +231,14 @@
             <div class='row'>
               <div class='col'>
                 <br />
-                <a href='../characterManagement.php?<?php echo $characterName ?>' role='button' 
-                  class="btn btn-success btn-lg btn-block border">CHARACTER MGMT</a>
+                <button data-target='../characterManagement.php?<?php echo $characterName ?>' role='button' class="btn btn-success btn-lg btn-block border" id='charMgmtBtn'>
+                  CHARACTER MGMT</button>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='col'>
+                <br />
+                <button role='button' class="btn btn-secondary btn-lg btn-block border" id='whisperBtn' type='button'>WHISPER</button>
                 <br />
               </div>
             </div>
@@ -1226,11 +1232,11 @@
         </div>
       </div>
 
-        <script src='../js/instantMessage.js'></script>
 
-        <script src='../node_modules/socket.io-client/dist/socket.io.js'></script>
-        
       <?php include( $_SERVER['DOCUMENT_ROOT'] . '/aftermath/footer.php' ); ?>
     </div>
+    <script src='../js/instantMessage.js'></script>
+
+    <script src='../node_modules/socket.io-client/dist/socket.io.js'></script>
   </body>
 </html>

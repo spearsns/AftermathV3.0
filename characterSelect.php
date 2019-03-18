@@ -1,6 +1,11 @@
 <?php
     include("inc/config.php");
     session_start();
+  
+    $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+    $game = parse_url($url, PHP_URL_QUERY);
+    $gameName = rawurldecode($game); 
+    $_SESSION['gameName'] = $gameName;
 
     $character = null;
 

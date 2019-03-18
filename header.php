@@ -35,7 +35,7 @@
         
         <div class='col'>
             <form id="logout" action="/aftermath/inc/processLogout.php" method="post">
-            <button type="submit" class="btn btn-warning btn-lg btn-block border" id='logoutBtn'>LOG OUT</button>
+                <button type="submit" class="btn btn-warning btn-lg btn-block border" id='logoutBtn'>LOG OUT</button>
             </form>
         </div>
     </div>
