@@ -13,7 +13,7 @@
         header("Location: login.php");
     }
 
-    if (isset($_SESSION['gameName']) == true){
+    if (isset($game) == true){
         $target = 'games/'. $_SESSION['gameName'] .'_Play.php?';
     } else {
         $target = 'characterManagement.php?';
@@ -38,6 +38,7 @@
     <body>
 
         <?php include("header.php"); ?>
+
         <div class="container-fluid">
 
             <div class='row metal'>

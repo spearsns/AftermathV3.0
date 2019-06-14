@@ -247,7 +247,7 @@ $(document).ready(function(){
 			$('#medicineBtn').attr("disabled", "disabled");
 			$('#surgery').val(surgery);
 			$('#surgeryBtn').attr("disabled", "disabled");
-		} else if(background == "Military"){
+		} else if(background == "Veteran"){
 			$('#navigation').val(navigation + twoD10());
 			$('#envAware').val(envAware + twoD10());
 			$('#stealth').val(stealth + twoD10());

@@ -34,7 +34,7 @@
   	<head>
     	<meta charset="utf-8">
     	<meta http-equiv="x-ua-compatible" content="ie=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="viewport" content="width=device-width, initial-scale=0.1, shrink-to-fit=no">
     	<title>Welcome to the Aftermath</title>
 	    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     	<link rel="stylesheet" type="text/css" href="css/styles.css" />
@@ -56,19 +56,19 @@
 
       <div class='row metal border-bottom-0 py-2'>
 
-  			<div class='col-3'>
+  			<div class='col'>
   				<a href='newCharacter.php' role='button' class="btn btn-warning btn-lg btn-block border">NEW CHARACTER</a>
   			</div>
 
-        <div class='col-1'></div>
-
-        <div class='col-4'>
-          <button type="button" class="btn btn-dark btn-lg btn-block border">FIRST TIME? BE PREPARED...</button>
+        <div class='col'>
+          <a href='apocalypse.php' role='button' class='btn btn-dark btn-lg btn-block border'>THE APOCALYPSE</a>
         </div>
 
-        <div class='col-1'></div>
+        <div class='col'>
+          <a href='info.php' role="button" class="btn btn-dark btn-lg btn-block border">USER MANUAL</a>
+        </div>
         
-  			<div class='col-3'>
+  			<div class='col'>
   				<a href='characterSelect.php' role='button' class="btn btn-warning btn-lg btn-block border">CHARACTER MGMT</a>
   			</div>
 

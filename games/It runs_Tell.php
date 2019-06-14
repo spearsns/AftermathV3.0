@@ -143,11 +143,9 @@
             <div class='col'>
               <br />
               <div class="input-group input-group-lg">
-                <input type="text" id='LoSValue' class="form-control border text-center" placeholder='Likelihood of Success' value='' />
+                <input type="text" id='LoSValue' class="form-control border text-center" value='' />
               </div>
             </div>
-          </div>
-          <div class='row'>
             <div class='col'>
               <br />
               <button class="btn btn-success btn-lg btn-block border" id='LoSBtn' type="button">LoS CALC</button>

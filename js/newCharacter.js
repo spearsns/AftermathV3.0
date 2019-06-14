@@ -54,7 +54,7 @@ function background(){
 	if (backgroundRoll <= 5){
 		background = "Medic";	
 	} else if (backgroundRoll >= 6 && backgroundRoll <= 10){
-		background = "Military";
+		background = "Veteran";
 	} else if (backgroundRoll >= 11 && backgroundRoll <= 15){
 		background = "Police Officer";
 	} else if (backgroundRoll >= 16 && backgroundRoll <= 20){
@@ -74,7 +74,7 @@ function background(){
 	} else {
 		background = "Scavenger";
 	}
-    return background;
+    return "Veteran";
 }
 
 var traitPoints = 	Math.floor(willpower / 2);

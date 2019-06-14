@@ -577,7 +577,7 @@
               <input type="text" id="offHand" name='offHand' class="form-control border text-center"
                 value="<?php echo $charSkills['OffHand']; ?>" readonly />
               <div class="input-group-append">
-                <button class="btn btn-success border incOffHand" data-target='offHand' type="button"> + </button>
+                <button class="btn btn-dark border incOffHand" data-target='offHand' type="button"> + </button>
               </div>
             </div>    
           </div>
@@ -594,7 +594,7 @@
               <input type="text" id="block" name='block' class="form-control border text-center"
                 value="<?php echo $charSkills['Block']; ?>" readonly />
               <div class="input-group-append">
-                <button class="btn btn-warning border incBlock" data-target='block' type="button"> + </button>
+                <button class="btn btn-dark border incBlock" data-target='block' type="button"> + </button>
               </div>
             </div>    
           </div>
@@ -607,7 +607,7 @@
               <input type="text" id="dodge" name='dodge' class="form-control border text-center"
                 value="<?php echo $charSkills['Dodge']; ?>" readonly />
               <div class="input-group-append">
-                <button class="btn btn-success border incDodge" data-target='dodge' type="button"> + </button>
+                <button class="btn btn-dark border incDodge" data-target='dodge' type="button"> + </button>
               </div>
             </div>    
           </div>

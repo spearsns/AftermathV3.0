@@ -4,6 +4,7 @@
     }
     include('modals/messageListModal.php');
 ?>
+
     <div class='row metal py-2'>
         <div class='col'>
             <a href='/aftermath/login.php' role='button' class="btn btn-warning btn-lg btn-block border">LOG IN</a>

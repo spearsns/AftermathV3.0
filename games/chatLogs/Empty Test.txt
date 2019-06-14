@@ -1,0 +1,12 @@
+NEW GAME: Empty Test<span>Guest [ Storyteller ]</span> : Major Success: 18 or less
+<span>Guest [ Storyteller ]</span> : Minor Success: 37 - 55
+Guest [ Storyteller ] : <span style='color: red;'>Minor Failure: 56 - 71
+Guest [ Storyteller ] : <span style='color: red;'>Direct Failure: 72 - 86
+<span>Guest [ Storyteller ]</span> : Direct Success: 19 - 36
+Guest [ Storyteller ] : <span style='color: red;'>Major Failure: 86 or more
+<span>Guest [ Storyteller ]</span> : Major Success: 22 or less
+<span>Guest [ Storyteller ]</span> : Direct Success: 23 - 44
+Guest [ Storyteller ] : <span style='color: red;'>Direct Failure: 79 - 89
+<span>Guest [ Storyteller ]</span> : Minor Success: 45 - 66
+Guest [ Storyteller ] : <span style='color: red;'>Minor Failure: 67 - 78
+Guest [ Storyteller ] : <span style='color: red;'>Major Failure: 90 or more

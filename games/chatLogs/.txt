@@ -1,0 +1,4 @@
+Guest [ Martinez ] : <span style='color: red;'>[%] 86
+Guest [ Martinez ] : <span style='color: red;'>[%] !!CRITICAL!! 11
+Guest [ Martinez ] : <span style='color: red;'>[%] 54
+Guest [ Storyteller ] : <span style='color: red;'>[%] 26

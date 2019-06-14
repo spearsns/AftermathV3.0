@@ -58,6 +58,9 @@ html {
 	min-height: 20vh;
 	width: 100%;
 }
+.tab{
+	text-indent: 5%;
+}
 .characterSheet{
 	background-image: url(../img/misc/photocopy.png);
 	background-position: center; 

@@ -205,6 +205,61 @@ $(document).ready(function(){
 		sendDice(percentileResult, name);
 	});
 
+	$('#LoSBtn').click(function(){
+		var LoS = Number( $('#LoSValue').val() );
+		var LoF = (100 - LoS) + 1;
+		var successRate = Math.floor(LoS / 3);
+		var failRate = Math.floor(LoF / 3);
+		//SUCCESS
+		var majorSuccess = "Major Success: " + successRate + " or less";
+		var directSuccess = "Direct Success: " + String(successRate + 1) + " - " + String(successRate * 2);
+		var minorSuccess = "Minor Success: " + String( (successRate * 2) + 1) + " - " + String(LoS);
+		//FAIL
+		var minorFail = "Minor Failure: " + String(LoS + 1) + " - " + String( (LoS + 1) + failRate );
+		var directFail = "Direct Failure: " + String( ( (LoS + 1) + failRate) + 1 ) + " - " + String( (LoS + 1) + (failRate * 2) );
+		var majorFail = "Major Failure: " + String( (100 - failRate) + 1 ) + " or more";
+
+		var first = function(){
+			return new Promise(function(resolve){
+				sendChat(majorSuccess, name);
+				resolve();
+			});	
+		}
+		var second = function(){
+			return new Promise(function(resolve){
+				sendChat(directSuccess, name);
+				resolve();
+			});	
+		}
+		var third = function(){
+			return new Promise(function(resolve){
+				sendChat(minorSuccess, name);
+				resolve();
+			});	
+		}
+		var fourth = function(){
+			return new Promise(function(resolve){
+				sendDice(minorFail, name);
+				resolve();
+			});	
+		}
+		var fifth = function(){
+			return new Promise(function(resolve){
+				sendDice(directFail, name);
+				resolve();
+			});	
+		}
+		var sixth = function(){
+			return new Promise(function(resolve){
+				sendDice(majorFail, name);
+				$('#LoSValue').val('');
+				resolve();
+			});	
+		}
+
+		first().then(second).then(third).then(fourth).then(fifth).then(sixth);
+	});
+
 	$('#twoD10Btn').click(function(){
 		var roll = twoD10();
 		var twoD10Result = "[2D10] " + roll;
@@ -224,10 +279,14 @@ $(document).ready(function(){
 			RHCResult = "PELVIS (GROIN/REAR)";
 		} else if (RHC >= 21 && RHC <= 30){
 			RHCResult = "MIDSECTION (STOMACH/LOWER BACK)";
-		} else if (RHC >= 31 && RHC <= 40){
-			RHCResult = "LEFT UPPER BODY (RIBS[HEART]/SHOULDER)";
-		} else if (RHC >= 41 && RHC <= 50){
-			RHCResult = "RIGHT UPPER BODY (RIBS/SHOULDER)";
+		} else if (RHC >= 31 && RHC <= 35){
+			RHCResult = "LEFT RIBS (HEART)";
+		} else if (RHC >= 36 && RHC <= 40){
+			RHCResult = "RIGHT RIBS";
+		} else if (RHC >= 41 && RHC <= 45){
+			RHCResult = "LEFT SHOULDER";	
+		} else if (RHC >= 46 && RHC <= 50){
+			RHCResult = "RIGHT SHOULDER";
 		} else if (RHC >= 51 && RHC <= 55){
 			RHCResult = "LEFT THIGH";
 		} else if (RHC >= 56 && RHC <= 60){

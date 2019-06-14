@@ -39,7 +39,7 @@
     <div class="row black">
       <div class='col'></div>
       <div class='col text-center'>
-        <p class='text-white TNR'>Do NOT hit back or refresh or you will feed the demons of data corruption!</p>
+        <p class='text-white TNR'>Do <strong>NOT</strong> hit BACK or REFRESH or you will feed the demons of data corruption!</p>
       </div>
       <div class='col'></div>
     </div>
