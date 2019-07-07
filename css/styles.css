@@ -5,18 +5,24 @@ html {
 
 #joinBtn:hover{
 	background-image: url(../img/buttons/join_1.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
 }
 #FAQBtn:hover{
 	background-image: url(../img/buttons/FAQ_1.png);
+	background-size: 100% 100%;
 }
 #conceptArtBtn:hover{
 	background-image: url(../img/buttons/concept_1.png);
+	background-size: 100% 100%;
 }
 #documentsBtn:hover{
 	background-image: url(../img/buttons/docfolder_1.png);
+	background-size: 100% 100%;
 }
 #shortsBtn:hover{
 	background-image: url(../img/buttons/shorts_1.png);
+	background-size: 100% 100%;
 }
 
 .metal{
@@ -44,9 +50,11 @@ html {
 	border-width: medium !important;
 	border-color: black !important;
 }
-.TNR{
-	font-family: "Times New Roman", serif;
-	font-weight: bold;	
+p, h1, h2, h3, h4, h5, h6{
+	font-family: "Times New Roman", serif;	
+}
+hr{
+	border-top: 5px solid black;
 }
 .trait-img{
 	width: 33%;
@@ -89,12 +97,46 @@ html {
 	height: 40vh;
   	background-color: white;
   	overflow-x: hidden;
-  	overflow-y: scroll;
 }
 #message{
 	width: 100%;
 	height: 12.5vh;
 }
+.carousel-item{
+	height: 25vh;
+}
+.carousel-item img{
+	height: 25vh;
+}
 .modal{
-	overflow-y: scroll;
+	overflow-y: auto;
+}
+/* MEDIA QUERIES */
+@media (max-width: 575px){
+	.btn {
+		font-size: 1em;
+	}
+}
+@media (min-width: 576px){
+	.btn {
+		font-size: 1em;
+	}
+}
+@media (min-width: 768px){
+	.btn {
+		font-size: 0.95em;
+	}
+
+}
+@media (min-width: 992px){
+	.btn {
+		font-size: 1em;
+	}
+
+}
+@media (min-width: 1200px){
+	.btn {
+		font-size: 1em;
+	}
+
 }

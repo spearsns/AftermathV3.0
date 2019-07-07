@@ -74,7 +74,7 @@ function background(){
 	} else {
 		background = "Scavenger";
 	}
-    return "Veteran";
+    return background;
 }
 
 var traitPoints = 	Math.floor(willpower / 2);

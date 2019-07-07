@@ -29,27 +29,25 @@
     </div>
 
     <div class="row black">
-      <div class='col'></div>
-      <div class='col text-center'>
-        <h2 class='text-success TNR'>UPLOAD SUCCESSFUL</h2>
-      </div>
-      <div class='col'></div>
+      <div class='col-sm'></div>
+      <div class='col text-center'><h2 class='text-success'>UPLOAD SUCCESSFUL</h2></div>
+      <div class='col-sm'></div>
     </div>
 
     <div class="row black">
-      <div class='col'></div>
+      <div class='col-sm'></div>
       <div class='col text-center'>
-        <p class='text-white TNR'>Do <strong>NOT</strong> hit BACK or REFRESH or you will feed the demons of data corruption!</p>
+        <p class='text-white'>Do <strong>NOT</strong> hit BACK or REFRESH or you will feed the demons of data corruption!</p>
       </div>
-      <div class='col'></div>
+      <div class='col-sm'></div>
     </div>
 
     <div class="row black">
-      <div class='col'></div>
+      <div class='col-sm'></div>
       <div class='col'>
-        <a href="index.php" role="button" class="btn btn-warning btn-lg btn-block border">RETURN HOME</a>
+        <a href="index.php" role="button" class="btn btn-warning btn-lg btn-block border my-1">RETURN HOME</a>
       </div>
-      <div class='col'></div>
+      <div class='col-sm'></div>
     </div>
 
     <?php include("footer.php"); ?>

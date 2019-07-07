@@ -41,56 +41,56 @@
       <form id="signup" method="post" action="inc/processSignUp.php">
 
       <div class='row black'>
-        <div class='col'></div>
-        <div class='col'><img src="img/graffiti/username.png" /></div>
-        <div class='col'>
+        <div class='col-md'></div>
+        <div class='col-12 col-sm-6 col-md'><img src="img/graffiti/username.png" class='img-fluid h-100 mx-auto d-block' /></div>
+        <div class='col-12 col-sm-6 col-md'>
           <div class="input-group input-group-lg">
             <input type="text" name="username" class="form-control border" placeholder="Enter Username" required />
           </div>
         </div>
-        <div class='col'></div>
+        <div class='col-md'></div>
       </div>
 
       <div class='row black'>
-        <div class='col'></div>
-        <div class='col'><img src="img/graffiti/password.png" /></div>
-        <div class='col'>
+        <div class='col-md'></div>
+        <div class='col-12 col-sm-6 col-md'><img src="img/graffiti/password.png" class='img-fluid h-100 mx-auto d-block' /></div>
+        <div class='col-12 col-sm-6 col-md'>
           <div class="input-group input-group-lg">
             <input type="password" name="password" class="form-control border" placeholder="Enter Password" required />
           </div>
         </div>
-        <div class='col'></div>
+        <div class='col-md'></div>
       </div>
 
       <div class='row black'>
-        <div class='col'></div>
-        <div class='col'><img src="img/graffiti/confirmpassword.png" /></div>
-        <div class='col'>
+        <div class='col-md'></div>
+        <div class='col-12 col-sm-6 col-md'><img src="img/graffiti/confirmpassword.png" class='img-fluid h-100 mx-auto d-block' /></div>
+        <div class='col-12 col-sm-6 col-md'>
           <div class="input-group input-group-lg">
             <input type="password" name="passwordConfirm" class="form-control border" placeholder="Confirm Password" required />
           </div>
         </div>
-        <div class='col'></div>
+        <div class='col-md'></div>
       </div>
 
       <div class='row black'>
-        <div class='col'></div>
-        <div class='col'><img src="img/graffiti/email.png" /></div>
-        <div class='col'>
+        <div class='col-md'></div>
+        <div class='col-12 col-sm-6 col-md'><img src="img/graffiti/email.png" class='img-fluid h-100 mx-auto d-block' /></div>
+        <div class='col-12 col-sm-6 col-md'>
           <div class="input-group input-group-lg">
             <input type="text" name="email" class="form-control border" placeholder="Enter Email" required />
           </div>
         </div>
-        <div class='col'></div>
+        <div class='col-md'></div>
       </div>
 
       <div class='row black'>
-        <div class='col'></div>
+        <div class='col-md'></div>
         <div class='col text-center'>
           <br />
           <p class='text-danger TNR'>EMAIL WILL ONLY BE USED TO RESET PASSWORD<p>
         </div>
-        <div class='col'></div>
+        <div class='col-md'></div>
       </div>
 
       <div class='row black'>

@@ -84,14 +84,14 @@ jQuery(function($){
 
         messageHtml += '          <br/>';
 
-        messageHtml += '          <div class="row">';
-        messageHtml += '            <div class="col-9 px-0">';
+        messageHtml += '          <div class="row justify-content-center">';
+        messageHtml += '            <div class="col-12 col-sm-9 px-0 py-1">';
         messageHtml += '              <div class="input-group input-group-lg">';
         messageHtml += '                <input type="text" class="form-control border text-center" id="sendTo-'+ reciever +'" autofocus />';
         messageHtml += '              </div>';
         messageHtml += '            </div>';
 
-        messageHtml += '            <div class="col-3 px-1">';
+        messageHtml += '            <div class="col-6 col-sm-3 px-1 py-1 align-items-center">';
         messageHtml += '              <button type="button" class="btn btn-info btn-lg btn-block border" id="sendMessageBtn">SEND</button>';
         messageHtml += '            </div>';
         messageHtml += '          </div>';

@@ -34,7 +34,7 @@
   	<head>
     	<meta charset="utf-8">
     	<meta http-equiv="x-ua-compatible" content="ie=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=0.1, shrink-to-fit=no">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     	<title>Welcome to the Aftermath</title>
 	    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     	<link rel="stylesheet" type="text/css" href="css/styles.css" />
@@ -56,42 +56,42 @@
 
       <div class='row metal border-bottom-0 py-2'>
 
-  			<div class='col'>
-  				<a href='newCharacter.php' role='button' class="btn btn-warning btn-lg btn-block border">NEW CHARACTER</a>
+  			<div class='col-12 col-sm-6 col-md-3 order-1 order-md-1 py-1'>
+  				<a href='newCharacter.php' role='button' class="btn btn-warning btn-lg btn-block border px-0">NEW CHARACTER</a>
   			</div>
 
-        <div class='col'>
-          <a href='apocalypse.php' role='button' class='btn btn-dark btn-lg btn-block border'>THE APOCALYPSE</a>
+        <div class='col-12 col-sm-6 col-md-3 order-3 order-md-2 py-1'>
+          <a href='apocalypse.php' role='button' class='btn btn-dark btn-lg btn-block border px-0'>THE APOCALYPSE</a>
         </div>
 
-        <div class='col'>
-          <a href='info.php' role="button" class="btn btn-dark btn-lg btn-block border">USER MANUAL</a>
+        <div class='col-12 col-sm-6 col-md-3 order-4 order-md-3 py-1'>
+          <a href='info.php' role="button" class="btn btn-dark btn-lg btn-block border px-0">USER MANUAL</a>
         </div>
         
-  			<div class='col'>
-  				<a href='characterSelect.php' role='button' class="btn btn-warning btn-lg btn-block border">CHARACTER MGMT</a>
+  			<div class='col-12 col-sm-6 col-md-3 order-2 order-md-4 py-1'>
+  				<a href='characterSelect.php' role='button' class="btn btn-warning btn-lg btn-block border px-0">CHARACTER MGMT</a>
   			</div>
 
   		</div>
 
       <div class='row metal border-top-0 py-2'>
-        <div class='col-2'>
-          <a href='newGame.php' role='button' class="btn btn-danger btn-lg btn-block border">NEW GAME</a>
+
+        <div class='col-12 order-1 col-sm-6 col-md-2 py-1'>
+          <button type="button" class="btn btn-light btn-lg btn-block border px-0" id='onlineBtn'>ONLINE</button>
         </div>
 
-        <div class='col-2'>
-          <img src='img/graffiti/gamesX.png'>
+        <div class='col-12 order-3 col-md-2 order-md-2 py-1 d-none d-md-block'>
+          <img src='img/graffiti/gamesX.png' class='img-fluid h-100 mx-auto d-block' />
         </div>
 
-        <div class='col-4'>
-          <img src='img/graffiti/description.png' class='mx-auto d-block'>
+        <div class='col-12 order-4 col-md-4 order-md-3 py-1 d-none d-md-block mr-auto'>
+          <img src='img/graffiti/description.png' class='img-fluid h-100 mx-auto d-block' />
         </div>
 
-        <div class='col-2'></div>
-
-        <div class='col-2'>
-          <button type="button" class="btn btn-light btn-lg btn-block border" id='onlineBtn'>ONLINE</button>
+        <div class='col-12 order-2 col-sm-6 col-md-2 order-md-5 py-1'>
+          <a href='newGame.php' role='button' class="btn btn-danger btn-lg btn-block border px-0">NEW GAME</a>
         </div>
+
       </div>
 
       <div id='gameList'></div>

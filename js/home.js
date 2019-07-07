@@ -242,4 +242,9 @@ $(document).ready(function(){
 	       	}
 		});
 	});
+
+	$('#onlineBtn').click(function(e){
+		e.preventDefault();
+		$('#onlineModal').modal('toggle');
+	});
 });

@@ -57,22 +57,22 @@
                     while($row = $result->fetch_assoc()) {
                     echo "
                         <div class='row black'>
-                            <div class='col'></div>
+                            <div class='col-sm'></div>
                             <div class='col'>
                                 <a href='". $target . $row['CharacterName'] ."' role='button' class='btn btn-warning btn-lg btn-block border'>
                                     ". $row['CharacterName'] ."</a>
                             </div>
-                            <div class='col'></div>
+                            <div class='col-sm'></div>
                         </div>";
                     }
                 } else {
                 echo "
                     <div class='row black'>
-                        <div class='col'></div>
+                        <div class='col-sm'></div>
                         <div class='col'>
                             <h4 class='text-white text-center TNR'>Zero Results:<br />You have to build a character first!</h4>
                         </div>
-                        <div class='col'></div>
+                        <div class='col-sm'></div>
                     </div>
                     ";
                 }

@@ -5,26 +5,22 @@
     include('modals/messageListModal.php');
 ?>
 
-    <div class='row metal py-2'>
-        <div class='col'>
-            <a href='/aftermath/login.php' role='button' class="btn btn-warning btn-lg btn-block border">LOG IN</a>
+    <div class='row metal'>
+        <div class='col-12 col-sm-6 col-md-2 py-1'>
+            <a href='/aftermath/login.php' role='button' class="btn btn-warning btn-lg btn-block border p-2">LOG IN</a>
         </div>
 
-        <div class='col'>
-            <button id='messageListBtn' class='btn btn-light btn-lg btn-block border px-0'>MESSAGES</button>
+        <div class='col-12 col-sm-6 col-md-2 py-1'>
+            <a href='/aftermath/signup.php' role='button'><img src='/aftermath/img/buttons/join_0.png' id='joinBtn' class='img-fluid h-100 mx-auto d-block' /></a>
         </div>
 
-        <div class='col'>
-            <a href='/aftermath/signup.php' role='button'><img src='/aftermath/img/buttons/join_0.png' id='joinBtn' /></a>
+        <div class='col-5 col-sm-6 col-md-2 py-1 pr-1'>
+            <img src='/aftermath/img/graffiti/usernameX.png' class='img-fluid h-100 mx-auto d-block' />
         </div>
 
-        <div class='col'>
-            <img src='/aftermath/img/graffiti/usernameX.png' />
-        </div>
-
-        <div class='col'>
+        <div class='col-7 col-sm-6 col-md-2 py-1 pl-1'>
             <div class="input-group input-group-lg">
-                <input type="text" class="form-control border text-center" placeholder='<-- Login 1st' id='usernameArea' readonly />
+                <input type="text" class="form-control border text-center" placeholder='Login 1st' id='usernameArea' readonly />
             
                 <script>
                     var username = "";
@@ -33,8 +29,12 @@
                 </script>
             </div>
         </div>
+
+        <div class='col-12 col-sm-6 col-md-2 py-1'>
+            <button id='messageListBtn' class='btn btn-light btn-lg btn-block border px-0'>MESSAGES</button>
+        </div>
         
-        <div class='col'>
+        <div class='col-12 col-sm-6 col-md-2 py-1'>
             <form id="logout" action="/aftermath/inc/processLogout.php" method="post">
                 <button type="submit" class="btn btn-warning btn-lg btn-block border" id='logoutBtn'>LOG OUT</button>
             </form>
@@ -42,8 +42,8 @@
     </div>
 
     <div class='row black'>
-        <div class='col-3'></div>
-        <div class='col-6'>
+        <div class='col-2'></div>
+        <div class='col-8'>
             <a href='/aftermath/index.php'>
             <div id="carousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -62,7 +62,7 @@
             </div>
             </a>
         </div>
-        <div class='col-3'></div>
+        <div class='col-2'></div>
     </div>
 
     <div id='messageModalArea'></div>
