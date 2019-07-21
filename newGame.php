@@ -44,69 +44,69 @@
       <form id="newGame" method="post" action="inc/processNewGame.php">
 
       <div class='row black'>
-        <div class='col'></div>
-        <div class='col'><img src="img/graffiti/GameName.png" /></div>
-        <div class='col-4'>
+        <div class='col-md-2'></div>
+        <div class='col-12 col-sm-6 col-md-4'><img src="img/graffiti/GameName.png" class='img-fluid h-100 mx-auto d-block' /></div>
+        <div class='col-12 col-sm-6 col-md-4'>
           <div class="input-group input-group-lg">
             <input type="text" name="name" class="form-control border" placeholder="Enter the Game's Name" required />
           </div>
         </div>
-        <div class='col'></div>
+        <div class='col-md-2'></div>
       </div>
 
       <div class='row black'>
-        <div class='col'></div>
-        <div class='col'><img src="img/graffiti/description1.png" /></div>
-        <div class='col-4'>
+        <div class='col-md-2'></div>
+        <div class='col-12 col-sm-6 col-md-4 py-sm-5'><img src="img/graffiti/description1.png" class='img-fluid mx-auto d-block' /></div>
+        <div class='col-12 col-sm-6 col-md-4'>
           <div class="input-group input-group-lg">
             <textarea rows="4" name="description" class="form-control border" placeholder="Enter a Brief Description" required></textarea>
           </div>
         </div>
-        <div class='col'></div>
+        <div class='col-md-2'></div>
       </div>
 
       <div class='row black'>
-        <div class='col'></div>
-        <div class='col'><img src="img/graffiti/StorytellerPassword.png" /></div>
-        <div class='col-4'>
+        <div class='col-md-2'></div>
+        <div class='col-12 col-sm-6 col-md-4'><img src="img/graffiti/StorytellerPassword.png" class='img-fluid h-100 mx-auto d-block' /></div>
+        <div class='col-12 col-sm-6 col-md-4'>
           <div class="input-group input-group-lg">
             <input type="password" name="storytellerPassword" class="form-control border" placeholder="Enter Storyteller Password" required />
           </div>
         </div>
-        <div class='col'></div>
+        <div class='col-md-2'></div>
       </div>
 
       <div class='row black'>
-        <div class='col'></div>
-        <div class='col'><img src="img/graffiti/STConfirmPassword.png" /></div>
-        <div class='col-4'>
+        <div class='col-md-2'></div>
+        <div class='col-12 col-sm-6 col-md-4'><img src="img/graffiti/confirmPW.png" class='img-fluid h-100 mx-auto d-block' /></div>
+        <div class='col-12 col-sm-6 col-md-4'>
           <div class="input-group input-group-lg">
             <input type="password" name="storytellerPWConfirm" class="form-control border" placeholder="Confirm Password" required />
           </div>
         </div>
-        <div class='col'></div>
+        <div class='col-md-2'></div>
       </div>
 
       <div class='row black'>
-        <div class='col'></div>
-        <div class='col'><img src="img/graffiti/playerPassword.png" /></div>
-        <div class='col-4'>
+        <div class='col-md-2'></div>
+        <div class='col-12 col-sm-6 col-md-4'><img src="img/graffiti/playerPassword.png" class='img-fluid h-100 mx-auto d-block' /></div>
+        <div class='col-12 col-sm-6 col-md-4'>
           <div class="input-group input-group-lg">
             <input type="password" name="playerPassword" class="form-control border" placeholder="Enter Player Password" />
           </div>
         </div>
-        <div class='col'></div>
+        <div class='col-md-2'></div>
       </div>
 
       <div class='row black'>
-        <div class='col'></div>
-        <div class='col'><img src="img/graffiti/PConfirmPassword.png" /></div>
-        <div class='col-4'>
+        <div class='col-md-2'></div>
+        <div class='col-12 col-sm-6 col-md-4'><img src="img/graffiti/confirmPW.png" class='img-fluid h-100 mx-auto d-block' /></div>
+        <div class='col-12 col-sm-6 col-md-4'>
           <div class="input-group input-group-lg">
             <input type="password" name="playerPWConfirm" class="form-control border" placeholder="Confirm Password" />
           </div>
         </div>
-        <div class='col'></div>
+        <div class='col-md-2'></div>
       </div>
 
       <div class='row black'>

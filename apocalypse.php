@@ -79,12 +79,12 @@
           </ul>
 
           <div class='row'>
-            <div class='col'>
-              <img src="img/apocalypse/TectonicPlates.jpg" class="rounded img-fluid d-block">
+            <div class='col-12 col-md-6 py-2'>
+              <img src="img/apocalypse/TectonicPlates.jpg" class="rounded img-fluid h-100 mx-auto d-block">
             </div>
 
-            <div class='col'>
-              <img src="img/apocalypse/Volcanoes.jpg" class="rounded img-fluid d-block">
+            <div class='col-12 col-md-6 py-2'>
+              <img src="img/apocalypse/Volcanoes.jpg" class="rounded img-fluid h-100 mx-auto d-block">
             </div>
           </div>
 
@@ -104,7 +104,7 @@
             <li>Bangor, Maine</li>
             <li>Boston, Massachusetts</li>
             <li>New York City, New York</li>
-            <li>Philadelphia, Pennsylvania</li>
+            <li>Philadelphia and Pittsburg, Pennsylvania</li>
             <li>Washington DC, District of Columbia</li>
             <li>Baltimore, Maryland</li>
             <li>Norfolk, Virginia</li>
@@ -112,9 +112,10 @@
             <li>Jacksonville, Tampa Bay, and Pensacola Florida</li>
             <li>Atlanta, Georgia</li>
             <li>Chicago, Illinois</li>
+            <li>Cleveland, Columbus, and Cincinnati Ohio</li>
             <li>Oklahoma City, Oklahoma</li>
-            <li>Dallas / Fort Worth, Amarillo, San Antonio, and Houston Texas</li>
-            <li>Colorado Springs and Denver Colorad</li>
+            <li>Dallas / Fort Worth, Amarillo, Austin, San Antonio, and Houston Texas</li>
+            <li>Colorado Springs and Denver Colorado</li>
             <li>Los Angeles, San Francisco, and San Diego California</li>
           </ul>
 
@@ -129,10 +130,14 @@
             <li>Jerusalem and Tel-Aviv Israel</li>
           </ul>
 
-          <!--PLACE NUKE MAP HERE-->
+          <div class='row'>
+            <div class='col-12 py-2'>
+              <img src="img/apocalypse/InitialNukeMap.jpg" class="rounded img-fluid h-100 mx-auto d-block">
+            </div>
+          </div>
 
           <p class='tab'>
-            Retaliatory strikes were issued immediately in accordance to the concept of Mutually Assured Destruction (MAD), though as far as the average civilian is concerned their effectiveness is unknown.  Anchorage, Alaska found itself immediately beseiged by Soviet forces.  The Russian military also began advancing into Eastern Europe, and details are sketchy but in the Middle East all hell broke loose before contact was severed.  With most major ports on the eastern seaboard out of commission, invasion imminent for America, Japanese industry demolished, and World War III in full swing for Europe global markets were in a free fall.  Over the course of the next few days the nuclear onslaught continued sporadically for the eastern United States.  With the majority of government leadership, international exchange professionals, and top corporate executives dead or MIA Uncle Sam was effectively beheaded in the first hour.  The once indomitable United States of America was removed as a powerhouse from the global playing field as the opening move for WWIII.
+            Retaliatory strikes were issued immediately in accordance to the concept of Mutually Assured Destruction (MAD), though as far as the average civilian is concerned their effectiveness is unknown.  Anchorage, Alaska found itself immediately beseiged by Soviet forces.  The Russian military also began advancing into Eastern Europe, and details are sketchy but in the Middle East all hell broke loose before contact was severed.  With most major ports on the eastern seaboard out of commission, invasion imminent for America, Japanese industry demolished, and World War III in full swing for Europe global markets were in a free fall.  Over the course of the next few days the nuclear onslaught continued sporadically for the eastern United States and Texas in an obvious effort to wreak havoc on the American Oil Industry.  The western Appalacian Oil Basin and the majority of Texas was reduced to little more than an ashen wasteland.  With the majority of government leadership, international exchange professionals, and top corporate executives dead or MIA Uncle Sam was effectively beheaded in the first hour.  The once indomitable United States of America was removed as a powerhouse from the global playing field as the opening move.
           </p>
 
           <p class='tab'>
@@ -201,8 +206,11 @@
             You have heard of “Tornado Alley” in the heartland of the continental US right?  While the elements of earth and water were the primary catalysts for the extreme changes taking place, wind got its turn to  punish mother earth's children in late spring.  Rising temperatures created significant dry warm fronts in the midwest, and when it collided with the storm surges in the east the heavens opened up their wrath.  Tornado alley rapidly expanded to evolve into Cyclone boulevard.  From Dallas to Oklahoma City, on to Wichita Kansas and then Lincoln and Omaha Nebraska the twisters wrought their destruction.  With Dallas and OKC still irradiated, the contamination spread with it even detrimented as it was. What little remaining freight moving through the area was thrown asunder like rag dolls during an environmental temper tantrum.   Massive hail storms rained like buckshot against the structures and vehicles along their path.  Dozens upon dozens of tornadoes tore the land apart by late April.
           </p>
 
-
-          <!--PLACE TORNADO ALLEY MAP HERE-->
+          <div class='row'>
+            <div class='col-12 py-2'>
+              <img src="img/apocalypse/TornadoAlley.jpg" class="rounded img-fluid h-100 mx-auto d-block">
+            </div>
+          </div>
 
           <p class='tab'>
             The livestock and farmlands were heavily damaged or destroyed, several interstates and railways uprooted from the earth.  Urban death tolls and property damage reached unprecedented levels, never before seen on such a scale.  Murphy's law marched stoicly forward, greatly reducing any chance of a swift recovery and yet again the displaced population bolstered the scores of homeless now flooding into the city centers across the country.  The gap between the surviving haves and the have-nots was quickly becoming a insurmountable chasm, hopes beyond bleak.  The United States of America was paying an enormous toll for its role as a superpower in the old world.
@@ -321,6 +329,11 @@
             It didn't take long for the “Old Families” of Vegas to welcome the displaced underworld into the fray.  The connections to the West Coast network were already established long ago and the bounty was rich at the moment.  It was unfortunate production could not continue, but C'est la Vie.  This is where the new “Anarchy Hubs” took root and will become increasingly important in the next few years.  They would have free run of I-5 and the 101 in the not too distant future, but only after successfully leveraging the return of Habeas Corpus for their regions in exchange for financing the war effort in addition to drawing arms and medical supplies from their South American sister cartels.
           </p>
 
+          <p class='text-center'><u><strong>LATE HURRICANE SEASON 2013: ISLAND EXODUS</strong></u></p>
+          <p class='tab'>
+            While California was being consumed by infernal hellfire, the eastern seaboard was getting ravaged by incessant tropical storms and hurricanes.  The island nations of Cuba, Haiti, and the Bahamas got it the worst.  After getting rocked again by the quakes so soon after their catastrophe in 2010, it became apparent to all but the most deluded of the Haitian people that their nation would never recover.  Their infrastructure was absolutely demolished by the end of July.  The unending deluge that summer forced their hand, and only the exceptionally brave or ridiculously foolish tried to weather the storm.  At first many of the Haitian people tried to just hop the channel and take sanctuary with their Cuban neighbors on their high ground.  What many didn't realize was that the quakes had shook loose much of the old stone, and landslides claimed hundreds of thousands of lives.  Scores of people made their frantic attempt to cross the sea seeking asylum.  Untold numbers of makeshift vessels never made port, and the stories of those that did were the stuff of legend.  The Atlantic's fury was unimaginable, and the vast majority failed miserably in their panicked attempt.  An estimated 20 million people, with two trains of mind, tried their luck against the sea.  Some realized that it would be wiser to head south and try to get clear of the neverending storms path of destruction.  We currently have no idea how many made it to Venezuela or Columbia, but survivors say that the majority of the population seemed to be about equally divided on which way to go. Of the supposed 10 million that set sail to Florida, current estimates state that a little over 6 actually made it.  4 million panicked souls now rest at the bottom of the sea, and thats not counting the dead who sailed south.  Needless to say, tensions were immensely high and violence was all too common in Florida as most made their mad dash inland. 
+          </p>
+
           <p class='text-center'><u><strong>AUGUST 29th 2013: AMERICA ONLINE & THE WATERS OF LIFE</strong></u></p>
 
           <p class='tab'>
@@ -368,7 +381,7 @@
           </p>
 
           <p class='tab'>
-            When the cold fronts finally broke through, they came in force.  From early January until March the conditions weren't much better than they had been during Nuke W.  With so much of the roadways damaged and then adding snow and ice on top of it, the overburdened freight system struggled to meet public demand.  The surge also caused a lot of freezing rain once again in the southeast, and severe winter conditions in the areas that typically received snowfall.  Terrorist attacks, banditry, and criminal activity spiked once the remaining supplies began to dwindle.  Several atrocities occurred on christmas eve in an apparent effort to break morale even further.  Knives suddenly made a big comeback in the dark alleys of the Order Hubs since the guard were trained to listen for gunfire.  They are small, concealable, and most importantly quiet.  I remember people used to say America would fall in the same fashion as Rome when the time came.  I wonder how many of them could appreciate the irony when they found a blade in their belly over a few coins or scraps of bread to feed the homeless and the hungry.  The WAN phone network helped stifle some of the more brazen acts of theft and violence, but there was a lot that slipped through the cracks of our crumbling foundation of order and control.  For many, it was a long and difficult winter.
+            When the cold fronts finally broke through, they came in force.  From early January until March the conditions weren't much better than they had been during Nuke W.  With so much of the roadways damaged and then adding snow and ice on top of it, the overburdened freight system struggled to meet public demand.  The surge also caused a lot of freezing rain once again in the southeast, and severe winter conditions in the areas that typically received snowfall.  Terrorist attacks, banditry, and criminal activity spiked once the remaining supplies began to dwindle.  Several Russian generated atrocities occurred on christmas eve in an apparent effort to break american morale even further.  Knives suddenly made a big comeback in the dark alleys of the Order Hubs since the guard were trained to listen for gunfire.  They are small, concealable, and most importantly quiet.  I remember people used to say America would fall in the same fashion as Rome when the time came.  I wonder how many of them could appreciate the irony when they found a blade in their belly over a few coins or scraps of bread to feed the homeless and the hungry.  The WAN phone network helped stifle some of the more brazen acts of theft and violence, but there was a lot that slipped through the cracks of our crumbling foundation of order and control.  For many, it was a long and brutal winter.
           </p>
 
           <p class='text-center'><u><strong>SPRING 2014: HIGH VOLUME ON CYCLONE BOULEVARD & THE STRUGGLE CONTINUES</strong></u></p>
@@ -411,17 +424,30 @@
             The west coast's illegal enterprise had begun to ascend to great heights particularly in Sacramento, Reno, and Las Vegas and word spread fast of the “Criminal Councils” taking over in the region.  It wasn't long before the message travelled south and every major South American, Mexican and Columbian cartel learned that the western US was an open market, ripe for the picking with almost zero rules or regulations and an enormous vice demand for people to self medicate.  Venezuelan and Brazilian gas prices soared, but were still affordable to the organized and structured heirarchy of gangland syndicates. Criminal immigration exploded into Arizona and New Mexico.  Texas and Southern California were avoided like the plague as the radiation was an unknown variable to them, but hundreds if not thousands of underworld operatives moved in to claim their piece of the american pie.
           </p>
 
+          <div class='row'>
+            <div class='col-12 py-2'>
+              <img src="img/apocalypse/RailMap.jpg" class="rounded img-fluid h-100 mx-auto d-block">
+            </div>
+          </div>
+
           <p class='tab'>
             In mid September, the rail system became fully online and expansive from the surviving Hubs on the east coast to the Missouri River and everything just outside of the widening “Tornado Alley”.  With several coal mines still operational this was a milestone achievement for the recovery effort.  As long as the military could keep them intact and free of sabotage the freight system stood a decent chance of healing and replenishing itself.  Railways could carry refined oil from Canada southbound as needed, food and livestock could be hauled from the newly reformed city centers and farmlands, relief supplies could once again pour out of the few remaining production centers.  Commerce could flow anew, though not nearly on the level of excess as it had before.  This was a crucial accomplishment with fuel suffering such a harsh recoil after being taken for granted for so long.
           </p>
-
-
-          <!--PLACE RAILROAD MAP HERE-->
 
           <p class='text-center'><u><strong>FALL 2014: EXCESSIVE DROUGHT & HURRICANE SEASON</strong></u></p>
 
           <p class='tab'>
             In spite of widespread approval of the Urban Farming Initiative (UFI) Mother Earth yet again had other plans for her suffering children.  Across the nation severe heatwaves and arid conditions all summer long lead to a horrendous drought for the public.  Most of the rookie farming population had no idea how to handle such a problem, and jury rigged irrigation systems were commonplace but yielded little results.  Then at the end of August the hurricanes rolled in, beating the weak and fragile crops down and flooding the earth.  Needless to say amatuer crop yields were especially low, and the burgeoning Outlands suddenly saw enormous swaths of its best and brightest fall into the Anarchy Camp by late October.  Gang warfare between newly established farming communities erupted with an extreme “Do or Die” mentality to stockpile food and supplies for the next harsh winter.  With cellular coverage only available in the most urbanized of the city centers, it was essentially a free for all for those outside of the coverage area.  The ING's were tied up chasing and rooting out the worst of the now nomadic bandits and raiders, and hadn't anticipated this issue from those it considered “friendly”.  Gangs, militias, and neighborhood watch swiftly became synonomous.  Frontier law was truly uninhibited.
+          </p>
+
+          <div class='row'>
+            <div class='col-12 py-2'>
+              <img src="img/apocalypse/MississippiRiver.jpg" class="rounded img-fluid h-100 mx-auto d-block">
+            </div>
+          </div>
+
+          <p class='tab'>
+            The only good news from this period was that excessive storming and floods lead to unusually high waters for the vast majority of the Mississippi River Basin.  Suddenly boating and ferrying upstream proved substantially easier than before, and with the lack of fuel making resupply for the city centers this was a welcome blessing.  Over the course of the next few months a burgeoning riverboat frieght line and transportation system emerged along all major associated rivers tied to the network.  Canoes and Rafts made an impressive and swift comeback by late November as more and more people rushed south to evade the harsh winter months.  St. Loius, Memphis, and especially New Orleans bolstered in both manpower and displaced population during this time, and many made their claim in spite of the intense flooding.  New Orleans found itself doubly burdened with so many of the Holdout evacuees being force flushed from Florida, Cuba, and Haiti.  Criminal desperation and unchecked enterprise rapidly took hold along the Mississippi and its connected estuaries from St. Louis and below, and the National Guard moved quickly to establish a patrol network to secure this forgotten trade circuit.  Amphibious piracy rose as rapidly as the as the ebbs and flows waterways.     
           </p>
 
           <p class='text-center'><u><strong>WINTER 2014: THE CLASH OF TITANS & STARVATION IN THE FAT OF THE LAND</strong></u></p>
@@ -462,7 +488,7 @@
             He told us that he meant what he said, he would lead our troops to fight tooth and nail to defend this great nation of ours and afford us the opportunity to rebuild a better tomorrow.  He said we still had a few tricks up our sleeve, several aces in the hole and that he actually got some amazing news that morning.  They needed to play their cards very close to their chest in order to make it happen, but in the not too distant future there would be a grand opportunity to turn the tables for the continental United States.  As executive chief he assured the rebels remaining in Vancouver and Seattle that the nuclear option absolutely would NOT be exercised against them unless absolutely necessary, that they needed to focus their efforts on as much intelligence gathering as they possibly could and that if they held out just a little longer the tide would begin to turn.  The career military man commended all of us for our patience and valiant efforts in the face of impossible odds, and declared that this war was far from over.  Although inspiring as it was, many began to openly question his sanity.  The war rages on...
           </p>
 
-          <p class='text-center'><u><strong>SUMMER 2015: WARFARE, FAMINE, AND FIRE</strong></u></p>
+          <p class='text-center'><u><strong>SUMMER 2015: WARFARE, FAMINE, AND FLAME</strong></u></p>
 
           <p class='tab'>
             While the combat grew more intense on the battlefront and the people migrated out of the hubs to reclaim what was once lost, the pattern of drought continued marching forward during the summertime.  When the dry lightning struck the west coast again, it was the soviets turn to battle the inferno.  California was already razed by flame for the most part, and in the end they just let the wildfires burn.  From the Umpqua to the Okanogan and Olympic forests the blaze engulfed the land.  Vancouver island and the entire west coast north of there caught as well, all the way up to Alaska.  In the contested terrain, COG forces launched extensive napalm assaults, utilizing a scorched earth policy to slow the soviet advance as much as possible.  While conditioned to the cold, they seemed to have little experience dealing with wildfire.  The Fire Walkers, enlisted troops, and the militias made use of the dense smokescreen and were able to force their retreat to Seattle and Vancouver.  This also allowed critical supplies to be smuggled into these cities for resistance operatives.  Noone dared to attempt to fight the flames in a warzone, and this bought our men and women time to gain much needed rest and resupply for the coming days.  Mother Nature didn't care which arbitrary line was drawn in the sand, her fury affects everyone.  When all was said and done, only Bend OR needed to flee the carnage.

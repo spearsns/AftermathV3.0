@@ -10,3 +10,33 @@ Guest [ Storyteller ] : <span style='color: red;'>Direct Failure: 79 - 89
 <span>Guest [ Storyteller ]</span> : Minor Success: 45 - 66
 Guest [ Storyteller ] : <span style='color: red;'>Minor Failure: 67 - 78
 Guest [ Storyteller ] : <span style='color: red;'>Major Failure: 90 or more
+<span>Guest [ Storyteller ]</span> : ? 
+<span>Creator [ Spinks ]</span> : vert de ferk? 
+<span>Guest [ Storyteller ]</span> : Major Success: 22 or less
+<span>Guest [ Storyteller ]</span> : Direct Success: 23 - 44
+Guest [ Storyteller ] : <span style='color: red;'>Minor Failure: 67 - 78
+Guest [ Storyteller ] : <span style='color: red;'>Direct Failure: 79 - 89
+<span>Guest [ Storyteller ]</span> : Minor Success: 45 - 66
+Guest [ Storyteller ] : <span style='color: red;'>Major Failure: 90 or more
+Guest [ Storyteller ] : <span style='color: red;'>[HIT] RIGHT FOREARM
+Guest [ Storyteller ] : <span style='color: red;'>[%] 69
+<span>Guest [ Storyteller ]</span> : fucking hell why is this fucked up? 
+<span>Creator [ Spinks ]</span> : I have no idea 
+<span>Guest [ Storyteller ]</span> : Major Success: 15 or less
+<span>Guest [ Storyteller ]</span> : Direct Success: 16 - 30
+<span>Guest [ Storyteller ]</span> : Minor Success: 31 - 45
+Guest [ Storyteller ] : <span style='color: red;'>Minor Failure: 46 - 64
+Guest [ Storyteller ] : <span style='color: red;'>Major Failure: 83 or more
+Guest [ Storyteller ] : <span style='color: red;'>Direct Failure: 65 - 82
+<span style='color: blue;'>Guest [ Storyteller ]</span> : blah 
+<span style='color: blue;'>Guest [ Storyteller ]</span> : lala 
+<span style='color: blue;'>Guest [ Storyteller ]</span> : kk 
+<span style='color: blue;'>Guest [ Storyteller ]</span> : gg 
+Guest [ Storyteller ] : <span style='color: blue;'>this is the story 
+</span><span style='color: blue;'>Guest [ Storyteller ] : then this 
+</span><span style='color: blue;'>Guest [ Storyteller ] : then this 
+</span><span style='color: blue;'>Guest [ Storyteller ] : lala 
+</span>Guest [ Storyteller ] : <span style='color: blue;'>lala 
+</span>Guest [ Storyteller ] : <span style='color: blue;'>kk 
+</span>Guest [ Storyteller ] : <span style='color: blue;'>kk 
+</span><span>Guest [ Storyteller ]</span> : kk 

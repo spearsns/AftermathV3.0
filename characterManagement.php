@@ -199,12 +199,12 @@
         <hr/>
 
         <div class='row'>
-          <div class='col py-1'><h4 class='text-center'><strong>CHARACTER TRAITS</strong></h4></div>
+          <div class='col py-1'><h4 class='text-center'><strong>MENTAL TRAITS</strong></h4></div>
         </div>
 
         <div class='row no-gutters'>
-          <div class='col-6 col-sm-3 col-lg-2 py-1'><h5 class='pt-3 text-center'><strong>MEMORY:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-lg-2 py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1'><h5 class='pt-3 text-center'><strong>MEMORY:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <div class="input-group-prepend">
                 <button class="btn btn-danger border decTrait" data-target='memory' type="button"> - </button>
@@ -215,8 +215,8 @@
               </div>
             </div>
           </div>
-          <div class='col-6 col-sm-3 col-lg-2 py-1'><h5 class='pt-3 text-center'><strong>WILLPOWER:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-lg-2 py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1'><h5 class='pt-3 text-center'><strong>WILLPOWER:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <div class="input-group-prepend">
                 <button class="btn btn-danger border decTrait" data-target='willpower' type="button"> - </button>
@@ -227,8 +227,8 @@
               </div>
             </div>
           </div>
-          <div class='col-6 col-sm-3 col-lg-2 py-1'><h5 class='pt-3 text-center'><strong>LOGIC:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-lg-2 py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1'><h5 class='pt-3 text-center'><strong>LOGIC:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <div class="input-group-prepend">
                 <button class="btn btn-danger border decTrait" data-target='logic' type="button"> - </button>
@@ -239,8 +239,8 @@
               </div>
             </div>
           </div>
-          <div class='col-6 col-sm-3 col-lg-2 py-1'><h5 class='pt-3 text-center'><strong>PERCEPTION:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-lg-2 py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1'><h5 class='pt-3 text-center'><strong>PERCEPTION:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <div class="input-group-prepend">
                 <button class="btn btn-danger border decTrait" data-target='perception' type="button"> - </button>
@@ -251,8 +251,8 @@
               </div>
             </div>
           </div>
-          <div class='col-6 col-sm-3 col-lg-2 py-1 offset-sm-6 offset-lg-4'><h5 class='pt-3 text-center'><strong>CHARISMA:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-lg-2 py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1 offset-sm-6 offset-md-4'><h5 class='pt-3 text-center'><strong>CHARISMA:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <div class="input-group-prepend">
                 <button class="btn btn-danger border decTrait" data-target='charisma' type="button"> - </button>
@@ -264,10 +264,15 @@
             </div>
           </div>
         </div>
+        <hr/>
+
+        <div class='row'>
+          <div class='col py-1'><h4 class='text-center'><strong>PHYSICAL TRAITS</strong></h4></div>
+        </div>
 
         <div class='row no-gutters'>
-          <div class='col-6 col-sm-3 col-lg-2 py-1'><h5 class='pt-3 text-center'><strong>STRENGTH:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-lg-2 py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1'><h5 class='pt-3 text-center'><strong>STRENGTH:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <div class="input-group-prepend">
                 <button class="btn btn-danger border decTrait" data-target='strength' type="button"> - </button>
@@ -278,8 +283,8 @@
               </div>
             </div>
           </div>
-          <div class='col-6 col-sm-3 col-lg-2 py-1'><h5 class='pt-3 text-center'><strong>SPEED:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-lg-2 py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1'><h5 class='pt-3 text-center'><strong>SPEED:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <div class="input-group-prepend">
                 <button class="btn btn-danger border decTrait" data-target='speed' type="button"> - </button>
@@ -290,8 +295,8 @@
               </div>
             </div>
           </div>
-          <div class='col-6 col-sm-3 col-lg-2 py-1'><h5 class='pt-3 text-center'><strong>ENDURANCE:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-lg-2 py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1'><h5 class='pt-3 text-center'><strong>ENDURANCE:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <div class="input-group-prepend">
                 <button class="btn btn-danger border decTrait" data-target='endurance' type="button"> - </button>
@@ -302,8 +307,8 @@
               </div>
             </div>
           </div>
-          <div class='col-6 col-sm-3 col-lg-2 py-1'><h5 class='pt-3 text-center'><strong>AGILITY:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-lg-2 py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1'><h5 class='pt-3 text-center'><strong>AGILITY:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <div class="input-group-prepend">
                 <button class="btn btn-danger border decTrait" data-target='agility' type="button"> - </button>
@@ -314,14 +319,13 @@
               </div>
             </div>
           </div>
-          <div class='col-6 col-sm-3 col-lg-2 py-1 offset-sm-6 offset-lg-4'><h5 class='pt-3 text-center px-0'><strong>BEAUTY:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-lg-2 py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1 offset-sm-6 offset-md-4'><h5 class='pt-3 text-center px-0'><strong>BEAUTY:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <input type="text" id="beauty" name='beauty' class="form-control border text-center" value="<?php echo $charTraits['Beauty']; ?>" readonly />
             </div>
           </div>
         </div>
-
         <hr/>
 
         <div class='row no-gutters'>
@@ -1571,7 +1575,7 @@
               <input type="text" id="ability15" name='ability15' class="form-control border text-center abilitySlot px-0" value='<?php echo $charAbilities["15"] ?>' readonly />
             </div>
           </div>
-          <div class='col-12 col-sm-6 col-md-4 col-lg-3 py-1 my-1'>
+          <div class='col-12 col-sm-6 col-md-4 offset-md-4 col-lg-3 offset-lg-0 py-1 my-1'>
             <div class="input-group input-group-lg">
               <input type="text" id="ability16" name='ability16' class="form-control border text-center abilitySlot px-0" value='<?php echo $charAbilities["16"] ?>' readonly />
             </div>

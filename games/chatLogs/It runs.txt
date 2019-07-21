@@ -702,3 +702,83 @@ Guest [ Storyteller ] : <span style='color: red;'>[%] 56
 Guest [ Storyteller ] : <span style='color: red;'>[%] 92
 Guest [ Storyteller ] : <span style='color: red;'>[%] 84
 <span>Creator [ Spinks ]</span> : the fuck? 
+<span>Guest [ Martinez ]</span> : lalalala 
+<span>Guest [ Martinez ]</span> : blah 
+Guest [ Martinez ] : <span style='color: red;'>[%] !!CRITICAL!! 66
+Guest [ Martinez ] : <span style='color: red;'>[2D10] 6
+Guest [ Martinez ] : <span style='color: red;'>[%] 46
+Guest [ Martinez ] : <span style='color: red;'>[HIT] LEFT CALF
+Guest [ Martinez ] : <span style='color: red;'>[HIT] MIDSECTION (STOMACH/LOWER BACK)
+<span>Guest [ Storyteller ]</span> : Major Success: 0 or less
+<span>Guest [ Storyteller ]</span> : Direct Success: 1 - 0
+<span>Guest [ Storyteller ]</span> : Minor Success: 1 - 0
+Guest [ Storyteller ] : <span style='color: red;'>Minor Failure: 1 - 34
+Guest [ Storyteller ] : <span style='color: red;'>Direct Failure: 35 - 67
+Guest [ Storyteller ] : <span style='color: red;'>Major Failure: 68 or more
+Guest [ Martinez ] : <span style='color: red;'>[HIT] LEFT CALF
+Guest [ Martinez ] : <span style='color: red;'>[HIT] RIGHT THIGH
+Guest [ Martinez ] : <span style='color: red;'>[HIT] HEAD
+Guest [ Martinez ] : <span style='color: red;'>[%] !!CRITICAL!! 88
+Guest [ Martinez ] : <span style='color: red;'>[%] 48
+Guest [ Martinez ] : <span style='color: red;'>[%] 82
+Guest [ Martinez ] : <span style='color: red;'>[%] 40
+Guest [ Martinez ] : <span style='color: red;'>[%] 51
+Guest [ Martinez ] : <span style='color: red;'>[%] 84
+Guest [ Martinez ] : <span style='color: red;'>[%] 67
+Guest [ Martinez ] : <span style='color: red;'>[%] 20
+Guest [ Martinez ] : <span style='color: red;'>[%] 39
+Guest [ Martinez ] : <span style='color: red;'>[%] 82
+Guest [ Martinez ] : <span style='color: red;'>[%] 62
+<span>Creator [ Spinks ]</span> : fecken wierd that is mate 
+<span>Guest [ Storyteller ]</span> : I know right? 
+Guest [ Storyteller ] : <span style='color: red;'>[%] 84
+Guest [ Storyteller ] : <span style='color: red;'>[HIT] LEFT FOREARM
+Guest [ Storyteller ] : <span style='color: red;'>[2D10] 13
+<span>Guest [ Storyteller ]</span> : yes? 
+<span>Guest [ Storyteller ]</span> : Major Success: 28 or less
+<span>Guest [ Storyteller ]</span> : Direct Success: 29 - 56
+<span>Guest [ Storyteller ]</span> : Minor Success: 57 - 86
+Guest [ Storyteller ] : <span style='color: red;'>Direct Failure: 93 - 97
+Guest [ Storyteller ] : <span style='color: red;'>Minor Failure: 87 - 92
+Guest [ Storyteller ] : <span style='color: red;'>Major Failure: 96 or more
+<span>Guest [ Storyteller ]</span> : Major Success: 29 or less
+<span>Guest [ Storyteller ]</span> : Direct Success: 30 - 58
+<span>Guest [ Storyteller ]</span> : Minor Success: 59 - 88
+Guest [ Storyteller ] : <span style='color: red;'>Minor Failure: 89 - 93
+Guest [ Storyteller ] : <span style='color: red;'>Direct Failure: 94 - 97
+Guest [ Storyteller ] : <span style='color: red;'>Major Failure: 97 or more
+<span>Guest [ Storyteller ]</span> : Major Success: 17 or less
+<span>Guest [ Storyteller ]</span> : Direct Success: 18 - 34
+<span>Guest [ Storyteller ]</span> : Minor Success: 35 - 52
+Guest [ Storyteller ] : <span style='color: red;'>Minor Failure: 53 - 69
+Guest [ Storyteller ] : <span style='color: red;'>Major Failure: 85 or more
+Guest [ Storyteller ] : <span style='color: red;'>Direct Failure: 70 - 85
+Guest [ Storyteller ] : <span style='color: red;'>[2D10] 15
+Guest [ Storyteller ] : <span style='color: red;'>[HIT] LEFT CALF
+Guest [ Storyteller ] : <span style='color: red;'>[%] 47
+<span>Guest [ Storyteller ]</span> : kk 
+Guest [ Storyteller ] : <span style='color: blue;'>wtf 
+<span style='color: blue;'>Guest [ Storyteller ] : kk 
+<span>Creator [ Spinks ]</span> : lala 
+<span style='color: blue;'>Guest [ Storyteller ] : youre in for a world of shit 
+<span>Creator [ Spinks ]</span> : I live in a world of shit! 
+Guest [ Storyteller ] : <span style='color: red;'>[HIT] LEFT CALF
+<span style='color: blue;'>Guest [ Storyteller ] : kk 
+<span>Creator [ Spinks ]</span> : kk 
+<span style='color: blue;'>Guest [ Storyteller ] : [HIT] LEFT THIGH
+<span>Creator [ Spinks ]</span> : damn! 
+<span style='color: blue;'>Guest [ Storyteller ] : [2D10] 19
+Creator [ Spinks ] : <span style='color: red;'>[HIT] HEAD
+<span style='color: blue;'>Guest [ Storyteller ] : Im telling the story here! 
+Creator [ Spinks ] : <span style='color: red;'>[%] 73
+<span style='color: blue;'>Guest [ Storyteller ] : very nice! 
+<span style='color: blue;'>Guest [ Storyteller ] : [%] !!CRITICAL!! 66
+<span style='color: blue;'>Guest [ Storyteller ] : you find yourself sitting in an old airport hanger 
+<span>Creator [ Spinks ]</span> : oh yeah?  what can I see? 
+<span style='color: blue;'>Guest [ Storyteller ] : check PER 
+Creator [ Spinks ] : <span style='color: red;'>[2D10] 12
+<span style='color: blue;'>Guest [ Storyteller ] : you got a 14 right? 
+<span>Creator [ Spinks ]</span> : sure do 
+<span>Creator [ Spinks ]</span> : ?? 
+<span style='color: blue;'>Guest [ Storyteller ] : pallets, cardboard boxes, old packaging equipment, etc 
+<span style='color: blue;'>Guest [ Storyteller ] : I really need to get the talk to text API up on this mofo 

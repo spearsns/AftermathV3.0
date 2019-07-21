@@ -42,10 +42,8 @@
         <div class="container-fluid">
 
             <div class='row metal'>
-                <div class='col'>
-                  <br />
-                  <h4 class='text-black text-center TNR'>CHOOSE YOUR CHARACTER:</h4>
-                  <br /> 
+                <div class='col py-2'>
+                  <h4 class='text-black text-center'>CHOOSE YOUR CHARACTER:</h4>
                 </div>
             </div>
 
@@ -58,7 +56,7 @@
                     echo "
                         <div class='row black'>
                             <div class='col-sm'></div>
-                            <div class='col'>
+                            <div class='col py-1'>
                                 <a href='". $target . $row['CharacterName'] ."' role='button' class='btn btn-warning btn-lg btn-block border'>
                                     ". $row['CharacterName'] ."</a>
                             </div>
@@ -69,7 +67,7 @@
                 echo "
                     <div class='row black'>
                         <div class='col-sm'></div>
-                        <div class='col'>
+                        <div class='col py-1'>
                             <h4 class='text-white text-center TNR'>Zero Results:<br />You have to build a character first!</h4>
                         </div>
                         <div class='col-sm'></div>

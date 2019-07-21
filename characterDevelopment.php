@@ -124,70 +124,75 @@
         <hr/>
 
         <div class='row'>
-          <div class='col py-1'><h4 class='text-center'><strong>CHARACTER TRAITS</strong></h4></div>
+          <div class='col py-1'><h4 class='text-center'><strong>MENTAL TRAITS</strong></h4></div>
         </div>
 
         <div class='row no-gutters'>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1'><h5 class='pt-3 text-center'><strong>MEMORY:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1'><h5 class='pt-3 text-center'><strong>MEMORY:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <input type="text" name='memory' id='memory' class="form-control border text-center" value='<?php echo $_SESSION["memory"]; ?>' readonly />
             </div>
           </div>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1'><h5 class='pt-3 text-center'><strong>WILLPOWER:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1'><h5 class='pt-3 text-center'><strong>WILLPOWER:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <input type="text" name='willpower' id='willpower' class="form-control border text-center" value='<?php echo $_SESSION["willpower"]; ?>' readonly />
             </div>
           </div>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1'><h5 class='pt-3 text-center'><strong>LOGIC:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1'><h5 class='pt-3 text-center'><strong>LOGIC:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <input type="text" name='logic' id='logic' class="form-control border text-center" value='<?php echo $_SESSION["logic"]; ?>' readonly />
             </div>
           </div>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1'><h5 class='pt-3 text-center'><strong>PERCEPTION:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1'><h5 class='pt-3 text-center'><strong>PERCEPTION:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <input type="text" name='perception' id='perception' class="form-control border text-center" value='<?php echo $_SESSION["perception"]; ?>' readonly />
             </div>
           </div>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1 offset-sm-6 offset-md-4 offset-xl-0'><h5 class='pt-3 text-center'><strong>CHARISMA:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1 offset-sm-6 offset-md-4'><h5 class='pt-3 text-center'><strong>CHARISMA:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <input type="text" id="charisma" name='charisma' class="form-control border text-center" value='<?php echo $_SESSION["charisma"]; ?>' readonly />
             </div>
           </div>
         </div>
+        <hr/>
+
+        <div class='row'>
+          <div class='col py-1'><h4 class='text-center'><strong>PHYSICAL TRAITS</strong></h4></div>
+        </div>
 
         <div class='row no-gutters'>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1'><h5 class='pt-3 text-center'><strong>STRENGTH:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1'><h5 class='pt-3 text-center'><strong>STRENGTH:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <input type="text" name='strength' id='strength' class="form-control border text-center" value='<?php echo $_SESSION["strength"]; ?>' readonly />
             </div>
           </div>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1'><h5 class='pt-3 text-center'><strong>SPEED:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1'><h5 class='pt-3 text-center'><strong>SPEED:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <input type="text" name='speed' id='speed' class="form-control border text-center" value='<?php echo $_SESSION["speed"]; ?>' readonly />
             </div>
           </div>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1'><h5 class='pt-3 text-center'><strong>ENDURANCE:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1'><h5 class='pt-3 text-center'><strong>ENDURANCE:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <input type="text" name='endurance' id='endurance' class="form-control border text-center" value='<?php echo $_SESSION["endurance"]; ?>' 
                 readonly />
             </div>
           </div>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1'><h5 class='pt-3 text-center'><strong>AGILITY:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1'><h5 class='pt-3 text-center'><strong>AGILITY:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <input type="text" name='agility' id='agility' class="form-control border text-center" value='<?php echo $_SESSION["agility"]; ?>' readonly />
             </div>
           </div>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1 offset-sm-6 offset-md-4 offset-xl-0'><h5 class='pt-3 text-center'><strong>BEAUTY:</strong></h5></div>
-          <div class='col-6 col-sm-3 col-md-2 col-xl py-1'>
+          <div class='col-6 col-sm-3 col-md-2 py-1 offset-sm-6 offset-md-4'><h5 class='pt-3 text-center'><strong>BEAUTY:</strong></h5></div>
+          <div class='col-6 col-sm-3 col-md-2 py-1'>
             <div class="input-group input-group-lg">
               <input type="text" id="beauty" name='beauty' class="form-control border text-center" value='<?php echo $_SESSION["beauty"]; ?>' readonly />
             </div>

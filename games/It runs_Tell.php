@@ -99,28 +99,28 @@
       	?>
 
 	    <div class='row metal py-2'>
-	      <div class='col'><img src='../img/graffiti/GameName.png' class='mx-auto d-block' /></div>
-	      <div class='col'>
-	        <div class="input-group input-group-lg">
-	          <input type="text" id="gameName" class="form-control border text-center" value='<?php echo $gameName; ?>' readonly />
-	        </div>
-	      </div>
-	      <div class='col'><img src='../img/graffiti/storyteller.png' class='mx-auto d-block' /></div>
-	      <div class='col'>
-	        <div class="input-group input-group-lg">
-	          <input type="text" id="storytellerName" class="form-control border text-center" value='' readonly />
-	        </div>
-	      </div>
+	      <div class='col-12 col-sm-6 col-md-3'><img src='../img/graffiti/GameName.png' class='img-fluid h-100 mx-auto d-block' /></div>
+        <div class='col-12 col-sm-6 col-md-3'>
+          <div class="input-group input-group-lg">
+            <input type="text" id="gameName" class="form-control border text-center" value='<?php echo $gameName; ?>' readonly />
+          </div>
+        </div>
+        <div class='col-12 col-sm-6 col-md-3 py-1'><img src='../img/graffiti/storyteller.png' class='img-fluid h-100 mx-auto d-block' /></div>
+        <div class='col-12 col-sm-6 col-md-3 py-1'>
+          <div class="input-group input-group-lg">
+            <input type="text" id="storytellerName" class="form-control border text-center" value='' readonly />
+          </div>
+        </div>
 	    </div>
 
-	    <!--INTERFACE-->
+	    <!--CHAT AREA-->
     	<div class='row'>
-	   		<div class='col-9 black px-0'>
-	        <div class='row'>
-	          <div class='col'>
-	          	<div id="chat-area"></div>
-	          </div>
-	        </div>
+        <div class='col-12 col-md-8 col-lg-9 black px-0'>
+          <div class='row'>
+            <div class='col'>
+              <div id="chat-area"></div>
+            </div>
+          </div>
 
 	        <div class='row'>
 	          <div class='col'>
@@ -129,75 +129,52 @@
 	            </form>
 	          </div>
 	        </div>
-
         </div>
 		        
-	      <div class='col-3 brass'>
-		      <div class='row'>
-		        <div class='col'>
-		          <br />
-		          <button class="btn btn-warning btn-lg btn-block border" id='percentileBtn' type="button">PERCENTILE (%)</button>
-		        </div>
-		      </div>
-          <div class='row'>
-            <div class='col'>
-              <br />
+        <div class='col-12 col-md-4 col-lg-3 brass interface'>
+  	      <div class='row'>
+  	        <div class='col-12 col-sm-6 order-sm-first col-md-12 py-2'>
+  	          <button class="btn btn-warning btn-lg btn-block border" id='percentileBtn' type="button">PERCENTILE (%)</button>
+  	        </div>
+            <div class='col-12 col-sm-6 col-md-12 py-2'>
+              <button class="btn btn-danger btn-lg btn-block border" id='randomHitBtn' type="button">RANDOM HIT</button>
+            </div>
+            <div class='col-12 col-sm-6 py-2'>
               <div class="input-group input-group-lg">
                 <input type="text" id='LoSValue' class="form-control border text-center" value='' />
               </div>
             </div>
-            <div class='col'>
-              <br />
+            <div class='col-12 col-sm-6 py-2'>
               <button class="btn btn-success btn-lg btn-block border" id='LoSBtn' type="button">LoS CALC</button>
             </div>
-          </div>
-		      <div class='row'>
-		        <div class='col'>
-		          <br />
-		          <button class="btn btn-warning btn-lg btn-block border" id='twoD10Btn' type="button">TRAITS (2D10)</button>
-		        </div>
-		      </div>
-		      <div class='row'>
-		        <div class='col'>
-		          <br />
-		          <button class="btn btn-danger btn-lg btn-block border" id='randomHitBtn' type="button">RANDOM HIT</button>
-		        </div>
-		      </div>
-		      <div class='row'>
-            <div class='col'>
-            <br />
+  	        <div class='col-12 col-sm-6 col-md-12 py-2'>
+  	          <button class="btn btn-warning btn-lg btn-block border" id='twoD10Btn' type="button">TRAITS (2D10)</button>
+  	        </div>
+          <!--  POTENTIAL FOR KEEPING TRACK OF COMBAT ROUNDS
+            <div class='col-12 col-sm-6 order-sm-4 col-md-12 py-2'>
             <button role='button' class="btn btn-light btn-lg btn-block border" id='roundBtn' type='button'>ROUND</button>
           	</div>
-          </div>
-          <div class='row'>
-            <div class='col'>
-            <br />
+            <div class='col-12 col-sm-6 order-sm-4 col-md-12 py-2'>
             <button role='button' class="btn btn-info btn-lg btn-block border" id='resetBtn' type='button'>RESET</button>
           	</div>
-          </div>
-          <div class='row'>
-            <div class='col'>
-            <br />
+          -->
+            <div class='col-12 col-sm-6 col-md-12 py-2'>
             <button role='button' class="btn btn-secondary btn-lg btn-block border" id='whisperBtn' type='button'>WHISPER</button>
           	</div>
-          </div>
-		      <div class='row'>
-		        <div class='col' id='lockInterface'>
-		          <br />
-		          <button class="btn btn-dark btn-lg btn-block border lockBtn" data-reference='<?php echo $gameID; ?>' type="button">LOCK GAME</button>
-		        </div>
-		      </div>
-          <div class='row'>
-            <div class='col'>
-              <br />
+  	        <div class='col-12 col-sm-6 col-md-12 py-2' id='lockInterface'>
+  	          <button class="btn btn-dark btn-lg btn-block border lockBtn" data-reference='<?php echo $gameID; ?>' type="button">LOCK GAME</button>
+  	        </div>
+            <div class='col-12 col-sm-6 col-md-12 py-2'>
               <button role='button' class="btn btn-danger btn-lg btn-block border mx-auto" id='bootBtn' type='button'>BOOT USER</button>
-              <br />
             </div>
           </div>
-	     	</div>
-	 	  </div>
+        </div>
+      </div>
+
 	    <div class='row metal py-2'>
-	      <div class='col'><img src='../img/graffiti/notesX.png' class='mx-auto d-block' /></div>
+	      <div class='col'>
+          <img src='../img/graffiti/notesX.png' class='img-fluid h-100 mx-auto d-block' />
+        </div>
 	    </div>
 
 	    <div class='row'>
@@ -207,18 +184,27 @@
 	    </div>
 
       <div class='row metal py-2'>
-      	<div class='col px-0'><img src='../img/graffiti/playerX.png' class='mx-auto d-block' /></div>
-      	<div class='col px-0'><img src='../img/graffiti/characterX.png' class='mx-auto d-block' /></div>
-      	<div class='col px-0'><img src='../img/graffiti/charSheet.png' class='mx-auto d-block' /></div>
-      	<div class='col px-0'><img src='../img/graffiti/idMarks.png' class='mx-auto d-block' /></div>
-      	<div class='col px-0'><img src='../img/graffiti/experienceX.png' class='mx-auto d-block' /></div>
+      	<div class='col px-0'>
+          <img src='../img/graffiti/playerX.png' class='img-fluid h-100 mx-auto d-block' />
+        </div>
+      	<div class='col px-0'>
+          <img src='../img/graffiti/characterX.png' class='img-fluid h-100 mx-auto d-block' />
+        </div>
+      	<div class='col px-0'>
+          <img src='../img/graffiti/charSheet.png' class='img-fluid h-100 mx-auto d-block' />
+        </div>
+      	<div class='col px-0'>
+          <img src='../img/graffiti/idMarks.png' class='img-fluid h-100 mx-auto d-block' />
+        </div>
+      	<div class='col px-0'>
+          <img src='../img/graffiti/experienceX.png' class='img-fluid h-100 mx-auto d-block' />
+        </div>
         <div class='col px-0'></div>
       </div>
 
       <div id='interface' class='interface'></div>
 
 	    <script src='../js/instantMessage.js'></script>
-
 	    <script src='../node_modules/socket.io-client/dist/socket.io.js'></script>
 
       <?php include($_SERVER['DOCUMENT_ROOT'] . '/aftermath/footer.php'); ?>

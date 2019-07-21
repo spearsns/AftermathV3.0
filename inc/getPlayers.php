@@ -23,35 +23,36 @@
 	        
 	        echo "
 	            <div class='row black py-1'>
-	              <div class='col'>
+	              <div class='col-12 col-sm-6 col-lg-2'>
 	                <div class='input-group input-group-lg'>
 	                  <input type='text' class='form-control border text-center' value='$player' readonly />
 	                </div>
 	              </div>
-	              <div class='col'>
+	              <div class='col-12 col-sm-6 col-lg-2'>
 	                <div class='input-group input-group-lg'>
 	                  <input type='text' class='form-control border text-center' value='$character' readonly />
 	                </div>
 	              </div>
-	              <div class='col'>
+	              <div class='col-12 col-sm-6 col-lg-2'>
 	                  <button class='btn btn-warning btn-lg btn-block border charSheetBtn' data-reference='$characterID' 
-	                  	type='button' onclick='characterID = ". $target ."; '>VIEW</button>
+	                  	type='button' onclick='characterID = ". $target ."; '>SHEET</button>
 	              </div>
-	              <div class='col'>
+	              <div class='col-12 col-sm-6 col-lg-2'>
 	                <button class='btn btn-info btn-lg btn-block border idMarksBtn' data-reference='$characterID' type='button' 
 	                	onclick='characterID = ". $target ."; '>ID MARKS</button>  
 	              </div>
-	              <div class='col'>
+	              <div class='col-12 col-sm-6 col-lg-2'>
 	                <div class='input-group input-group-lg'>
 	                  <input type='text' class='form-control border text-center earnedExp' data-reference='$characterID' 
 	                  	placeholder='Earned EXP' />
 	                </div>  
 	              </div>
-	              <div class='col'>
+	              <div class='col-12 col-sm-6 col-lg-2'>
 	                <button class='btn btn-success btn-lg btn-block border awardExpBtn' data-reference='$characterID' 
 	                	type='button'>AWARD EXP</button>  
 	              </div>
-	            </div> 
+	            </div>
+        		<hr class='hr-white my-0 d-block d-lg-none' /> 
 	        ";
 	    }
 	} else {

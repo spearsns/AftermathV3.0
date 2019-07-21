@@ -50,9 +50,11 @@
             if(preg_match($reg_exUrl, $message, $url)) {
                 $message = preg_replace($reg_exUrl, '<a href="'.$url[0].'" target="_blank">'.$url[0].'</a>', $message);
                 }
-
-                fwrite(fopen('../games/chatLogs/'.$txtFile.'', 'a'), "<span>". $nickname . "</span> : " 
-                    . $message = str_replace("\n", " ", $message) . "\n");
+                if(strpos($nickname, 'Storyteller') == true){
+                    fwrite(fopen('../games/chatLogs/'.$txtFile.'', 'a'), "<span style='color: blue;'>". $nickname . " : ".  $message = str_replace("\n", " ", $message) . "\n") ."</span>";
+                } else {
+                    fwrite(fopen('../games/chatLogs/'.$txtFile.'', 'a'), "<span>". $nickname . "</span> : ". $message = str_replace("\n", " ", $message) . "\n");
+                }
             }
             break;
     
@@ -66,9 +68,11 @@
             if(preg_match($reg_exUrl, $message, $url)) {
                 $message = preg_replace($reg_exUrl, '<a href="'.$url[0].'" target="_blank">'.$url[0].'</a>', $message);
                 }
-
-                fwrite(fopen('../games/chatLogs/'.$txtFile.'', 'a'), $nickname . " : " 
-                    ."<span style='color: red;'>".  $message = str_replace("\n", " ", $message) . "\n") ."</span>";
+                if(strpos($nickname, 'Storyteller') == true){
+                    fwrite(fopen('../games/chatLogs/'.$txtFile.'', 'a'), "<span style='color: blue;'>". $nickname . " : ".  $message = str_replace("\n", " ", $message) . "\n") ."</span>";
+                } else {
+                    fwrite(fopen('../games/chatLogs/'.$txtFile.'', 'a'), $nickname . " : <span style='color: red;'>".  $message = str_replace("\n", " ", $message) . "\n") ."</span>";
+                }
             }
             break;   
     }

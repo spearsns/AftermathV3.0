@@ -60,12 +60,10 @@
       <div class="accordion py-3" id="accordion">
 
         <div class="card">
-          <div class="card-header brass TNR text-center" id="headingOne">
-            <h5 class="mb-0">
-              <button class="btn btn-dark btn-lg w-50 border" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                ROLE PLAYING: PLAYERS vs. STORYTELLERS
-              </button>
-            </h5>
+          <div class="card-header brass text-center" id="headingOne">
+            <button class="btn btn-dark btn-lg btn-block border px-0" id='rolesBtn' type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+              ROLE PLAYING
+            </button>
           </div>
 
           <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
@@ -92,12 +90,10 @@
         </div>
 
         <div class="card">
-          <div class="card-header brass TNR text-center" id="headingTwo">
-            <h5 class="mb-0">
-              <button class="btn btn-dark btn-lg border collapsed w-50" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                TRAITS: CHECKS & MODIFIERS
-              </button>
-            </h5>
+          <div class="card-header brass text-center" id="headingTwo">
+            <button class="btn btn-dark btn-lg btn-block border px-0" id='traitsBtn' type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              TRAITS & CHECKS
+            </button>
           </div>
 
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -639,12 +635,10 @@
         </div>
 
         <div class="card">
-          <div class="card-header brass TNR text-center" id="headingThree">
-            <h5 class="mb-0">
-              <button class="btn btn-dark btn-lg border collapsed w-50" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                SKILLS: CHECKS & MODIFIERS
-              </button>
-            </h5>
+          <div class="card-header brass text-center" id="headingThree">
+            <button class="btn btn-dark btn-lg btn-block border px-0" id='skillsBtn' type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              SKILLS & CHECKS
+            </button>
           </div>
 
           <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
@@ -878,12 +872,10 @@
         </div>
 
         <div class="card">
-          <div class="card-header brass TNR text-center" id="headingFour">
-            <h5 class="mb-0">
-              <button class="btn btn-dark btn-lg border collapsed w-50" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                COMBAT: ROUNDS, TURNS, & ACTIONS
-              </button>
-            </h5>
+          <div class="card-header brass text-center" id="headingFour">
+            <button class="btn btn-dark btn-lg btn-block border px-0" id='roundsBtn' type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              ROUNDS & ACTIONS
+            </button>
           </div>
 
           <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
@@ -1766,12 +1758,10 @@
         </div>
 
         <div class="card">
-          <div class="card-header brass TNR text-center" id="headingFive">
-            <h5 class="mb-0">
-              <button class="btn btn-dark btn-lg border collapsed w-50" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                STRIKES: MODIFIERS & LIKELIHOODS
-              </button>
-            </h5>
+          <div class="card-header brass text-center" id="headingFive">
+            <button class="btn btn-dark btn-lg btn-block border px-0" id='strikesBtn' type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              STRIKES & L.O.S
+            </button>
           </div>
 
           <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
@@ -1939,7 +1929,7 @@
                 </ul>
               </ul>
 
-              <h5 class='text-center TNR'><strong>COMPLEX STRIKING MODIFIERS</strong></h5>
+              <h5 class='text-center'><strong>COMPLEX STRIKING MODIFIERS</strong></h5>
 
               <div class='table-responsive'>
                 <table class="table">
@@ -2281,7 +2271,7 @@
                 </strong>
               </p>
 
-              <h5 class='text-center TNR'><strong>SIMPLE STRIKING MODIFIERS</strong></h5>
+              <h5 class='text-center'><strong>SIMPLE STRIKING MODIFIERS</strong></h5>
 
               <div class='table-responsive'>
                 <table class="table">
@@ -2351,7 +2341,7 @@
                 </table>
               </div>
 
-              <h5 class='text-center TNR'><u><strong>SPECIALIZED ATTACKS</strong></u></h5>
+              <h5 class='text-center'><u><strong>SPECIALIZED ATTACKS</strong></u></h5>
 
               <ul>
                 <li>
@@ -2502,7 +2492,7 @@
                 </ul>
               </ul><!--END SPECIALIZED ATTACKS-->
 
-              <h5 class='text-center TNR'><strong>RANDOM HIT SEVERITY</strong></h5>
+              <h5 class='text-center'><strong>RANDOM HIT SEVERITY</strong></h5>
 
               <div class='table-responsive'>
                 <table class="table">
@@ -2537,12 +2527,10 @@
         </div>
 
         <div class="card">
-          <div class="card-header brass TNR text-center" id="headingSix">
-            <h5 class="mb-0">
-              <button class="btn btn-dark btn-lg border collapsed w-50" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                STRIKES: EFFECTS & DAMAGE
-              </button>
-            </h5>
+          <div class="card-header brass text-center" id="headingSix">
+            <button class="btn btn-dark btn-lg btn-block border px-0" id='effectsBtn' type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+              EFFECTS & DAMAGE
+            </button>
           </div>
 
           <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
@@ -2685,7 +2673,7 @@
 
             </ul><!--END FACTOR LIST-->
 
-            <h5 class='text-center TNR'><strong><u>CRITICAL HITS & FAILURES</u></strong></h5>
+            <h5 class='text-center'><strong><u>CRITICAL HITS & FAILURES</u></strong></h5>
 
             <p class='text-center'>
               Don't forget about Criticals (double rolls IE: 11, 22, 66, 99)!  These are meant to reflect awesome and unpredictable outcomes on Combat Rolls.  Generally speaking:
@@ -2701,13 +2689,13 @@
               </li>
             </ul>
 
-            <h5 class='text-center TNR'><strong><u>DAMAGE & IMMEDIATE EFFECTS</u></strong></h5>
+            <h5 class='text-center'><strong><u>DAMAGE & IMMEDIATE EFFECTS</u></strong></h5>
 
             <p class='tab'>
               Damage is primarily determined by the type of Strike, be it Major, Direct, or Minor but there are also Damage Types consisting of the following (It is important to note that thrown weapons vary wildly, but will generally fall into the Melee categories and NOT Ballistic):
             </p>
 
-            <h5 class='text-center TNR'><strong>BLUNT ATTACKS</strong></h5>
+            <h5 class='text-center'><strong>BLUNT ATTACKS</strong></h5>
 
             <p class='text-center'>
               These are strikes that are not intended to penetrate the targets skin, but deliver a lot of force over a reasonably small surface area
@@ -2849,7 +2837,7 @@
                 </ul>
               </ul><!--END BLUNT ATTACKS-->
 
-              <h5 class='text-center TNR'><strong>EDGED ATTACKS</strong></h5>
+              <h5 class='text-center'><strong>EDGED ATTACKS</strong></h5>
               <p class='text-center'>
                 Consist of any weapon or attack intended to cut, slice, slash, chop, or otherwise open up the target causing blood loss and significant bone or organ damage
               </p>  
@@ -3055,7 +3043,7 @@
                 </ul>
               </ul><!--END EDGED ATTACKS-->
 
-              <h5 class='text-center TNR'><strong>PIERCING ATTACKS</strong></h5>
+              <h5 class='text-center'><strong>PIERCING ATTACKS</strong></h5>
               <p class='text-center'>
                 Stabbing manuevers, plain and simple.  Be it a knife, sword, spear, or anything with a point.  This also includes spiked weapons attached to a heavier base object, like a mace or baseball bat.  Remember the focus here is on the Type of Damage. Ballistics are projectile piercing attacks and are covered immediately after this
               </p>  
@@ -3213,7 +3201,7 @@
                 </ul>
               </ul><!--END PIERCING ATTACKS-->
 
-              <h5 class='text-center TNR'><strong>BALLISTIC ATTACKS</strong></h5>
+              <h5 class='text-center'><strong>BALLISTIC ATTACKS</strong></h5>
               <p class='text-center'>
                 Consist of gunfire, arrows, and crossbow bolts.  Strength of the attack remains consistent with caliber size, bullet velocity based on the amount of powder in the round, arrowhead type, and / or the archery weapon itself.  Strength Checks do not apply here though an exception could be made for the Short Bow potentially.  Effects are very similar to Piercing Attacks.  
                 <strong>Storytellers, as always, do what you do best!</strong>
@@ -3385,18 +3373,16 @@
         </div>
 
         <div class="card">
-          <div class="card-header brass TNR text-center" id="headingSeven">
-            <h5 class="mb-0">
-              <button class="btn btn-dark btn-lg border collapsed w-50" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                EFFECTS: MELEE WEAPONS & ARMOR
-              </button>
-            </h5>
+          <div class="card-header brass text-center" id="headingSeven">
+            <button class="btn btn-dark btn-lg btn-block border px-0" id='meleeBtn' type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+              MELEE & ARMOR
+            </button>
           </div>
 
           <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
             <div class="card-body">
 
-              <h5 class='text-center TNR'><strong><u>STRENGTH CHECK CHAINS ON MELEE DAMAGE</u></strong></h5>
+              <h5 class='text-center'><strong><u>STRENGTH CHECK CHAINS ON MELEE DAMAGE</u></strong></h5>
 
               <p class='tab'>
                 If a character lands a Strike in Melee Combat, they still need to drive the force of the blow in order to be effective. It seems safe to assume that the Defender will be bobbing and weaving to avoid or reduce the efficiency of the  attack, and once you factor in the possibility of armor, weapon type, and quality the implications should be  apparent.  This factors in more when you include armor, but for the sake of the story it should always be included!
@@ -3448,7 +3434,7 @@
                 </ul>
               </ul>
 
-              <h5 class='text-center TNR'><strong><u>MELEE WEAPON MODIFIERS</u></strong></h5>
+              <h5 class='text-center'><strong><u>MELEE WEAPON MODIFIERS</u></strong></h5>
 
               <p class='tab'>
                 Melee weapons come in all different shapes and sizes, and certain weapons adopt specific tactics and striking   methods.  This section attempts to address that.  For instance:
@@ -3947,7 +3933,7 @@
                 </ul><!--END SPECIALIZED MUNITIONS-->
               </ul><!--END ARMOR & DAMAGE MODIFIERS-->
 
-              <h5 class='text-center TNR'><u><strong>ARMOR MATERIALS & BASELINE PROTECTION</strong></u></h5>
+              <h5 class='text-center'><u><strong>ARMOR MATERIALS & BASELINE PROTECTION</strong></u></h5>
 
               <div class='table-responsive'>
                 <table class="table">
@@ -4124,7 +4110,7 @@
                   <strong>As always, the Storyteller has the final say!</strong>  Don't get too wrapped up in overcomplicating your reasoning, just think it through and tell the tale!  <strong>Rules are guidelines, not set in stone!</strong>
                 </li>
 
-                <h5 class='text-center TNR'><u><strong>SHIELDS: MATERIAL, THICKNESS, & EFFECTIVENESS</strong></u></h5>
+                <h5 class='text-center'><u><strong>SHIELDS: MATERIAL, THICKNESS, & EFFECTIVENESS</strong></u></h5>
 
                 <p class='tab'>
                   Much like armor, shield effectiveness relies heavily upon the material, thickness, and craftsmanship of the equipment.  Shields can definitely shatter from Major Hits, effectively wielding Two Handed weapons like battle axes, and bullets still punch through softer materials not designed to withstand ballistic impacts. <strong>Storyteller's use your best judgment!</strong>
@@ -4135,12 +4121,10 @@
         </div>
 
         <div class="card">
-          <div class="card-header brass TNR text-center" id="headingEight">
-            <h5 class="mb-0">
-              <button class="btn btn-dark btn-lg border collapsed w-50" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                COMBAT: GRAPPLING & HOLDS
-              </button>
-            </h5>
+          <div class="card-header brass text-center" id="headingEight">
+            <button class="btn btn-dark btn-lg btn-block border px-0" id='grapplingBtn' type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+              GRAPPLING & HOLDS
+            </button>
           </div>
 
           <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordionExample">
@@ -4332,7 +4316,7 @@
                 </li>
               </ul>
 
-              <h5 class='text-center TNR'><u><strong>A FEW EXAMPLES</strong></u></h5>
+              <h5 class='text-center'><u><strong>A FEW EXAMPLES</strong></u></h5>
 
               <p class='tab'>
                 We should probably run through a couple of examples to demonstrate exactly how this system of play is intended to function.  These will be randomly determined Rolls used in pre-determined scenarios to represent the reality of the situation.  Lets begin:
@@ -4472,12 +4456,10 @@
         </div>
 
         <div class="card">
-          <div class="card-header brass TNR text-center" id="headingNine">
-            <h5 class="mb-0">
-              <button class="btn btn-dark btn-lg border collapsed w-50" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                WOUNDS: BLOOD LOSS & STATUS
-              </button>
-            </h5>
+          <div class="card-header brass text-center" id="headingNine">
+            <button class="btn btn-dark btn-lg btn-block border px-0" id='woundsBtn' type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+              WOUNDS & BLOOD LOSS
+            </button>
           </div>
 
           <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#accordionExample">
@@ -4788,7 +4770,7 @@
                 </ul>
               </ul><!--END STATUS EFFECTS-->
 
-              <h5 class='text-center TNR'><u><strong>HEALING, REHABILITATION, & RECOVERY TIMES</strong></u></h5>
+              <h5 class='text-center'><u><strong>HEALING, REHABILITATION, & RECOVERY TIMES</strong></u></h5>
 
               <p class='text-center'>
                 Healing takes time!  This time might be sped up with proper medical care, or slowed down with inadequate supply and expertise.  The severity of injury determines the amount of time it takes.  Some points to note:
@@ -4837,12 +4819,10 @@
         </div>
 
         <div class="card">
-          <div class="card-header brass TNR text-center" id="headingTen">
-            <h5 class="mb-0">
-              <button class="btn btn-dark btn-lg border collapsed w-50" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
-                EXPERIENCE: GAIN & SPENDING
-              </button>
-            </h5>
+          <div class="card-header brass text-center" id="headingTen">
+            <button class="btn btn-dark btn-lg btn-block border px-0" id='experienceBtn' type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+              EXPERIENCE
+            </button>
           </div>
 
           <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#accordionExample">
@@ -5270,12 +5250,10 @@
         </div>
 
         <div class="card">
-          <div class="card-header brass TNR text-center" id="headingEleven">
-            <h5 class="mb-0">
-              <button class="btn btn-dark btn-lg border collapsed w-50" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
-                ANIMALS & NPC'S
-              </button>
-            </h5>
+          <div class="card-header brass text-center" id="headingEleven">
+            <button class="btn btn-dark btn-lg btn-block border px-0" id='animalsBtn' type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+              ANIMALS & NPC'S
+            </button>
           </div>
 
           <div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#accordionExample">
@@ -5399,7 +5377,7 @@
                 </li>
               </ul>
 
-              <h5 class='text-center TNR'><u><strong>ANIMALS & DANGEROUS WILDLIFE</strong></u></h5>
+              <h5 class='text-center'><u><strong>ANIMALS & DANGEROUS WILDLIFE</strong></u></h5>
 
               <p class='tab'>
                 There are many forms of dangerous wildlife that exist in North America that pose significant risk to human life, especially now that the majority of the population has become centralized and humanities "Infinite Growth Model" no longer inhibits Natures "Darwinism" and unfettered population growth and thrival.  From predatory species like bears, wolves, dogs, coyotes, cougars, and mountain lions to herbivores like cattle, goats, deer, elk, moose, horses, and even large gangs of vicious wild turkeys (known fact on both the East and West Coast!); each one has developed means to either Attack or Defend itself.  This section addresses some of the differences between man and animal, primarily the following things to consider: 
@@ -5509,12 +5487,10 @@
         </div>
 
         <div class="card">
-          <div class="card-header brass TNR text-center" id="headingTwelve">
-            <h5 class="mb-0">
-              <button class="btn btn-dark btn-lg border collapsed w-50" type="button" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
-                TACTICAL GEAR
-              </button>
-            </h5>
+          <div class="card-header brass text-center" id="headingTwelve">
+            <button class="btn btn-dark btn-lg btn-block border px-0" id='tacticalBtn' type="button" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+              TACTICAL GEAR
+            </button>
           </div>
 
           <div id="collapseTwelve" class="collapse" aria-labelledby="headingTwelve" data-parent="#accordionExample">
@@ -5624,12 +5600,10 @@
         </div>
 
         <div class="card">
-          <div class="card-header brass TNR text-center" id="headingThirteen">
-            <h5 class="mb-0">
-              <button class="btn btn-dark btn-lg border collapsed w-50" type="button" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
-                FIRST CHARACTER BUILD
-              </button>
-            </h5>
+          <div class="card-header brass text-center" id="headingThirteen">
+            <button class="btn btn-dark btn-lg btn-block border px-0" id='firstCharBtn' type="button" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+              FIRST CHARACTER
+            </button>
           </div>
 
           <div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#accordionExample">

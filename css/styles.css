@@ -54,7 +54,10 @@ p, h1, h2, h3, h4, h5, h6{
 	font-family: "Times New Roman", serif;	
 }
 hr{
-	border-top: 5px solid black;
+	border-bottom: 5px solid black;
+}
+.hr-white{
+	border-bottom: 5px solid white;
 }
 .trait-img{
 	width: 33%;
@@ -110,6 +113,9 @@ hr{
 }
 .modal{
 	overflow-y: auto;
+}
+.modal-lg{
+	max-width: 80% !important;
 }
 /* MEDIA QUERIES */
 @media (max-width: 575px){
