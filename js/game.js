@@ -219,45 +219,42 @@ $(document).ready(function(){
 		var directFail = "Direct Failure: " + String( ( (LoS + 1) + failRate) + 1 ) + " - " + String( (LoS + 1) + (failRate * 2) );
 		var majorFail = "Major Failure: " + String( (100 - failRate) + 1 ) + " or more";
 
-		var first = function(){
-			return new Promise(function(resolve){
+		class Likelihood {
+			first(){
 				sendChat(majorSuccess, name);
-				resolve();
-			});	
-		}
-		var second = function(){
-			return new Promise(function(resolve){
+				return this;
+			}
+			second(){
 				sendChat(directSuccess, name);
-				resolve();
-			});	
-		}
-		var third = function(){
-			return new Promise(function(resolve){
+				return this;
+			}
+			third(){
 				sendChat(minorSuccess, name);
-				resolve();
-			});	
-		}
-		var fourth = function(){
-			return new Promise(function(resolve){
-				sendDice(minorFail, name);
-				resolve();
-			});	
-		}
-		var fifth = function(){
-			return new Promise(function(resolve){
-				sendDice(directFail, name);
-				resolve();
-			});	
-		}
-		var sixth = function(){
-			return new Promise(function(resolve){
-				sendDice(majorFail, name);
-				$('#LoSValue').val('');
-				resolve();
-			});	
+				return this;
+			}
+			fourth(){
+				sendChat(minorFail, name);
+				return this;
+			}
+			fifth(){
+				sendChat(directFail, name);
+				return this;
+			}
+			sixth(){
+				sendChat(majorFail, name);
+				return this;
+			}
 		}
 
-		first().then(second).then(third).then(fourth).then(fifth).then(sixth);
+		const likelihoodCalc = new Likelihood()
+			likelihoodCalc
+				.first()
+				.second()
+				.third()
+				.fourth()
+				.fifth()
+				.sixth();
+
 	});
 
 	$('#twoD10Btn').click(function(){
@@ -325,6 +322,7 @@ $(document).ready(function(){
 		$('#bootModal').modal('toggle');
 	});
 
+/* ROUND COUNTER POSSIBILITY --
 	var round = 0;
 
 	$('#roundBtn').click(function(){
@@ -335,7 +333,7 @@ $(document).ready(function(){
 	$('#resetBtn').click(function(){
 		round = 0;
 	});
-
+*/
 	$('#lockInterface').on('click', '.lockBtn', function(e){ 
 		var gameID = $(this).data('reference');
 		$.ajax({
@@ -392,7 +390,7 @@ $(document).ready(function(){
 
 							if (window.location.href.indexOf("_Tell") > -1) {
 							    $('.idMarks').removeAttr('readonly');
-							    $('#closeBtn').html("<button type='submit' class='btn btn-success btn-lg btn-block border'>CONFIRM & SAVE</button>");
+							    $('#IDcloseBtn').html("<button type='submit' class='btn btn-success btn-lg btn-block border'>CONFIRM & SAVE</button>");
 
 							    if (idmarks['Deceased'] == 0){
 									$('#deathToggle').html("<input type='button' class='btn btn-light btn-lg btn-block border' data-toggle='button' aria-pressed='false' "

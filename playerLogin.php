@@ -14,6 +14,7 @@
   $game = parse_url($url, PHP_URL_QUERY);
   $gameName = rawurldecode($game); 
   $_SESSION['gameName'] = $gameName;
+  $error = "";
 ?>
 
 <!doctype html>
@@ -86,6 +87,20 @@
             </div>
           </div>
           <div class='col'></div>
+        </div>
+
+        <div class='row black'>
+          <div class='col'>
+            <h6 class='text-center' style='color: red;'>
+
+              <?php
+                if(isset($_SESSION['console'])){
+                  echo($_SESSION['console']);
+                  unset($_SESSION['console']);
+                }
+              ?>
+            </h6>
+          </div>
         </div>
 
       </form>

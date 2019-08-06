@@ -75,7 +75,7 @@
           </div>
 
           <div class='col-12 order-5 col-md-2 order-md-5'>
-            <button class='btn btn-secondary btn-lg btn-block border adminBtn' data-target='". $row['GameName'] ."' data-reference='". $reference ."'>ADMIN</a>
+            <button class='btn btn-secondary btn-lg btn-block border adminBtn' data-target='". $row['GameName'] ."' data-reference='". $reference ."' disabled>ADMIN</a>
           </div>
         </div>
         <hr class='hr-white my-0 d-block d-md-none' />
@@ -108,7 +108,7 @@
           </div>
 
           <div class='col-12 order-5 col-md-2 order-md-5'>
-            <button class='btn btn-secondary btn-lg btn-block border adminBtn' data-target='". $row['GameName'] ."' data-reference='". $reference ."'>ADMIN</a>
+            <button class='btn btn-secondary btn-lg btn-block border adminBtn' data-target='". $row['GameName'] ."' data-reference='". $reference ."' disabled>ADMIN</a>
           </div>
         </div>
         <hr class='hr-white my-0 d-block d-md-none' />

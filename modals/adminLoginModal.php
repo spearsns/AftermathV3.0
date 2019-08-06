@@ -19,7 +19,7 @@
           
           <div class='row black'>
             <div class='col'>
-              <h4 style='color: red;' id='errorLog' class='text-center TNR'>&nbsp;</h4>
+              <h4 style='color: red;' id='errorLog' class='text-center'>&nbsp;</h4>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ session_start();
 $gameID = htmlentities(stripslashes($_POST['gameID']));
 $password = htmlentities(stripslashes($_POST['password']));
 
-$stmt = $conn->prepare("SELECT ID, StorytellerPassword FROM games WHERE ID = ? AND StorytellerPassword = ? ");
+$stmt = $conn->prepare("SELECT ID, StorytellerPassword FROM games WHERE BINARY ID = ? AND BINARY StorytellerPassword = ? ");
 $stmt->bind_param("is", $gameID, $password);
 $stmt->execute();
 $stmt->store_result();

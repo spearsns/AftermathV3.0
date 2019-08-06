@@ -92,7 +92,7 @@
         <div class='col-12 col-sm-6 col-md-4'><img src="img/graffiti/playerPassword.png" class='img-fluid h-100 mx-auto d-block' /></div>
         <div class='col-12 col-sm-6 col-md-4'>
           <div class="input-group input-group-lg">
-            <input type="password" name="playerPassword" class="form-control border" placeholder="Enter Player Password" />
+            <input type="password" name="playerPassword" class="form-control border" placeholder="Enter Player Password" required />
           </div>
         </div>
         <div class='col-md-2'></div>
@@ -103,7 +103,7 @@
         <div class='col-12 col-sm-6 col-md-4'><img src="img/graffiti/confirmPW.png" class='img-fluid h-100 mx-auto d-block' /></div>
         <div class='col-12 col-sm-6 col-md-4'>
           <div class="input-group input-group-lg">
-            <input type="password" name="playerPWConfirm" class="form-control border" placeholder="Confirm Password" />
+            <input type="password" name="playerPWConfirm" class="form-control border" placeholder="Confirm Password" required />
           </div>
         </div>
         <div class='col-md-2'></div>

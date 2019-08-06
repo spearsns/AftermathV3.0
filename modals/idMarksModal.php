@@ -200,7 +200,7 @@
         <div class="modal-footer">
 
           <div class='col'></div>
-          <div class='col' id='closeBtn'>
+          <div class='col' id='IDcloseBtn'>
             <button type="button" class="btn btn-danger btn-lg btn-block border" data-dismiss="modal">CLOSE</button>
           </div>
           <div class='col' id='deathToggle'></div>

@@ -42,8 +42,8 @@
     </div>
 
     <div class='row black'>
-        <div class='col-2'></div>
-        <div class='col-8'>
+        <div class='col-sm-1 col-md-2 col-lg-3'></div>
+        <div class='col-12 col-sm-10 col-md-8 col-lg-6'>
             <a href='/aftermath/index.php'>
             <div id="carousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
@@ -62,7 +62,7 @@
             </div>
             </a>
         </div>
-        <div class='col-2'></div>
+        <div class='col-sm-1 col-md-2 col-lg-3'></div>
     </div>
 
     <div id='messageModalArea'></div>
