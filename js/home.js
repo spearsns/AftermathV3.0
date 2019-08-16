@@ -45,6 +45,13 @@ $(document).ready(function(){
 	$('#gameList').on('mouseleave', '.adminBtn', function(e){ 
 		listing = setInterval(getGames, 1000);
 	});
+	$('#gameList').on('mouseenter', '.descriptionBtn', function(e){ 
+		clearInterval(listing);
+	});
+	$('#gameList').on('mouseleave', '.descriptionBtn', function(e){ 
+		listing = setInterval(getGames, 1000);
+	});
+
 
 //GAME ADMIN
 	function getGameInfo(){
@@ -58,6 +65,8 @@ $(document).ready(function(){
 				$('#currentGDesc').val(response['Description']);
 				$('#currentSTPass').val(response['StorytellerPassword']);
 				$('#currentPPass').val(response['PlayerPassword']);
+				$('#descriptionHeader').html("<strong>" + response['GameName'] + "</strong>");
+				$('#descriptionSlot').html(response['Description']);
 	       	}
 		});
 	}
@@ -67,6 +76,13 @@ $(document).ready(function(){
 		gameID = $(this).data('reference');
 		getGameInfo();
 		$('#adminLoginModal').modal('toggle');
+	});
+
+	$('#gameList').on('click', '.descriptionBtn', function(e){
+		e.preventDefault();
+		gameID = $(this).data('reference');
+		getGameInfo();
+		$('#descriptionModal').modal('toggle');
 	});
 
 	function checkAdminPW(){

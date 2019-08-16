@@ -104,7 +104,7 @@
 
                   <!--CENTER-->
                   <div class='col-lg-4 d-none d-lg-block px-0 pt-4 pb-0'>
-                    <img src='../img/virtruvian/sketchyvirtruvian.jpg' class='img-fluid h-100' />
+                    <img src='../img/virtruvian/sketchyvirtruvian.jpg' class='img-fluid h-100 border' />
                   </div>
                 
                   <!--R SIDE-->

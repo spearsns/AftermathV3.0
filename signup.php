@@ -64,7 +64,7 @@
 
       <div class='row black'>
         <div class='col-md'></div>
-        <div class='col-12 col-sm-6 col-md'><img src="img/graffiti/confirmpassword.png" class='img-fluid h-100 mx-auto d-block' /></div>
+        <div class='col-12 col-sm-6 col-md'><img src="img/graffiti/confirmPW.png" class='img-fluid h-100 mx-auto d-block' /></div>
         <div class='col-12 col-sm-6 col-md'>
           <div class="input-group input-group-lg">
             <input type="password" name="passwordConfirm" class="form-control border" placeholder="Confirm Password" required />
@@ -86,9 +86,9 @@
 
       <div class='row black'>
         <div class='col-md'></div>
-        <div class='col text-center'>
+        <div class='col'>
           <br />
-          <p class='text-danger TNR'>EMAIL WILL ONLY BE USED TO RESET PASSWORD<p>
+          <p class='text-center' style='color: white;'>EMAIL WILL ONLY BE USED TO RESET PASSWORD<p>
         </div>
         <div class='col-md'></div>
       </div>
@@ -106,21 +106,19 @@
       </form>
 
       <div class="row black">
-        <div class='col'></div>
         <div class="col text-center">
           <br />
           <?php
             $url = "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
             if (strpos($url, 'error=username')) {
-              echo '<p class="text-danger">USERNAME ALREADY TAKEN</p>';
+              echo '<p style="color: red;"><strong>USERNAME ALREADY TAKEN</strong></p>';
             } elseif (strpos($url, 'error=email')){
-              echo '<p class="text-danger">PLEASE ENTER A VALID EMAIL</p>';
+              echo '<p style="color: red;"><strong>PLEASE ENTER A VALID EMAIL</strong></p>';
             } elseif (strpos($url, 'error=password')){
-              echo '<p class="text-danger">PASSWORD VALUES DO NOT MATCH</p>';
+              echo '<p style="color: red;"><strong>PASSWORD VALUES DO NOT MATCH</strong></p>';
             }
           ?>
-        </div>
-        <div class='col'></div>  
+        </div> 
       </div>
 
       <?php include('footer.php'); ?>

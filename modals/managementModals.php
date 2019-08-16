@@ -3,8 +3,8 @@
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
           <div class="modal-content">
             
-            <div class="modal-header">
-              <h5 class="modal-title">Please select one of the following:</h5>
+            <div class="modal-header black">
+              <h5 class="modal-title text-light">Please select one of the following:</h5>
             </div>
 
             <div class="modal-body">
@@ -104,8 +104,8 @@
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
           <div class="modal-content">
             
-            <div class="modal-header">
-              <h5 class="modal-title">Select one of the following to learn more:</h5>
+            <div class="modal-header black">
+              <h5 class="modal-title text-light">Select one of the following to learn more:</h5>
             </div>
 
             <div class="modal-body">
@@ -203,8 +203,8 @@
               <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                 <div class="modal-content">
             
-                  <div class="modal-header">
-                    <h4 class="modal-title mx-auto">SWEEP ATTACK</h4>
+                  <div class="modal-header black">
+                    <h4 class="modal-title text-light mx-auto">SWEEP ATTACK</h4>
                   </div>
 
                   <div class="modal-body">
@@ -307,20 +307,20 @@
                         <div class='col'></div>
                       </div>
 
-          </div>
-        </div>
+              </div>
+            </div>
 
-      </div>  
-    </div>
-  </div>
+          </div>  
+        </div>
+      </div>
 
 <!--DISARM MODAL-->
       <div class="modal fade" id="disarmModal" tabindex="-4" role="dialog" aria-labelledby="disarmModal" data-backdrop='static' aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
           <div class="modal-content">
             
-            <div class="modal-header">
-              <h4 class="modal-title mx-auto">DISARM ATTACK</h4>
+            <div class="modal-header black">
+              <h4 class="modal-title text-light mx-auto">DISARM ATTACK</h4>
             </div>
 
             <div class="modal-body">
@@ -429,8 +429,8 @@
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
           <div class="modal-content">
             
-            <div class="modal-header">
-              <h4 class="modal-title mx-auto">PARRY ATTACK</h4>
+            <div class="modal-header black">
+              <h4 class="modal-title text-light mx-auto">PARRY ATTACK</h4>
             </div>
 
             <div class="modal-body">
@@ -545,8 +545,8 @@
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
           <div class="modal-content">
             
-            <div class="modal-header">
-              <h4 class="modal-title mx-auto">COUNTER-ATTACK</h4>
+            <div class="modal-header black">
+              <h4 class="modal-title text-light mx-auto">COUNTER-ATTACK</h4>
             </div>
 
             <div class="modal-body">
@@ -661,8 +661,8 @@
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
           <div class="modal-content">
             
-            <div class="modal-header">
-              <h4 class="modal-title mx-auto">QUICKDRAW WEAPON</h4>
+            <div class="modal-header black">
+              <h4 class="modal-title text-light mx-auto">QUICKDRAW WEAPON</h4>
             </div>
 
             <div class="modal-body">
@@ -773,8 +773,8 @@
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
           <div class="modal-content">
             
-            <div class="modal-header">
-              <h4 class="modal-title mx-auto">SPEEDLOAD WEAPON</h4>
+            <div class="modal-header black">
+              <h4 class="modal-title text-light mx-auto">SPEEDLOAD WEAPON</h4>
             </div>
 
             <div class="modal-body">
@@ -919,8 +919,8 @@
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
           <div class="modal-content">
             
-            <div class="modal-header">
-              <h4 class="modal-title mx-auto">SPRAY ATTACK</h4>
+            <div class="modal-header black">
+              <h4 class="modal-title text-light mx-auto">SPRAY ATTACK</h4>
             </div>
 
             <div class="modal-body">
@@ -982,8 +982,8 @@
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
           <div class="modal-content">
             
-            <div class="modal-header">
-              <h4 class="modal-title mx-auto">BLIND-FIRE ATTACK</h4>
+            <div class="modal-header black">
+              <h4 class="modal-title text-light mx-auto">BLIND-FIRE ATTACK</h4>
             </div>
 
             <div class="modal-body">

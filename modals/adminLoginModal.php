@@ -12,7 +12,7 @@
             <div class='col-12 col-sm-6'><img class='d-block h-100 mx-auto img-fluid' src="img/graffiti/StorytellerPassword.png" /></div>
             <div class='col-12 col-sm-6'>
               <div class="input-group input-group-lg">
-                <input type="text" id="adminLoginPassword" class="form-control border text-center" />
+                <input type="password" id="adminLoginPassword" class="form-control border text-center" />
               </div>
             </div>
           </div>

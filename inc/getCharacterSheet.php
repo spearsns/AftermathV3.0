@@ -4,7 +4,7 @@
 
   $characterID = $_POST['characterID'];
   
-  $infoSQL =  " SELECT CharacterName, Background, Habitat, Age, Sex, Ethnicity, HairColor, HairStyle, EyeColor, SecondLanguage, 
+  $infoSQL =  " SELECT CharacterName, Picture, Background, Habitat, Age, Sex, Ethnicity, HairColor, HairStyle, EyeColor, SecondLanguage, 
               ThirdLanguage, FourthLanguage, FifthLanguage, TotalExp, RemainingExp, Memory, Logic, Perception, Willpower, Charisma, Strength, 
               Endurance, Agility, Speed, Beauty, Sequence, Actions 
             FROM characters AS c
@@ -39,7 +39,7 @@
   $result3 = mysqli_query($conn, $skillSQL);
 
   while ($output = mysqli_fetch_array($result3)){
-    $charSkills[ preg_replace('/\s+/', '',$output['Name']) ] = $output['Value'];
+    $charSkills[ preg_replace('/\s+/', '', $output['Name']) ] = $output['Value'];
   }
 
   $character = array_merge($charInfo, $charAbilities, $charSkills);

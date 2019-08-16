@@ -30,7 +30,7 @@ jQuery(function($){
     $('#userList').html(html);
 
     if(userCount > 1){
-        $('#onlineBtn').html('ONLINE (' + (userCount - 1) + ')').addClass('btn-primary').removeClass('btn-light');
+        $('#onlineBtn').html('ONLINE ( ' + (userCount - 1) + ' )').addClass('btn-primary').removeClass('btn-light');
       } else {
         $('#onlineBtn').html('ONLINE').addClass('btn-light').removeClass('btn-primary');
       }
@@ -126,12 +126,13 @@ jQuery(function($){
     if (username == data.reciever){
       reciever = data.sender;
 
-      if ( $('.messageReply').data('target') !== reciever){
-        if ( $('#message-'+ reciever).length > 0){
+      if ( $('#message-'+ reciever).hasClass('show') ){
           messageCount = messageCount;
         } else {
           messageCount += 1;  
         }
+
+      if ( $('.messageReply').data('target') !== reciever){
     
 //MESSAGE LIST
         var messageListHtml = '';
@@ -221,14 +222,31 @@ jQuery(function($){
       });
 
 //MESSAGE LIST UPDATE
-      if (messageCount == 1){
-        $('#messageListBtn').html('MESSAGE (1)').addClass('btn-primary').removeClass('btn-light');
-      } else if (messageCount > 1) {
-        $('#messageListBtn').html('MESSAGES ' + '(' + messageCount + ')' ).addClass('btn-primary').removeClass('btn-light');  
+      function messageBtnBlue(){  
+          if (messageCount == 1){
+            $('#messageListBtn').html('MESSAGE ( 1 )').addClass('btn-primary').removeClass('btn-light');
+          } else if (messageCount > 1) {
+            $('#messageListBtn').html('MESSAGES ' + '( ' + messageCount + ' )' ).addClass('btn-primary').removeClass('btn-light');  
+          }
+          setTimeout(messageBtnWhite, 1000);
+      }
+
+      function messageBtnWhite(){
+          clearInterval(messageBtnBlue);
+          if (messageCount == 1){
+            $('#messageListBtn').html('MESSAGE ( 1 )').addClass('btn-light').removeClass('btn-primary');
+          } else if (messageCount > 1) {
+            $('#messageListBtn').html('MESSAGES ' + '( ' + messageCount + ' )' ).addClass('btn-light').removeClass('btn-primary');  
+          }
+          setTimeout(messageBtnBlue, 1000);
+      }
+      
+      if (messageCount >= 1){
+        setInterval(messageBtnBlue, 1000);
       } else {
         $('#messageListBtn').html('MESSAGES').addClass('btn-light').removeClass('btn-primary'); 
       }
-
+        
       $('#messageList').on('click', '.messageReply', function(e){ 
         e.preventDefault();
         messageCount -= 1;
@@ -237,10 +255,8 @@ jQuery(function($){
         $('#message-' + reciever).modal({"backdrop": "static"});
         $('#sendTo-'+ reciever).focus();
         
-        if (messageCount == 1){
-          $('#messageListBtn').html('(1) MESSAGE').addClass('btn-primary').removeClass('btn-light');
-        } else if (messageCount > 1) {
-          $('#messageListBtn').html('(' + messageCount + ') MESSAGES').addClass('btn-primary').removeClass('btn-light');  
+        if (messageCount >= 1){
+          messageBtnBlue();  
         } else {
           $('#messageListBtn').html('MESSAGES').addClass('btn-light').removeClass('btn-primary'); 
         }

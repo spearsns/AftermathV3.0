@@ -58,11 +58,9 @@
 	} else {
 	  echo "
 	    <div class='row black py-1'>
-	        <div class='col'></div>
 	        <div class='col'>
-	            <h5 class='text-white text-center TNR'>ROOM IS CURRENTLY EMPTY</h4>
+	            <h5 class='text-white text-center'><strong>ROOM IS CURRENTLY EMPTY</strong></h4>
 	        </div>
-	        <div class='col'></div>
 	    </div>
 	    ";
 	}

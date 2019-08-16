@@ -123,6 +123,8 @@
 	}
 
 $(document).ready(function(){
+	var storyTeller = '';
+	var gameName = $('#gameName').val();
 
 	function roll(min, max){
 		return Math.round(Math.random() * (max - min)) + min;
@@ -165,7 +167,8 @@ $(document).ready(function(){
 			type: "GET",
 			url: "../inc/getStoryteller.php",
 			dataType: "html",
-			success: function(response){                    
+			success: function(response){
+				storyTeller = response;                    
 	           $("#storytellerName").val(response);
 	       	}
 		});
@@ -322,18 +325,6 @@ $(document).ready(function(){
 		$('#bootModal').modal('toggle');
 	});
 
-/* ROUND COUNTER POSSIBILITY --
-	var round = 0;
-
-	$('#roundBtn').click(function(){
-		round += 1;
-		sendDice("[ROUND - " + round + "]", name );
-	});
-
-	$('#resetBtn').click(function(){
-		round = 0;
-	});
-*/
 	$('#lockInterface').on('click', '.lockBtn', function(e){ 
 		var gameID = $(this).data('reference');
 		$.ajax({
@@ -374,7 +365,53 @@ $(document).ready(function(){
 		var url = $(this).data('target');
 		window.open(url,'_blank');
 	});
+	/* GAME MAP */
+	function getGameMap(){
+		$.ajax({
+			type: "GET",
+			url: "../inc/getGameMap.php",
+			dataType: "html",
+			success: function(response){      
+	           	$("#mapSlot").css('background-image', 'url("'+ response +'")' );
+	        }
+		});
+	}
 
+	$('.interface').on('click', '.gameMapBtn', function(e){
+		e.preventDefault();
+		if(window.location.href.indexOf("_Tell") > -1){
+			$('#updateMapRow').removeClass("d-none");
+			$('#updateMapError').removeClass("d-none");
+		}
+		getGameMap(); 
+		$('#gameMapModal').modal('toggle');
+	});
+
+	$('#mapForm').on('submit', function(e){
+		e.preventDefault();
+		$.ajax({
+			type: 			"POST",
+			url: 			"../inc/processGameMap.php",
+			data: 			new FormData(this),
+			contentType: 	false,
+			cache: 			false,
+			processData: 	false,
+			success: 		function(data){
+								if(data === 'invalid'){
+									$('#mapErrorLog').html('<h5 style="color: red;"><strong>SOMETHING WENT WRONG...</strong></h5>');
+								} else {
+									$("#mapSlot").css('background-image', 'url("' + data + '")' );
+									$('#mapForm')[0].reset();
+									sendChat("MAP UPDATED", name);
+								}
+							},
+			error: 			function(e){
+								$('#mapErrorLog').html(e);	
+							}
+		});
+	});
+
+	/* ID MARKS */
 	$('.interface').on('click', '.idMarksBtn', function(e){ 
 		e.preventDefault(); 
 		var characterID = $(this).data('reference');

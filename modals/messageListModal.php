@@ -2,7 +2,7 @@
   <div class="modal-dialog modal modal-dialog-centered" role="document">
     <div class="modal-content">
 
-      <div class="modal-header text-center bg-primary">
+      <div class="modal-header text-center black">
         <h5 class="modal-title w-100 font-weight-bold text-light">SESSION MESSAGES</h5>
       </div>
 

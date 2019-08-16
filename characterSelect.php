@@ -39,14 +39,15 @@
 
         <?php include("header.php"); ?>
 
-        <div class="container-fluid">
+        <div class="container-fluid black">
 
             <div class='row metal'>
                 <div class='col py-2'>
-                  <h4 class='text-black text-center'>CHOOSE YOUR CHARACTER:</h4>
+                  <img src='img/graffiti/characterChoice.png' class='img-fluid h-100 mx-auto d-block' />
                 </div>
             </div>
 
+            <div id='characterList'>
             <?php
                 $sql = "SELECT CharacterName FROM characters WHERE UserID = '$userID' AND Deceased = '0' ";
                 $result = $conn->query($sql);
@@ -75,6 +76,8 @@
                     ";
                 }
             ?>
+            </div>
+
             <?php include("footer.php"); ?>
         </div>
     </body>

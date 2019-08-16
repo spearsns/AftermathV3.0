@@ -45,13 +45,14 @@
   	</head>
 
 	<body class='px-0'>
-		<div class="container-fluid" id='contentWrap'>
+		<div class="container-fluid black" id='contentWrap'>
   		<?php 
         include('header.php');
         include('modals/adminModal.php');
         include('modals/adminLoginModal.php');
         include('modals/confirmationModal.php');
         include('modals/onlineModal.php');
+        include('modals/descriptionModal.php');
       ?>
 
       <div class='row metal border-bottom-0 py-2'>
@@ -80,15 +81,19 @@
           <button type="button" class="btn btn-light btn-lg btn-block border px-0" id='onlineBtn'>ONLINE</button>
         </div>
 
-        <div class='col-12 order-3 col-md-2 order-md-2 py-1 d-none d-md-block'>
+        <div class='col-12 order-3 col-md-3 order-md-2 py-1 d-none d-md-block'>
           <img src='img/graffiti/gamesX.png' class='img-fluid h-100 mx-auto d-block' />
         </div>
 
-        <div class='col-12 order-4 col-md-4 order-md-3 py-1 d-none d-md-block mr-auto'>
+        <div class='col-12 order-4 col-md-2 order-md-3 py-1 d-none d-md-block'>
           <img src='img/graffiti/description.png' class='img-fluid h-100 mx-auto d-block' />
         </div>
 
-        <div class='col-12 order-2 col-sm-6 col-md-2 order-md-5 py-1'>
+        <div class='col-12 order-5 col-md-1 order-md-4 py-1 d-none d-md-block'>
+          <img src='img/graffiti/pop.png' class='img-fluid h-100 mx-auto d-block' />
+        </div>
+
+        <div class='col-12 order-2 col-sm-6 col-md-2 order-md-5 offset-md-2 py-1'>
           <a href='newGame.php' role='button' class="btn btn-danger btn-lg btn-block border px-0">NEW GAME</a>
         </div>
 

@@ -7,7 +7,7 @@
           <div class='row'>
 
             <div class='col'>
-              <h4 class='TNR text-center' id='confirmationText'></h4>              
+              <h4 class='text-center' id='confirmationText'></h4>              
             </div>
 
           </div>
@@ -15,7 +15,7 @@
           <div class='row'>
 
             <div class='col'>
-              <h4 class='TNR text-center' style='color: red;' id='confirmationLog'></h4>              
+              <h4 class='text-center' style='color: red;' id='confirmationLog'></h4>              
             </div>
 
           </div>

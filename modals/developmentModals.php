@@ -4,8 +4,8 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             
-            <div class="modal-header">
-              <h5 class="modal-title">Due to your history as an Outdoorsman you can select one of the following:</h5>
+            <div class="modal-header black">
+              <h5 class="modal-title text-light">Due to your history as an Outdoorsman you can select one of the following:</h5>
             </div>
 
             <div class="modal-body">
@@ -35,8 +35,8 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             
-            <div class="modal-header">
-              <h5 class="modal-title">Due to your history as an Militia Member you can select one of the following:</h5>
+            <div class="modal-header black">
+              <h5 class="modal-title text-light">Due to your history as an Militia Member you can select one of the following:</h5>
             </div>
 
             <div class="modal-body">
@@ -63,8 +63,8 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             
-            <div class="modal-header">
-              <h5 class="modal-title">Due to your history as a Gang Member you can select one of the following:</h5>
+            <div class="modal-header black">
+              <h5 class="modal-title text-light">Due to your history as a Gang Member you can select one of the following:</h5>
             </div>
 
             <div class="modal-body">
@@ -115,8 +115,8 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             
-            <div class="modal-header">
-              <h5 class="modal-title">Due to your history as a Security Guard you can select one of the following:</h5>
+            <div class="modal-header black">
+              <h5 class="modal-title text-light">Due to your history as a Security Guard you can select one of the following:</h5>
             </div>
 
             <div class="modal-body">
@@ -140,8 +140,8 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
           <div class="modal-content">
             
-            <div class="modal-header">
-              <h5 class="modal-title">Due to your history as a Mariner you can select one of the following:</h5>
+            <div class="modal-header black">
+              <h5 class="modal-title text-light">Due to your history as a Mariner you can select one of the following:</h5>
             </div>
 
             <div class="modal-body">
@@ -165,8 +165,8 @@
         <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
           <div class="modal-content">
             
-            <div class="modal-header">
-              <h5 class="modal-title">Please select one of the following:</h5>
+            <div class="modal-header black">
+              <h5 class="modal-title text-light">Please select one of the following:</h5>
             </div>
 
             <div class="modal-body">

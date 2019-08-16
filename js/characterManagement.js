@@ -101,6 +101,48 @@ var medicine = $('#medicine').val();
 var actions = Math.floor(speed / 2);
 var sequence = Math.floor( (perception + speed) / 2 );
 
+	function getCharPic(){
+		$.ajax({
+			type: "GET",
+			url: "inc/getCharPic.php",
+			dataType: "html",
+			success: function(response){      
+				$("#charPicPreview").attr('src', response);
+	           	$("#characterPic").attr('src', response);
+	        }
+		});
+	}
+	getCharPic();
+
+	$('#characterPic').click(function(){
+		getCharPic();
+		$('#characterPicModal').modal('toggle');
+	});
+
+	$('#charPicForm').on('submit', function(e){
+		e.preventDefault();
+		$.ajax({
+			type: 			"POST",
+			url: 			"inc/processCharPic.php",
+			data: 			new FormData(this),
+			contentType: 	false,
+			cache: 			false,
+			processData: 	false,
+			success: 		function(data){
+								if(data === 'invalid'){
+									$('#charPicErrorLog').html('<h5 style="color: red;"><strong>SOMETHING WENT WRONG...</strong></h5>');
+								} else {
+									console.log(data);
+									getCharPic();
+									$('#charPicForm')[0].reset();
+								}
+							},
+			error: 			function(e){
+								$('#charPicErrorLog').html(e);	
+							}
+		});
+	});
+	
 	$('.incTrait').click(function(){
 		target = $(this).data('target');
 		value = Number($('#' + target).val());
@@ -782,7 +824,7 @@ var sequence = Math.floor( (perception + speed) / 2 );
 
 	$('.abilitySelect').click(function(){
 		ability = $(this).data('target');
-		$('#abilityModal').modal('toggle');
+		$('#abilityModal').modal('hide');
 		$('#' + ability + 'Modal').modal('toggle');
 	});
 

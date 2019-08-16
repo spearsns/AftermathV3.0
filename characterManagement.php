@@ -13,7 +13,7 @@
 
   //STAT PREP
   $characterSQL =  
-    "SELECT ID, Background, Habitat, Age, Sex, Ethnicity, HairColor, HairStyle, FacialHair, EyeColor, SecondLanguage, ThirdLanguage,
+    "SELECT ID, Picture, Background, Habitat, Age, Sex, Ethnicity, HairColor, HairStyle, FacialHair, EyeColor, SecondLanguage, ThirdLanguage,
       FourthLanguage, FifthLanguage, TotalExp, RemainingExp 
     FROM characters 
     WHERE UserID = '$userID' AND CharacterName = '$characterName' ";
@@ -22,6 +22,7 @@
   $charInfo = mysqli_fetch_assoc($result1);
 
   $characterID = $charInfo['ID'];
+  $_SESSION['characterID'] = $characterID;
 
   $traitSQL =  
     "SELECT Memory, Logic, Perception, Willpower, Charisma, Strength, Endurance, Agility, Speed, Beauty, Sequence, Actions 
@@ -89,11 +90,8 @@
 
       <div class='row black'>
         <div class='col'><h5 class='pt-2 text-white text-center'>THERE IS A BELL CURVE : LEARNING NEW SKILLS IS ALMOST AS DIFFICULT AS MASTERING OLD ONES</h5></div>
-      </div>
-
-  <?php include('modals/managementModals.php'); ?>
-     
-  </div> <!--END HEADER-->
+      </div>  
+    </div> <!--END HEADER-->
 
       <!--SHEET BEGIN-->
       <form id="characterManagement" class='characterSheet' method="post" action="inc/updateCharacter.php">
@@ -1599,6 +1597,8 @@
 
       <script src='node_modules/socket.io-client/dist/socket.io.js'></script>
 
+      <?php include('modals/managementModals.php'); ?>
+      <?php include('modals/characterPicModal.php'); ?>
       <?php include("footer.php"); ?>
     </div>
   </body>

@@ -14,20 +14,6 @@
   $gameName = $_SESSION['gameName']; 
   $gameID = $_SESSION['gameID'];
 
-  /*
-  if (isset($_SESSION['gameID']) == false){
-  
-  $gameSQL =
-    "SELECT ID
-    FROM games
-    WHERE ? = '$gameName'
-    ";
-
-    $gameResult = mysqli_query($conn, $gameSQL);
-    $gameID = mysqli_fetch_assoc($gameResult);
-  }
-  */
-
   //STAT PREP
   $characterSQL =  
     "SELECT ID, Background, Habitat, Age, Sex, Ethnicity, HairColor, HairStyle, FacialHair, EyeColor, SecondLanguage, ThirdLanguage,
@@ -169,7 +155,8 @@
       <?php 
         include( $_SERVER['DOCUMENT_ROOT'] . '/aftermath/header.php' );
         include('../modals/idMarksModal.php'); 
-        include('../modals/whisperModal.php'); 
+        include('../modals/whisperModal.php');
+        include('../modals/gameMapModal.php');   
       ?>      
 
       <!--PLAY INTERFACE-->
@@ -220,6 +207,9 @@
               <div class='col-12 col-sm-6 order-sm-4 col-md-12 py-2'>
                 <button class="btn btn-info btn-lg btn-block border idMarksBtn" data-reference='<?php echo $characterID ?>' type="button">VIEW ID MARKS</button>
               </div>
+              <div class='col-12 col-sm-6 order-sm-7 col-md-12 py-2'>
+                <button class="btn btn-primary btn-lg btn-block border gameMapBtn" id='gameMapBtn' type="button" data-reference='<?php echo $gameID; ?>' >VIEW MAP</button>
+              </div>
               <div class='col-12 col-sm-6 order-sm-5 col-md-12 py-md-0 py-sm-2'>
                 <h4 class='TNR text-center'><strong>EXP POOL:</strong></h4>
               </div>
@@ -228,11 +218,11 @@
                   <input type="text" id="expPool" class="form-control border text-center" value="" readonly />
                 </div>
               </div>
-              <div class='col-12 col-sm-6 order-sm-7 col-md-12 py-2'>
+              <div class='col-12 col-sm-6 order-sm-8 col-md-12 py-2'>
                 <button data-target='../characterManagement.php?<?php echo $characterName ?>' role='button' class="btn btn-success btn-lg btn-block border" id='charMgmtBtn'>
                   CHARACTER MGMT</button>
               </div>
-              <div class='col-12 col-sm-6 order-sm-8 col-md-12 py-2'>
+              <div class='col-12 col-sm-6 order-sm-9 offset-sm-6 offset-md-0 col-md-12 py-2'>
                 <button role='button' class="btn btn-secondary btn-lg btn-block border" id='whisperBtn' type='button'>WHISPER</button>
               </div>
             </div>
