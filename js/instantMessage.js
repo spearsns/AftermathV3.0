@@ -268,9 +268,16 @@ jQuery(function($){
     $('#onlineModal').modal('toggle');
   });
   
-  socket.on('logout', function(){
-    ('logout');
+  socket.on('logout', function(data){
     userCount -= 1;
+    exiter = data.exiter;
+    console.log(exiter);
+    $.ajax({
+        type:   "POST",
+        url:      "inc/processLogout.php",
+        data:     {'exiter' : exiter},
+        dataType: "json",
+      });
   });
 
   $('#messageListBtn').click(function(){

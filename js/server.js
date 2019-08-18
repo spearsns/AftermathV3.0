@@ -4,7 +4,6 @@ var express =  require('express'),
 	io = require('socket.io').listen(server),
 	users = {};
 
-
 server.listen(3000);
 
 io.sockets.on('connection', function(socket){
@@ -35,9 +34,10 @@ io.sockets.on('connection', function(socket){
 
 	socket.on('disconnect', function(data){
 		if(!socket.nickname) return; //IF NOT SET JUST 'RETURN OUT'
+		var exiter = socket.nickname;
 		delete users[socket.nickname];
 		updateNicknames();
-		io.emit('logout');
+		io.emit('logout', {exiter: exiter});
 
 //MySQL -- CONNECTION ERROR
 /*

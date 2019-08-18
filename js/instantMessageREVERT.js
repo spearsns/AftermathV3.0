@@ -179,15 +179,17 @@ jQuery(function($){
 
 //INSTANT MESSAGING MODAL
       if( $('#message-' + reciever).length > 0 ){
-        var $target = $('.unread[data-target="'+ reciever +'"]');
-        var messages = Number( $target.val() );
+        
         if ( $('#message-'+ reciever).hasClass('show') ){
           messageCount -= 1;
           $('.unread[data-target="'+ reciever +'"]').val(0);
-        }
-        if(messages == 0) $('.messageReply[data-target="'+ reciever +'"]').addClass('btn-primary').removeClass('btn-light');
-        messages += 1;
-        $target.val(messages);       
+        } else {
+          var $target = $('.unread[data-target="'+ reciever +'"]');
+          var messages = Number( $target.val() );
+          if(messages == 0) $('.messageReply[data-target="'+ reciever +'"]').addClass('btn-primary').removeClass('btn-light');
+          messages += 1;
+          $target.val(messages);
+        }       
         $('#messageBox-'+ reciever).append('<b>' + data.sender + ': </b>' + data.msg + '<br/>');
         $('#sendTo-'+ reciever).focus();
 
@@ -242,7 +244,7 @@ jQuery(function($){
         $('#messageModalArea').append(messageHtml);
         $('#messageBox-'+ reciever).append('<b>' + data.sender + ': </b>' + data.msg + '<br/>');
       }
-    }
+    } // END IF REPLY ALREADY EXISTS
 
     checkMessageCount();
   });         //new message

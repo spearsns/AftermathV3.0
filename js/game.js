@@ -222,42 +222,26 @@ $(document).ready(function(){
 		var directFail = "Direct Failure: " + String( ( (LoS + 1) + failRate) + 1 ) + " - " + String( (LoS + 1) + (failRate * 2) );
 		var majorFail = "Major Failure: " + String( (100 - failRate) + 1 ) + " or more";
 
-		class Likelihood {
-			first(){
+
+		function FIRE(second){
 				sendChat(majorSuccess, name);
-				return this;
-			}
-			second(){
+				}
+		function second(third){
 				sendChat(directSuccess, name);
-				return this;
-			}
-			third(){
+				}
+		function third(fourth){
 				sendChat(minorSuccess, name);
-				return this;
-			}
-			fourth(){
+				}
+		function fourth(fifth){
 				sendChat(minorFail, name);
-				return this;
-			}
-			fifth(){
+				}
+		function fifth(sixth){
 				sendChat(directFail, name);
-				return this;
-			}
-			sixth(){
+				}
+		function sixth(){
 				sendChat(majorFail, name);
-				return this;
-			}
-		}
-
-		const likelihoodCalc = new Likelihood()
-			likelihoodCalc
-				.first()
-				.second()
-				.third()
-				.fourth()
-				.fifth()
-				.sixth();
-
+				}
+		FIRE();
 	});
 
 	$('#twoD10Btn').click(function(){
