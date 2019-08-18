@@ -97,7 +97,7 @@
         	include('../modals/whisperModal.php'); 
           include('../modals/bootModal.php');
           include('../modals/gameMapModal.php');  
-      	?>
+      ?>
 
 	    <div class='row metal py-2'>
 	      <div class='col-12 col-sm-6 col-md-3'><img src='../img/graffiti/GameName.png' class='img-fluid h-100 mx-auto d-block' /></div>
@@ -151,6 +151,18 @@
   	        <div class='col-12 col-sm-6 col-md-12 py-2'>
   	          <button class="btn btn-warning btn-lg btn-block border" id='twoD10Btn' type="button">TRAITS (2D10)</button>
   	        </div>
+          <!--  POTENTIAL FOR KEEPING TRACK OF COMBAT ROUNDS
+            <div class='co
+            <div class='col-12 col-sm-6 col-md-12 py-2'>
+              <button class="btn btn-warning btn-lg btn-block border" id='twoD10Btn' type="button">TRAITS (2D10)</button>
+            </div>l-12 col-sm-6 order-sm-4 col-md-12 py-2'>
+            <button role='button' class="btn btn-light btn-lg btn-block border" id='roundBtn' type='button'>ROUND</button>
+          	</div>
+            <div class='col-12 col-sm-6 order-sm-4 col-md-12 py-2'>
+            <button role='button' class="btn btn-info btn-lg btn-block border" id='resetBtn' type='button'>RESET</button>
+          	</div>
+          -->
+
             <div class='col-12 col-sm-6 col-md-12 py-2'>
               <button class="btn btn-primary btn-lg btn-block border gameMapBtn" id='gameMapBtn' type="button" data-reference='<?php echo $gameID; ?>' >VIEW MAP</button>
             </div>
