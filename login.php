@@ -42,7 +42,7 @@
           <div class='col-12 col-sm-6 col-md'><img src="img/graffiti/username.png" /></div>
           <div class='col-12 col-sm-6 col-md'>
             <div class="input-group input-group-lg">
-              <input type="text" name="username" class="form-control border" placeholder="Enter Username" required />
+              <input type="text" name="username" class="form-control border text-center" placeholder="Enter Username" required />
             </div>
           </div>
           <div class='col-md'></div>
@@ -53,7 +53,7 @@
           <div class='col-12 col-sm-6 col-md'><img src="img/graffiti/password.png" /></div>
           <div class='col-12 col-sm-6 col-md'>
             <div class="input-group input-group-lg">
-              <input type="password" name="password" class="form-control border" placeholder="Enter Password" required />
+              <input type="password" name="password" class="form-control border text-center" placeholder="Enter Password" required />
             </div>
           </div>
           <div class='col-md'></div>

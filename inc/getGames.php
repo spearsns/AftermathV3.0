@@ -84,7 +84,7 @@
           </div>
 
           <div class='col-12 order-6 col-md-2 order-md-6'>
-            <button class='btn btn-secondary btn-lg btn-block border my-1 adminBtn' data-target='". $row['GameName'] ."' data-reference='". $reference ."' disabled>ADMIN</a>
+            <button class='btn btn-dark btn-lg btn-block border my-1 adminBtn' data-target='". $row['GameName'] ."' data-reference='". $reference ."' disabled>ADMIN</a>
           </div>
         </div>
         <hr class='hr-white my-0 d-block d-md-none' />
@@ -95,7 +95,7 @@
         echo "        
         <div class='row black py-1'>
           <div class='col-5 order-4 col-md-2 order-md-1'>
-            <button  class='btn bt3-dark btn-lg btn-block border playBtn my-1' data-target='". $playerTarget ."' data-reference='". $reference ."' disabled>PLAY</a>
+            <button  class='btn btn-dark btn-lg btn-block border playBtn my-1' data-target='". $playerTarget ."' data-reference='". $reference ."' disabled>PLAY</a>
           </div>
 
           <div class='col-12 order-1 col-md-3 order-md-2'>
@@ -121,7 +121,7 @@
           </div>
 
           <div class='col-12 order-6 col-md-2 order-md-6'>
-            <button class='btn btn-secondary btn-lg btn-block border adminBtn my-1' data-target='". $row['GameName'] ."' data-reference='". $reference ."' disabled>ADMIN</a>
+            <button class='btn btn-dark btn-lg btn-block border adminBtn my-1' data-target='". $row['GameName'] ."' data-reference='". $reference ."' disabled>ADMIN</a>
           </div>
         </div>
         <hr class='hr-white my-0 d-block d-md-none' />

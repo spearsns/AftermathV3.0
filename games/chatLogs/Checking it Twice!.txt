@@ -105,3 +105,5 @@ NEW GAME: Checking it Twice!<span style='color: blue;'>Guest [ Storyteller ] : [
 <span style='color: blue;'>Guest [ Storyteller ] : Minor Failure: 67 - 78
 <span style='color: blue;'>Guest [ Storyteller ] : Direct Failure: 79 - 89
 <span style='color: blue;'>Guest [ Storyteller ] : Major Failure: 90 or more
+<span style='color: blue;'>Guest [ Storyteller ] : what up creator, gonna take a look at your char real quick 
+<span>Creator [ Spinks ]</span> : ok cool 

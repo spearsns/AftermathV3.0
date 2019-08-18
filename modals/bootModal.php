@@ -8,6 +8,12 @@
 
       <div class="modal-body">
         <div class='container-fluid' id='bootList'></div>
+        <div class='row'>
+          <div class='col text-center'>
+            <h6 style='color: red;'><strong>IF THE GAME ISN'T LOCKED,<br />THEY CAN WALTZ RIGHT BACK IN...</strong></h6>
+            <h6><strong>NOONE IS BEYOND REDEMPTION<br />NO PERMANENT BANS</strong></h6>
+          </div>
+        </div>
       </div>
 
       <div class="modal-footer">

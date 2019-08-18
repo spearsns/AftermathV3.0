@@ -39,7 +39,8 @@
       <div class="row black">
         <div class='col-sm'></div>
         <div class='col text-center'>
-          <p class='text-white'>Do <strong>NOT</strong> hit BACK or REFRESH or you will feed the demons of data corruption!</p>
+          <p style='color: red;'>Do <strong>NOT</strong> hit BACK or REFRESH or you will feed the demons of data corruption!</p>
+          <p style='color: white;'>If you hit the CHAR MGMT button in game make sure you refresh when you return</p>
         </div>
         <div class='col-sm'></div>
       </div>
